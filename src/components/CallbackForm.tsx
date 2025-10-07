@@ -6,43 +6,45 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Phone, Mail, Clock, CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Loader2, Lock, Check } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
-const indianPhoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[6-9]\d{9}$/;
+const indianPhoneRegex = /^(\+91[-\s]?)?[0]?(91)?[6-9]\d{9}$/;
 
 const formSchema = z.object({
-  fullName: z.string().min(2, "Name must be at least 2 characters").max(100),
-  phone: z.string().regex(indianPhoneRegex, "Please enter a valid Indian phone number (10 digits, starting with 6-9)"),
-  email: z.string().email("Please enter a valid email address"),
-  service: z.string().min(1, "Please select a service"),
-  bestTime: z.string().min(1, "Please select your preferred time"),
-  message: z.string().max(200, "Message must be less than 200 characters").optional(),
-  consent: z.boolean().refine((val) => val === true, "You must consent to be contacted"),
+  fullName: z.string().min(2, "Please enter your full name (at least 2 characters)").max(100, "Name is too long"),
+  phone: z.string().regex(indianPhoneRegex, "Please enter a valid 10-digit Indian mobile number starting with 6-9"),
+  service: z.string().optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
 const CallbackForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [validFields, setValidFields] = useState<Record<string, boolean>>({});
   
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, touchedFields },
     setValue,
+    trigger,
     watch,
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
+    mode: "onBlur",
   });
 
-  const consent = watch("consent");
+  const formValues = watch();
+
+  const handleFieldBlur = async (fieldName: keyof FormData) => {
+    const isValid = await trigger(fieldName);
+    setValidFields(prev => ({ ...prev, [fieldName]: isValid }));
+  };
 
   const onSubmit = async (data: FormData) => {
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     
     console.log("Form submitted:", data);
     setIsSubmitted(true);
@@ -70,91 +72,108 @@ const CallbackForm = () => {
 
   return (
     <div className="bg-card rounded-lg p-6 md:p-8 shadow-lg border border-border">
-      <div className="mb-6">
-        <h3 className="text-2xl font-bold text-foreground mb-2">
-          Request a Callback - We'll Contact You Within 24 Hours
-        </h3>
-        <p className="text-sm text-muted-foreground">
-          Your information is HIPAA-protected
+      {/* Security Reassurance Banner */}
+      <div className="mb-6 flex items-center justify-center gap-2 p-3 bg-emerald-50 dark:bg-emerald-950/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
+        <Lock className="h-5 w-5 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+        <p className="text-sm font-medium text-emerald-800 dark:text-emerald-300">
+          Your information is HIPAA-protected and secure
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-        <div>
-          <Label htmlFor="fullName" className="text-foreground">
-            Full Name <span className="text-destructive">*</span>
+      {/* Form Header */}
+      <div className="mb-6 text-center">
+        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+          Request Your Free Medical Consultation
+        </h3>
+        <p className="text-base text-muted-foreground">
+          Expert doctors will contact you within 24 hours
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        {/* Full Name Field */}
+        <div className="relative">
+          <Label htmlFor="fullName" className="text-base font-medium text-foreground mb-2 block">
+            Full Name <span className="text-destructive" aria-label="required">*</span>
           </Label>
-          <Input
-            id="fullName"
-            type="text"
-            placeholder="Enter your full name"
-            className="mt-1.5 h-12 text-base"
-            aria-required="true"
-            aria-invalid={!!errors.fullName}
-            aria-describedby={errors.fullName ? "fullName-error" : undefined}
-            {...register("fullName")}
-          />
+          <div className="relative">
+            <Input
+              id="fullName"
+              type="text"
+              placeholder="Enter your full name"
+              className="h-12 text-base pr-12 focus-visible:ring-blue-500 focus-visible:border-blue-500"
+              aria-required="true"
+              aria-invalid={!!errors.fullName}
+              aria-describedby={errors.fullName ? "fullName-error" : "fullName-desc"}
+              {...register("fullName", {
+                onBlur: () => handleFieldBlur("fullName")
+              })}
+            />
+            {validFields.fullName && !errors.fullName && (
+              <Check 
+                className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-600 dark:text-emerald-400" 
+                aria-label="Valid"
+              />
+            )}
+          </div>
+          <span id="fullName-desc" className="sr-only">Enter your complete name as it appears on official documents</span>
           {errors.fullName && (
-            <p id="fullName-error" className="text-sm text-destructive mt-1" role="alert">
-              {errors.fullName.message}
+            <p id="fullName-error" className="text-sm text-red-600 dark:text-red-400 mt-2 flex items-start gap-1" role="alert">
+              <span aria-hidden="true">⚠</span>
+              <span>{errors.fullName.message}</span>
             </p>
           )}
         </div>
 
-        <div>
-          <Label htmlFor="phone" className="text-foreground flex items-center gap-2">
-            <Phone className="h-4 w-4" />
-            Phone Number <span className="text-destructive">*</span>
+        {/* Phone Number Field */}
+        <div className="relative">
+          <Label htmlFor="phone" className="text-base font-medium text-foreground mb-2 block">
+            Phone Number <span className="text-destructive" aria-label="required">*</span>
           </Label>
-          <Input
-            id="phone"
-            type="tel"
-            placeholder="10-digit mobile number"
-            className="mt-1.5 h-12 text-base"
-            aria-required="true"
-            aria-invalid={!!errors.phone}
-            aria-describedby={errors.phone ? "phone-error" : undefined}
-            {...register("phone")}
-          />
+          <div className="relative">
+            <Input
+              id="phone"
+              type="tel"
+              placeholder="9876543210"
+              className="h-12 text-base pr-12 focus-visible:ring-blue-500 focus-visible:border-blue-500"
+              aria-required="true"
+              aria-invalid={!!errors.phone}
+              aria-describedby={errors.phone ? "phone-error" : "phone-desc"}
+              {...register("phone", {
+                onBlur: () => handleFieldBlur("phone")
+              })}
+            />
+            {validFields.phone && !errors.phone && (
+              <Check 
+                className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-600 dark:text-emerald-400" 
+                aria-label="Valid"
+              />
+            )}
+          </div>
+          <span id="phone-desc" className="sr-only">Enter your 10-digit Indian mobile number without country code</span>
           {errors.phone && (
-            <p id="phone-error" className="text-sm text-destructive mt-1" role="alert">
-              {errors.phone.message}
+            <p id="phone-error" className="text-sm text-red-600 dark:text-red-400 mt-2 flex items-start gap-1" role="alert">
+              <span aria-hidden="true">⚠</span>
+              <span>{errors.phone.message}</span>
             </p>
           )}
         </div>
 
+        {/* Preferred Service Field */}
         <div>
-          <Label htmlFor="email" className="text-foreground flex items-center gap-2">
-            <Mail className="h-4 w-4" />
-            Email Address <span className="text-destructive">*</span>
+          <Label htmlFor="service" className="text-base font-medium text-foreground mb-2 block">
+            Preferred Service <span className="text-muted-foreground text-sm">(Optional)</span>
           </Label>
-          <Input
-            id="email"
-            type="email"
-            placeholder="your.email@example.com"
-            className="mt-1.5 h-12 text-base"
-            aria-required="true"
-            aria-invalid={!!errors.email}
-            aria-describedby={errors.email ? "email-error" : undefined}
-            {...register("email")}
-          />
-          {errors.email && (
-            <p id="email-error" className="text-sm text-destructive mt-1" role="alert">
-              {errors.email.message}
-            </p>
-          )}
-        </div>
-
-        <div>
-          <Label htmlFor="service" className="text-foreground">
-            Preferred Service <span className="text-destructive">*</span>
-          </Label>
-          <Select onValueChange={(value) => setValue("service", value)}>
+          <Select 
+            onValueChange={(value) => {
+              setValue("service", value);
+              handleFieldBlur("service");
+            }}
+          >
             <SelectTrigger 
               id="service" 
-              className="mt-1.5 h-12 text-base"
-              aria-required="true"
-              aria-invalid={!!errors.service}
+              className="h-12 text-base focus:ring-blue-500 focus:border-blue-500"
+              aria-describedby="service-desc"
             >
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
@@ -169,91 +188,47 @@ const CallbackForm = () => {
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
           </Select>
-          {errors.service && (
-            <p className="text-sm text-destructive mt-1" role="alert">
-              {errors.service.message}
-            </p>
-          )}
+          <span id="service-desc" className="sr-only">Select the medical service you are interested in</span>
         </div>
 
-        <div>
-          <Label htmlFor="bestTime" className="text-foreground flex items-center gap-2">
-            <Clock className="h-4 w-4" />
-            Best Time to Call <span className="text-destructive">*</span>
-          </Label>
-          <Select onValueChange={(value) => setValue("bestTime", value)}>
-            <SelectTrigger 
-              id="bestTime" 
-              className="mt-1.5 h-12 text-base"
-              aria-required="true"
-              aria-invalid={!!errors.bestTime}
-            >
-              <SelectValue placeholder="Select preferred time" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="morning">Morning (8AM - 12PM)</SelectItem>
-              <SelectItem value="afternoon">Afternoon (12PM - 5PM)</SelectItem>
-              <SelectItem value="evening">Evening (5PM - 8PM)</SelectItem>
-            </SelectContent>
-          </Select>
-          {errors.bestTime && (
-            <p className="text-sm text-destructive mt-1" role="alert">
-              {errors.bestTime.message}
-            </p>
-          )}
-        </div>
-
-        <div>
-          <Label htmlFor="message" className="text-foreground">
-            Brief Message (Optional)
-          </Label>
-          <Textarea
-            id="message"
-            placeholder="Any specific concerns or questions? (max 200 characters)"
-            className="mt-1.5 min-h-20 text-base"
-            maxLength={200}
-            aria-describedby={errors.message ? "message-error" : undefined}
-            {...register("message")}
-          />
-          {errors.message && (
-            <p id="message-error" className="text-sm text-destructive mt-1" role="alert">
-              {errors.message.message}
-            </p>
-          )}
-        </div>
-
-        <div className="flex items-start gap-3 p-4 bg-muted/50 rounded-md">
-          <Checkbox
-            id="consent"
-            checked={consent}
-            onCheckedChange={(checked) => setValue("consent", checked as boolean)}
-            aria-required="true"
-            aria-invalid={!!errors.consent}
-            aria-describedby={errors.consent ? "consent-error" : undefined}
-          />
-          <div className="flex-1">
-            <label htmlFor="consent" className="text-sm text-foreground cursor-pointer leading-relaxed">
-              I consent to be contacted about medical services and understand my information is protected under HIPAA regulations.
-            </label>
-            {errors.consent && (
-              <p id="consent-error" className="text-sm text-destructive mt-1" role="alert">
-                {errors.consent.message}
-              </p>
-            )}
+        {/* Trust Indicators */}
+        <div className="pt-2 pb-4">
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-1">
+              <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+              <span>Free consultation</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+              <span>No spam calls</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+              <span>Private & confidential</span>
+            </div>
           </div>
         </div>
 
+        {/* Submit Button */}
         <Button
           type="submit"
           size="lg"
-          className="w-full h-12 text-base font-semibold"
+          className="w-full h-12 text-base font-semibold bg-emerald-600 hover:bg-emerald-700 text-white focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 transition-colors"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Submitting..." : "Request My Callback"}
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-5 w-5 animate-spin" aria-hidden="true" />
+              Sending request...
+            </>
+          ) : (
+            "Request My Free Consultation"
+          )}
         </Button>
 
-        <p className="text-xs text-center text-muted-foreground">
-          For emergencies, call 911 or our 24/7 helpline
+        {/* Emergency Notice */}
+        <p className="text-sm text-center text-muted-foreground pt-2">
+          For medical emergencies, call <span className="font-semibold">911</span> or our 24/7 helpline immediately
         </p>
       </form>
     </div>
