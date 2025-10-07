@@ -64,6 +64,28 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/4d42d3f7-387b-4c93-8599-dcf90ca68dd9) and click on Share -> Publish.
 
+## Deploy to GitHub Pages (jeevak-hospital-website)
+
+This repo is configured to deploy to GitHub Pages at `https://nirnimes.github.io/jeevak-hospital-website`.
+
+Steps:
+
+1. Ensure your repository is named `jeevak-hospital-website` under the `nirnimes` account.
+2. Push to the `main` branch. A workflow `.github/workflows/deploy.yml` builds the app and publishes `dist/` to Pages.
+3. In GitHub, go to Settings → Pages and set Source to "GitHub Actions" if not already.
+
+Local preview:
+
+```sh
+npm ci
+npm run build
+npm run preview
+```
+
+Notes:
+- Vite `base` is set to `/jeevak-hospital-website/` for correct asset paths on Pages.
+- `public/404.html` redirects unknown routes back to the SPA entry.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

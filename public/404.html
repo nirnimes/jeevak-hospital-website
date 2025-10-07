@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=/jeevak-hospital-website/" />
+  </head>
+  <body>
+    <script>
+      // SPA redirect handling for GitHub Pages
+      // Sends unknown routes back to index under the repo base
+      (function() {
+        var base = '/jeevak-hospital-website/';
+        var redirect = base;
+        // Preserve hash for client-side routers
+        if (location.hash) redirect += location.hash;
+        window.location.replace(redirect);
+      })();
+    </script>
+    Redirecting...
+  </body>
+  </html>
+
+
