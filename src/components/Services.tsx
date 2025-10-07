@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Bone, Stethoscope, Siren, Baby, Users } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import CTASection from "@/components/CTASection";
 
 const Services = () => {
   const services = [
@@ -86,6 +87,14 @@ const Services = () => {
           </p>
         </div>
       </div>
+      
+      {/* CTA Section */}
+      <CTASection 
+        title="Find the Right Cardiac Treatment"
+        description="Our expert cardiologists are ready to provide you with world-class cardiac care"
+        primaryButtonText="Schedule Your Heart Checkup"
+        variant="muted"
+      />
     </section>
   );
 };
