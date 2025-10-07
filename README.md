@@ -93,3 +93,25 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Deployment workflow
+
+This repo deploys to GitHub Pages using GitHub Actions and the `gh-pages` branch.
+
+- Workflow: `.github/workflows/deploy.yml`
+- Trigger: push to `main` (or manual dispatch)
+- Steps: checkout → setup Node → install → inject build metadata → build → deploy to `gh-pages`
+- Pages URL: `https://nirnimes.github.io/jeevak-hospital-website`
+
+### Build metadata in footer
+
+The footer shows the deployed commit SHA and UTC timestamp when environment variables are provided at build time:
+
+- `VITE_BUILD_SHA`: full git SHA
+- `VITE_BUILD_TIME`: ISO UTC timestamp, e.g. `2025-10-07T17:38:21Z`
+
+Locally, you can preview this by:
+
+```sh
+VITE_BUILD_SHA=$(git rev-parse HEAD) VITE_BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ") npm run build && npm run preview
+```
