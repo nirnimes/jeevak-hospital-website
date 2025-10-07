@@ -13,9 +13,7 @@ const indianPhoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[6-9]\d{9}$/;
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters").max(100),
-  phone: z
-    .string()
-    .regex(indianPhoneRegex, "Please enter a valid Indian phone number (10 digits, starting with 6-9)"),
+  phone: z.string().regex(indianPhoneRegex, "Please enter a valid Indian phone number (10 digits, starting with 6-9)"),
   service: z.string().optional(),
 });
 
@@ -62,10 +60,25 @@ const CallbackForm = () => {
   }
 
   return (
-    <div id="callback" className="bg-card rounded-lg p-6 md:p-8 shadow-lg border border-border">
+    <div className="bg-card rounded-lg p-6 md:p-8 shadow-lg border border-border">
       <div className="mb-6">
-        <h3 className="text-2xl font-bold text-foreground mb-2">Get Expert Cardiac Care - Free Consultation</h3>
-        <p className="text-sm text-muted-foreground">✓ Free consultation ✓ No waiting lists ✓ HIPAA protected</p>
+        <h3 className="text-2xl font-bold text-foreground mb-3">
+          Get Expert Cardiac Care - Free Consultation
+        </h3>
+        <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1">
+            <CheckCircle2 className="h-4 w-4 text-secondary" />
+            Free consultation
+          </span>
+          <span className="flex items-center gap-1">
+            <CheckCircle2 className="h-4 w-4 text-secondary" />
+            No waiting lists
+          </span>
+          <span className="flex items-center gap-1">
+            <CheckCircle2 className="h-4 w-4 text-secondary" />
+            HIPAA protected
+          </span>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
@@ -112,44 +125,37 @@ const CallbackForm = () => {
           )}
         </div>
 
-        {/* Email removed for minimal fields */}
-
         <div>
-          <Label htmlFor="service" className="text-foreground">Preferred Service (optional)</Label>
+          <Label htmlFor="service" className="text-foreground">
+            Preferred Service (Optional)
+          </Label>
           <Select onValueChange={(value) => setValue("service", value)}>
             <SelectTrigger 
               id="service" 
               className="mt-1.5 h-12 text-base"
-              aria-required={false}
-              aria-invalid={false}
             >
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="general">General Consultation</SelectItem>
-              <SelectItem value="cardiology">Cardiology</SelectItem>
-              <SelectItem value="orthopedics">Orthopedics</SelectItem>
-              <SelectItem value="internal-medicine">Internal Medicine</SelectItem>
+              <SelectItem value="angioplasty">Angioplasty</SelectItem>
+              <SelectItem value="bypass-surgery">Bypass Surgery</SelectItem>
+              <SelectItem value="valve-replacement">Valve Replacement</SelectItem>
+              <SelectItem value="heart-checkup">Heart Checkup</SelectItem>
               <SelectItem value="emergency">Emergency Care</SelectItem>
-              <SelectItem value="pediatrics">Pediatrics</SelectItem>
-              <SelectItem value="womens-health">Women's Health</SelectItem>
+              <SelectItem value="consultation">General Consultation</SelectItem>
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
           </Select>
-          {/* Optional field has no error */}
         </div>
-        {/* Removed best time, message, consent for minimal friction */}
 
         <Button
           type="submit"
           size="lg"
-          className="w-full h-12 text-base font-semibold bg-[hsl(var(--medical-green))] hover:bg-[hsl(var(--medical-green))]/90"
+          className="w-full h-14 text-base font-semibold bg-secondary hover:bg-secondary/90"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Submitting..." : "Request My Consultation"}
         </Button>
-
-        <p className="text-xs text-center text-muted-foreground">✓ Free consultation ✓ No waiting lists ✓ HIPAA protected</p>
       </form>
     </div>
   );
