@@ -1,16 +1,18 @@
 import { Phone, Menu, Cross } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Emergency", href: "tel:+916122670992" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/", isExternal: false },
+    { name: "Services", href: "/services", isExternal: false },
+    { name: "Emergency", href: "/emergency", isExternal: false },
+    { name: "About", href: "/about", isExternal: false },
+    { name: "Contact", href: "/contact", isExternal: false },
   ];
 
   return (
@@ -42,24 +44,20 @@ const Header = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6">
               {navItems.map((item) => (
-                item.name === "Emergency" ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-destructive hover:text-destructive/80 transition-colors font-medium flex items-center gap-1"
-                  >
-                    <Phone className="h-4 w-4" />
-                    {item.name}
-                  </a>
-                ) : (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors font-medium"
-                  >
-                    {item.name}
-                  </a>
-                )
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`transition-colors font-medium ${
+                    location.pathname === item.href
+                      ? "text-primary font-semibold"
+                      : item.name === "Emergency"
+                      ? "text-destructive hover:text-destructive/80 flex items-center gap-1"
+                      : "text-foreground hover:text-primary"
+                  }`}
+                >
+                  {item.name === "Emergency" && <Phone className="h-4 w-4" />}
+                  {item.name}
+                </Link>
               ))}
               <a
                 href="tel:+916122670992"
@@ -68,9 +66,11 @@ const Header = () => {
                 <Phone className="h-4 w-4" />
                 +91-612-2670992
               </a>
-              <Button variant="default" size="lg" className="bg-primary hover:bg-primary/90">
-                Book Consultation
-              </Button>
+              <Link to="/contact">
+                <Button variant="default" size="lg" className="bg-primary hover:bg-primary/90">
+                  Book Consultation
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -86,26 +86,21 @@ const Header = () => {
           {mobileMenuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
               {navItems.map((item) => (
-                item.name === "Emergency" ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block text-destructive hover:text-destructive/80 transition-colors font-medium flex items-center gap-2"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <Phone className="h-4 w-4" />
-                    {item.name}
-                  </a>
-                ) : (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block text-foreground hover:text-primary transition-colors font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                )
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block transition-colors font-medium ${
+                    location.pathname === item.href
+                      ? "text-primary font-semibold"
+                      : item.name === "Emergency"
+                      ? "text-destructive hover:text-destructive/80 flex items-center gap-2"
+                      : "text-foreground hover:text-primary"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name === "Emergency" && <Phone className="h-4 w-4" />}
+                  {item.name}
+                </Link>
               ))}
               <a
                 href="tel:+916122670992"
@@ -114,9 +109,11 @@ const Header = () => {
                 <Phone className="h-4 w-4" />
                 Emergency: +91-612-2670992
               </a>
-              <Button variant="default" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                Book Consultation
-              </Button>
+              <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="default" size="lg" className="w-full bg-primary hover:bg-primary/90">
+                  Book Consultation
+                </Button>
+              </Link>
             </div>
           )}
         </nav>

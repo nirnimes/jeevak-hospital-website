@@ -21,14 +21,14 @@ const About = () => {
               A Complete Cardiac Care Super-Specialty Hospital
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              The Jeevak Heart Hospital and Research Institute, Patna is Bihar's first fully equipped 
+              The Anupama Hospital Pvt Ltd and Research Institute, Patna is Bihar's first fully equipped 
               super-specialty hospital providing all facilities for the entire range of invasive and 
               non-invasive cardiac procedures.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
               Until August 1998, Bihar did not have any facility for coronary angiography, angioplasty, 
               open heart surgery, and patients had to travel to distant cities at great risk. With the 
-              start of Jeevak Heart Hospital, this critical gap has been covered.
+              start of Anupama Hospital Pvt Ltd, this critical gap has been covered.
             </p>
 
             {/* Highlights */}
