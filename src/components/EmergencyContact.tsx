@@ -1,18 +1,16 @@
 import { Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const EmergencyContact = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
-      <a href="tel:+916122670992" aria-label="Emergency contact - Call now">
-        <Button
-          size="lg"
-          className="h-14 px-6 bg-destructive hover:bg-destructive/90 text-destructive-foreground shadow-2xl rounded-full font-semibold text-base gap-2 animate-pulse"
+      <a href="tel:+916122670992" aria-label="Emergency contact - Call now" className="group flex items-center gap-3">
+        <div
+          className="h-[60px] w-[60px] rounded-full bg-destructive text-destructive-foreground shadow-2xl flex items-center justify-center animate-pulse"
+          role="button"
         >
-          <Phone className="h-5 w-5" />
-          <span className="hidden sm:inline">Emergency: Call Now</span>
-          <span className="sm:hidden">Emergency</span>
-        </Button>
+          <Phone className="h-6 w-6" />
+        </div>
+        <span className="hidden sm:inline text-sm font-semibold text-destructive">Emergency</span>
       </a>
     </div>
   );

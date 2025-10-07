@@ -75,7 +75,7 @@ const Hero = () => {
         </div>
 
         {/* Callback Form */}
-        <div className="max-w-2xl mx-auto mt-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+        <div id="callback" className="max-w-2xl mx-auto mt-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
           <CallbackForm />
         </div>
       </div>
