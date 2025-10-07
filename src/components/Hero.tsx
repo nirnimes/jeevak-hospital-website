@@ -27,16 +27,16 @@ const Hero = () => {
 
             {/* Main Headline - Emotional Connection */}
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+              <h1 className="text-responsive-5xl font-bold tracking-tight leading-tight">
                 Your Heart,{" "}
                 <span className="text-primary">Our Promise</span>
                 <br />
-                <span className="text-2xl md:text-4xl text-muted-foreground font-normal">
+                <span className="text-responsive-3xl text-muted-foreground font-normal">
                   Expert Care Close to Home
                 </span>
               </h1>
 
-              <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
+              <p className="text-responsive-xl text-muted-foreground max-w-lg leading-relaxed">
                 When your heart needs expert care, you shouldn't have to travel far from family. 
                 Get world-class cardiac treatment right here in Bihar, with the compassion you deserve.
               </p>
@@ -83,13 +83,13 @@ const Hero = () => {
             </div>
 
             {/* Primary CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow medical-button-primary group">
+            <div className="flex-responsive">
+              <Button size="lg" className="button-mobile text-responsive-xl px-6 py-4 sm:px-8 sm:py-6 shadow-lg hover:shadow-xl transition-shadow medical-button-primary group">
                 <Calendar className="mr-2 h-5 w-5" />
                 Book Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 text-destructive border-destructive hover:bg-destructive hover:text-destructive-foreground">
+              <Button variant="outline" size="lg" className="button-mobile text-responsive-xl px-6 py-4 sm:px-8 sm:py-6 text-destructive border-destructive hover:bg-destructive hover:text-destructive-foreground">
                 <Phone className="mr-2 h-5 w-5" />
                 Emergency: +91-612-267-0992
               </Button>
@@ -119,8 +119,8 @@ const Hero = () => {
                 <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-end justify-end relative">
                   {/* Professional patient photo placeholder */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  <div className="relative z-10 p-8 text-right">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 inline-block">
+                  <div className="relative z-10 p-6 text-right">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 inline-block max-w-xs">
                       <div className="text-sm font-medium text-gray-700">Patient Success Story</div>
                       <div className="text-xs text-gray-500">"They saved my life" - Rajesh, 52</div>
                     </div>
@@ -128,34 +128,34 @@ const Hero = () => {
                   
                   {/* Heart icon overlay */}
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-32 h-32 bg-primary/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      <Heart className="w-16 h-16 text-primary" />
+                    <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center backdrop-blur-sm">
+                      <Heart className="w-12 h-12 text-primary" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating Stats Cards */}
-            <div className="absolute -top-6 -left-6 bg-white rounded-xl shadow-lg p-4 border animate-bounce-slow">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                  <Heart className="h-5 w-5 text-green-600" />
+            {/* Floating Stats Cards - Repositioned to avoid overflow */}
+            <div className="absolute top-4 left-4 bg-white rounded-xl shadow-lg p-3 border animate-bounce-slow">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                  <Heart className="h-4 w-4 text-green-600" />
                 </div>
                 <div>
-                  <div className="font-bold text-lg">10,000+</div>
+                  <div className="font-bold text-sm">10,000+</div>
                   <div className="text-xs text-muted-foreground">Lives Saved</div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-4 border animate-bounce-slow" style={{ animationDelay: "1s" }}>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Shield className="h-5 w-5 text-blue-600" />
+            <div className="absolute bottom-4 right-4 bg-white rounded-xl shadow-lg p-3 border animate-bounce-slow" style={{ animationDelay: "1s" }}>
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Shield className="h-4 w-4 text-blue-600" />
                 </div>
                 <div>
-                  <div className="font-bold text-lg">24/7</div>
+                  <div className="font-bold text-sm">24/7</div>
                   <div className="text-xs text-muted-foreground">Emergency Care</div>
                 </div>
               </div>

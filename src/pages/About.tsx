@@ -114,19 +114,19 @@ const About = () => {
       <Header />
       <main>
         {/* About Hero */}
-        <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/10">
-          <div className="container">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section className="py-responsive bg-gradient-to-br from-primary/5 to-secondary/10">
+          <div className="container-responsive">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
                 <Badge className="mb-4">Our Story</Badge>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                <h1 className="text-responsive-4xl font-bold mb-6">
                   26 Years of{" "}
                   <span className="text-primary">Transforming Lives</span>
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8">
+                <p className="text-responsive-xl text-muted-foreground mb-8">
                   From a vision to provide world-class cardiac care in Bihar to becoming the region's most trusted heart hospital, our journey has been one of dedication, innovation, and compassion.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid-responsive-2">
                   <div>
                     <div className="text-3xl font-bold text-primary">10,000+</div>
                     <div className="text-sm text-muted-foreground">Lives Saved</div>
@@ -190,7 +190,7 @@ const About = () => {
                           </div>
                         </CardHeader>
                         <CardContent>
-                          <p className="text-muted-foreground">{milestone.description}</p>
+                          <p className="text-muted-foreground text-overflow-fix break-words">{milestone.description}</p>
                         </CardContent>
                       </Card>
                     </div>

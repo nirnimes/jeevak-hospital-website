@@ -68,13 +68,13 @@ const Emergency = () => {
                 24/7 Emergency
               </Badge>
 
-              <h1 className="text-4xl md:text-6xl font-bold">
+              <h1 className="text-responsive-5xl font-bold">
                 Cardiac Emergency?
                 <br />
                 <span className="text-destructive-foreground/90">We're Here 24/7</span>
               </h1>
 
-              <p className="text-xl max-w-2xl mx-auto opacity-90">
+              <p className="text-responsive-xl max-w-2xl mx-auto opacity-90">
                 When every second matters, our expert emergency team is ready to provide 
                 life-saving cardiac care around the clock.
               </p>
@@ -93,12 +93,12 @@ const Emergency = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+              <div className="flex-responsive justify-center">
+                <Button size="lg" variant="secondary" className="button-mobile text-responsive-xl px-6 py-4 sm:px-8">
                   <Ambulance className="mr-2 h-5 w-5" />
                   Request Ambulance
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-destructive-foreground text-destructive-foreground hover:bg-destructive-foreground hover:text-destructive">
+                <Button size="lg" variant="outline" className="button-mobile text-responsive-xl px-6 py-4 sm:px-8 border-destructive-foreground text-destructive-foreground hover:bg-destructive-foreground hover:text-destructive">
                   <MapPin className="mr-2 h-5 w-5" />
                   Get Directions
                 </Button>
