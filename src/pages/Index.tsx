@@ -20,6 +20,7 @@ const Index = () => {
         <Hero />
         <Testimonials />
         <ContactBar />
+        <Testimonials />
         <Services />
         <About />
         <CTASection 
