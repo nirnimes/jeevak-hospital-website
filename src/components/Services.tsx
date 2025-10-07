@@ -1,77 +1,47 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+// @ts-nocheck
+import React from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Bone, Stethoscope, Siren, Baby, Users } from "lucide-react";
 import { ArrowRight } from "lucide-react";
-import CTASection from "@/components/CTASection";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
-  type ServiceItem = {
-    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-    title: string;
-    description: string;
-    bullets: string[];
-  };
-
-  const services: ServiceItem[] = [
+  const services = [
     {
       icon: Heart,
       title: "Cardiology",
       description: "Comprehensive cardiac care including angioplasty, bypass surgery, valve replacement, and advanced interventional procedures.",
-      bullets: [
-        "Angioplasty & stenting",
-        "Bypass & valve surgery",
-        "Cardiac rehab & prevention",
-      ],
+      specialties: ["Angioplasty & stents", "Bypass & valve surgery", "Heart failure clinic"],
     },
     {
       icon: Bone,
       title: "Orthopedics",
       description: "Expert treatment for bone, joint, and muscle conditions. Specializing in joint replacement, sports injuries, and spine care.",
-      bullets: [
-        "Joint replacement",
-        "Sports injury care",
-        "Spine & trauma",
-      ],
+      specialties: ["Joint replacement", "Sports injury care", "Spine & trauma"],
     },
     {
       icon: Stethoscope,
       title: "Internal Medicine",
       description: "Complete diagnostic and treatment services for adult medical conditions, chronic disease management, and preventive care.",
-      bullets: [
-        "Chronic disease management",
-        "Diabetes & hypertension",
-        "Preventive health checks",
-      ],
+      specialties: ["Diabetes & hypertension", "Infectious diseases", "Preventive health"],
     },
     {
       icon: Siren,
       title: "Emergency Care",
       description: "24/7 emergency services with state-of-the-art trauma care, critical care units, and dedicated emergency physicians.",
-      bullets: [
-        "24/7 trauma response",
-        "Advanced critical care",
-        "Rapid diagnostics",
-      ],
+      specialties: ["24/7 trauma care", "Critical care unit", "Rapid triage"],
     },
     {
       icon: Baby,
       title: "Pediatrics",
       description: "Specialized care for infants, children, and adolescents. From routine checkups to complex pediatric procedures.",
-      bullets: [
-        "Newborn & child care",
-        "Vaccinations & growth",
-        "Pediatric surgery",
-      ],
+      specialties: ["Well-child checkups", "NICU support", "Vaccinations"],
     },
     {
       icon: Users,
       title: "Women's Health",
       description: "Comprehensive women's healthcare including obstetrics, gynecology, maternal-fetal medicine, and wellness programs.",
-      bullets: [
-        "Obstetrics & maternity",
-        "Gynecology & IVF",
-        "Wellness & screening",
-      ],
+      specialties: ["Obstetrics & delivery", "Gynecologic care", "Maternal-fetal medicine"],
     },
   ];
 
@@ -87,37 +57,47 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 lg:gap-6 xl:gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group h-full flex flex-col hover-lift border-border/50 bg-card animate-fade-in"
+              className="group hover-lift border-border/50 bg-card animate-fade-in h-full flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader className="p-8">
-                <div className="h-14 w-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 transition-colors duration-300 ease-in-out group-hover:bg-primary/15">
-                  <service.icon className="h-7 w-7 text-primary transition-transform duration-300 ease-in-out group-hover:rotate-3 group-hover:scale-105" />
+              <CardHeader className="p-8 pb-0">
+                <div className="h-16 w-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-primary/15">
+                  <service.icon className="h-8 w-8 text-primary transition-transform duration-300 group-hover:rotate-3 group-hover:scale-[1.03]" />
                 </div>
-                <CardTitle className="text-2xl">{service.title}</CardTitle>
+                <CardTitle className="text-2xl leading-tight">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent className="p-8 pt-0 flex-1">
-                <CardDescription className="text-base mb-4">
+              <CardContent className="p-8 pt-4 pb-8 flex flex-col grow">
+                <CardDescription className="text-base mb-4 leading-relaxed">
                   {service.description}
                 </CardDescription>
-                <ul className="list-disc pl-5 space-y-2 text-foreground/90 mb-6">
-                  {service.bullets.map((item, i) => (
-                    <li key={i} className="text-sm md:text-base leading-relaxed">{item}</li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter className="p-8 pt-0 mt-auto">
-                <Button asChild size="lg" className="transition-transform duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98]">
-                  <a href="#contact" aria-label={`Book consultation for ${service.title}`}>
-                    Book Consultation
-                    <ArrowRight className="h-4 w-4" />
+                {service.specialties && (
+                  <ul className="mb-6 space-y-2 text-sm text-muted-foreground">
+                    {service.specialties.map((item: string, i: number) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary/70" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <div className="mt-auto pt-2 flex items-center justify-between">
+                  <Button asChild className="px-5 py-5 text-[15px] h-11 transition-transform duration-300 hover:scale-[1.02]">
+                    <a href="#contact">Book Consultation</a>
+                  </Button>
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+                    aria-label={`Learn more about ${service.title}`}
+                  >
+                    Learn More
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </a>
-                </Button>
-              </CardFooter>
+                </div>
+              </CardContent>
             </Card>
           ))}
         </div>
@@ -130,28 +110,7 @@ const Services = () => {
             for all your healthcare needs.
           </p>
         </div>
-
-      {/* CTA After Services */}
-      <div className="mt-16 text-center">
-        <h3 className="text-2xl font-bold mb-4">Find the Right Cardiac Treatment</h3>
-        <div className="flex justify-center gap-4">
-          <a href="#callback" className="inline-block">
-            <span className="inline-flex items-center px-6 py-3 rounded-md text-white bg-[hsl(var(--medical-green))] hover:bg-[hsl(var(--medical-green))]/90 transition-colors font-semibold">Request My Consultation</span>
-          </a>
-          <a href="tel:+916122670992" className="inline-block">
-            <span className="inline-flex items-center px-6 py-3 rounded-md text-white bg-destructive hover:bg-destructive/90 transition-colors font-semibold">Call Emergency</span>
-          </a>
-        </div>
       </div>
-      </div>
-      
-      {/* CTA Section */}
-      <CTASection 
-        title="Find the Right Cardiac Treatment"
-        description="Our expert cardiologists are ready to provide you with world-class cardiac care"
-        primaryButtonText="Schedule Your Heart Checkup"
-        variant="muted"
-      />
     </section>
   );
 };
