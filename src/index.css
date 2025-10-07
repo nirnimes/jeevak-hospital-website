@@ -148,6 +148,15 @@ All colors MUST be HSL.
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
   }
+
+  /* Line clamp utility for 3 lines */
+  .line-clamp-3 {
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 @keyframes fade-in {
