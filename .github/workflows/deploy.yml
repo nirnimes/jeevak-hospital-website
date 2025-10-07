@@ -33,6 +33,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify build output
+        run: |
+          ls -la
+          ls -la dist || echo "dist missing"
+          test -f dist/index.html && echo "index.html present" || (echo "index.html missing" && exit 1)
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
