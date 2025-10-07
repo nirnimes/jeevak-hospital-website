@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Award, Users, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-hospital.jpg";
+import CallbackForm from "@/components/CallbackForm";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20">
+    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20" aria-label="Hero section with hospital information and callback form">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -23,7 +24,7 @@ const Hero = () => {
             <span className="text-sm font-medium">Bihar's First Super-Specialty Cardiac Hospital</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-slide-up leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-slide-up leading-tight" tabIndex={0}>
             Expert Medical Care You Can Trust
           </h1>
 
@@ -44,7 +45,7 @@ const Hero = () => {
           {/* Trust Indicators */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-primary-foreground/20">
             <div className="flex items-start gap-3 animate-fade-in">
-              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                 <Award className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
@@ -53,7 +54,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                 <Clock className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
@@ -62,7 +63,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                 <Users className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
@@ -71,6 +72,11 @@ const Hero = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Callback Form */}
+        <div className="max-w-2xl mx-auto mt-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <CallbackForm />
         </div>
       </div>
     </section>

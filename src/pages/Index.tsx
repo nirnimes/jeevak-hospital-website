@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import EmergencyContact from "@/components/EmergencyContact";
+import ContactBar from "@/components/ContactBar";
 
 const Index = () => {
   return (
@@ -10,10 +12,12 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <ContactBar />
         <Services />
         <About />
       </main>
       <Footer />
+      <EmergencyContact />
     </div>
   );
 };
