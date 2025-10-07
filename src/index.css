@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    --primary: 217 91% 42%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 162 73% 46%;
@@ -39,17 +39,13 @@ All colors MUST be HSL.
     --radius: 0.5rem;
     
     /* Medical design tokens */
-    --medical-blue: 217 91% 42%;
-    --medical-green: 162 73% 38%;
+    --medical-blue: 217 91% 60%;
+    --medical-green: 162 73% 46%;
     --medical-light: 210 40% 98%;
     --medical-dark: 215 25% 27%;
     
-    /* Emergency and success colors */
-    --emergency: 0 84% 55%;
-    --success: 162 73% 38%;
-    
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 42%) 0%, hsl(217 91% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 50%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
     
     /* Shadows */
@@ -152,69 +148,6 @@ All colors MUST be HSL.
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
   }
-  
-  /* Service card specific animations */
-  .service-card-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .service-card-hover:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Icon animations */
-  .icon-float {
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  .icon-pulse {
-    animation: pulse-scale 2s ease-in-out infinite;
-  }
-  
-  /* Button hover effects */
-  .btn-glow:hover {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-  }
-  
-  /* Gradient text animation */
-  .gradient-text-animate {
-    background-size: 200% auto;
-    animation: gradient-shift 3s ease infinite;
-  }
-  
-  /* Card border glow */
-  .card-glow {
-    position: relative;
-  }
-  
-  .card-glow::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: 12px;
-    padding: 2px;
-    background: linear-gradient(45deg, transparent, var(--primary), transparent);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .card-glow:hover::before {
-    opacity: 0.3;
-  }
-  
-  /* Smooth scroll behavior */
-  .smooth-scroll {
-    scroll-behavior: smooth;
-  }
-  
-  /* Medical badge animation */
-  .badge-pulse {
-    animation: badge-pulse 2s ease-in-out infinite;
-  }
 }
 
 @keyframes fade-in {
@@ -239,7 +172,7 @@ All colors MUST be HSL.
   }
 }
 
-@keyframes float {
+@keyframes bounce-slow {
   0%, 100% {
     transform: translateY(0);
   }
@@ -248,34 +181,8 @@ All colors MUST be HSL.
   }
 }
 
-@keyframes pulse-scale {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes badge-pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.9;
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
   }
 }
