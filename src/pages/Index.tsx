@@ -8,6 +8,8 @@ import ContactBar from "@/components/ContactBar";
 import CallbackForm from "@/components/CallbackForm";
 import AppointmentBooking from "@/components/AppointmentBooking";
 import DoctorCards from "@/components/DoctorCards";
+import Testimonials from "@/components/Testimonials";
+import Features from "@/components/Features";
 
 const Index = () => {
   return (
@@ -15,18 +17,15 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <section id="callback-form" className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto">
-              <CallbackForm />
-            </div>
-          </div>
-        </section>
-        <ContactBar />
+        <Features />
         <Services />
         <DoctorCards />
-        <div className="py-10 text-center">
-          <AppointmentBooking />
+        <Testimonials />
+        <div className="py-16 text-center bg-gradient-to-br from-primary/5 via-background to-primary/5">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8">Ready to Book Your Appointment?</h2>
+            <AppointmentBooking />
+          </div>
         </div>
         <About />
       </main>

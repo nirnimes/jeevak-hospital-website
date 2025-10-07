@@ -9,7 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Progress } from "@/components/ui/progress";
-import { Calendar as CalendarIcon, Clock, User, Phone, Heart, Shield, CheckCircle, AlertCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { Calendar as CalendarIcon, Clock, User, Phone, Heart, Shield, CheckCircle, AlertCircle, ArrowLeft, ArrowRight, Star, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -26,11 +27,49 @@ const services = [
 
 const timeSlots = ["9:00 AM", "10:30 AM", "12:00 PM", "2:00 PM", "3:30 PM", "5:00 PM"];
 
+// Form validation schema
+const appointmentSchema = z.object({
+  firstName: z.string().min(2, "First name must be at least 2 characters"),
+  lastName: z.string().min(2, "Last name must be at least 2 characters"),
+  phone: z.string().min(10, "Phone number must be at least 10 digits"),
+  email: z.string().email("Invalid email address"),
+  symptoms: z.string().optional(),
+  agreeToTerms: z.boolean().refine(val => val === true, "You must agree to the terms")
+});
+
+type AppointmentFormData = z.infer<typeof appointmentSchema>;
+
 export default function AppointmentBooking() {
   const [date, setDate] = useState<Date | undefined>();
   const [selectedTime, setSelectedTime] = useState("");
   const [selectedService, setSelectedService] = useState("");
   const [step, setStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const form = useForm<AppointmentFormData>({
+    resolver: zodResolver(appointmentSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      symptoms: "",
+      agreeToTerms: false
+    }
+  });
+
+  const onSubmit = async (data: AppointmentFormData) => {
+    setIsSubmitting(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(false);
+    setSubmitted(true);
+  };
+
+  const getProgress = () => {
+    return (step / 3) * 100;
+  };
 
   return (
     <Dialog>

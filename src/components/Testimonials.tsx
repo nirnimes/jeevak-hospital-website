@@ -1,169 +1,181 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Activity, Users, Clock, Heart } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Star, Quote, Heart, Shield, Award } from "lucide-react";
 
 const testimonials = [
   {
     id: 1,
     name: "Rajesh Kumar",
-    age: 52,
     location: "Patna, Bihar",
-    treatment: "Triple Bypass Surgery",
-    outcome: "100% Recovery in 6 weeks",
     rating: 5,
-    quote: "Dr. Sharma performed my bypass surgery with incredible skill. Recovery was faster than expected, and I'm back to my normal life. No need to go to Delhi!",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=rajesh&backgroundColor=b6e3f4"
+    text: "Dr. Rajiv Sharma saved my life with a complex heart surgery. The entire team was professional and caring. I'm grateful to be alive today.",
+    treatment: "Bypass Surgery",
+    date: "3 months ago",
+    avatar: "RK"
   },
   {
     id: 2,
-    name: "Sunita Devi",
-    age: 47,
-    location: "Muzaffarpur, Bihar",
-    treatment: "Aortic Valve Replacement",
-    outcome: "Back to teaching within 8 weeks",
+    name: "Priya Singh",
+    location: "Gaya, Bihar",
     rating: 5,
-    quote: "The nursing staff and cardiac team provided exceptional care during my valve replacement. World-class treatment right here in Bihar.",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=sunita&backgroundColor=ffd5dc&accessories=prescription02&hairColor=black&facialHair=blank&clothingGraphic=blank&hatColor=pastel&skinColor=light&clothing=blazer&top=hijab"
+    text: "Excellent emergency care when I had a heart attack. The team responded immediately and provided world-class treatment. Highly recommended!",
+    treatment: "Emergency Care",
+    date: "1 month ago",
+    avatar: "PS"
   },
   {
     id: 3,
-    name: "Amit Singh",
-    age: 35,
-    location: "Gaya, Bihar",
-    treatment: "Emergency Angioplasty",
-    outcome: "Life saved, returned to work in 3 weeks",
+    name: "Amit Kumar",
+    location: "Muzaffarpur, Bihar",
     rating: 5,
-    quote: "Emergency angioplasty saved my life. The 24/7 cardiac team responded immediately. Excellent facilities and caring doctors.",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=amit&backgroundColor=b6e3f4"
+    text: "My 8-year-old son's heart condition was treated here. Dr. Sunita is amazing with children. The hospital has the best pediatric cardiac care.",
+    treatment: "Pediatric Cardiology",
+    date: "2 weeks ago",
+    avatar: "AK"
+  },
+  {
+    id: 4,
+    name: "Sunita Devi",
+    location: "Darbhanga, Bihar",
+    rating: 5,
+    text: "Angioplasty procedure was smooth and painless. The modern equipment and skilled doctors gave me confidence. Thank you team!",
+    treatment: "Angioplasty",
+    date: "1 week ago",
+    avatar: "SD"
+  },
+  {
+    id: 5,
+    name: "Vikash Gupta",
+    location: "Bhagalpur, Bihar",
+    rating: 5,
+    text: "From consultation to surgery, everything was handled professionally. The hospital facilities are world-class. Dr. Priya is an excellent cardiologist.",
+    treatment: "Cardiology Consultation",
+    date: "2 months ago",
+    avatar: "VG"
+  },
+  {
+    id: 6,
+    name: "Neha Sharma",
+    location: "Purnia, Bihar",
+    rating: 5,
+    text: "24/7 emergency services saved my father's life. The response time was incredible. This hospital is a blessing for Bihar.",
+    treatment: "Emergency Surgery",
+    date: "3 weeks ago",
+    avatar: "NS"
   }
 ];
 
-const trustStats = [
-  {
-    icon: Activity,
-    value: "5000+",
-    label: "Successful Heart Surgeries",
-    color: "text-red-600"
-  },
-  {
-    icon: Users,
-    value: "98%",
-    label: "Patient Satisfaction Rate",
-    color: "text-green-600"
-  },
-  {
-    icon: Clock,
-    value: "25+",
-    label: "Years of Cardiac Excellence",
-    color: "text-blue-600"
-  },
-  {
-    icon: Heart,
-    value: "24/7",
-    label: "Emergency Care Available",
-    color: "text-purple-600"
-  }
+const stats = [
+  { icon: Heart, label: "Lives Saved", value: "10,000+", color: "text-red-500" },
+  { icon: Shield, label: "Successful Surgeries", value: "5,000+", color: "text-blue-500" },
+  { icon: Award, label: "Years of Excellence", value: "25+", color: "text-green-500" }
 ];
 
-const Testimonials = () => {
+export default function Testimonials() {
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-blue-50">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why 10,000+ Patients Choose Jeevak Heart Hospital
+    <section className="py-20 bg-gradient-to-br from-muted/50 via-background to-primary/5">
+      <div className="container">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
+            <Heart className="mr-2 h-3 w-3" />
+            Patient Stories
+          </Badge>
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+            What Our Patients Say
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Real stories from patients who received life-saving cardiac care
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Real stories from real patients who trusted us with their heart health
           </p>
         </div>
 
-        {/* Testimonial Cards */}
+        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <Card key={index} className="medical-card text-center hover-lift animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <CardContent className="p-8">
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center ${stat.color}`}>
+                  <stat.icon className="w-8 h-8" />
+                </div>
+                <h3 className="text-3xl font-bold mb-2 text-primary">{stat.value}</h3>
+                <p className="text-muted-foreground font-medium">{stat.label}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={testimonial.id} 
-              className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-slide-up"
+              className="medical-card hover-lift animate-fade-in" 
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6">
-                {/* Patient Photo and Rating */}
-                <div className="flex items-center mb-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-20 h-20 rounded-full border-4 border-blue-100 mr-4"
-                  />
-                  <div>
-                    <div className="flex mb-2">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star 
-                          key={i} 
-                          className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                        />
-                      ))}
+                {/* Quote Icon */}
+                <div className="mb-4">
+                  <Quote className="w-8 h-8 text-primary/30" />
+                </div>
+
+                {/* Rating */}
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+
+                {/* Testimonial Text */}
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  "{testimonial.text}"
+                </p>
+
+                {/* Patient Info */}
+                <div className="flex items-center space-x-4">
+                  <Avatar className="w-12 h-12">
+                    <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+                      {testimonial.avatar}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">{testimonial.name}</h4>
+                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                    <div className="flex items-center space-x-2 mt-1">
+                      <Badge variant="outline" className="text-xs">
+                        {testimonial.treatment}
+                      </Badge>
+                      <span className="text-xs text-muted-foreground">{testimonial.date}</span>
                     </div>
-                    <h3 className="font-semibold text-gray-900">
-                      {testimonial.name}, {testimonial.age}
-                    </h3>
-                    <p className="text-sm text-gray-600">{testimonial.location}</p>
                   </div>
-                </div>
-
-                {/* Quote */}
-                <blockquote className="mb-4">
-                  <p className="text-gray-700 text-lg leading-relaxed italic">
-                    "{testimonial.quote}"
-                  </p>
-                </blockquote>
-
-                {/* Treatment Badge */}
-                <div className="mb-3">
-                  <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                    {testimonial.treatment}
-                  </span>
-                </div>
-
-                {/* Outcome */}
-                <div className="border-t pt-3">
-                  <p className="text-green-600 font-semibold flex items-center">
-                    <Heart className="w-4 h-4 mr-2" />
-                    {testimonial.outcome}
-                  </p>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Trust Statistics */}
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {trustStats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div 
-                  key={index} 
-                  className="text-center animate-fade-in"
-                  style={{ animationDelay: `${(index + 3) * 0.1}s` }}
-                >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4 ${stat.color}`}>
-                    <Icon className="w-8 h-8" />
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
-                    {stat.value}
-                  </div>
-                  <p className="text-gray-600 font-medium">
-                    {stat.label}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <Card className="medical-card max-w-2xl mx-auto bg-gradient-to-r from-primary/5 to-primary/10">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-4">Ready to Experience World-Class Heart Care?</h3>
+              <p className="text-muted-foreground mb-6">
+                Join thousands of satisfied patients who trust us with their heart health
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary">
+                  <Star className="w-4 h-4 mr-2 fill-current" />
+                  4.9/5 Patient Rating
+                </Badge>
+                <Badge variant="secondary" className="px-4 py-2 bg-green-100 text-green-800">
+                  <Shield className="w-4 h-4 mr-2" />
+                  100% Safe & Secure
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
   );
-};
-
-export default Testimonials;
+}
