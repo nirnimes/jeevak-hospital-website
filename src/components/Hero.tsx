@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Award, Users, ShieldCheck, Phone, Calendar, Clock, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Heart, Award, Users, ShieldCheck, Shield, Phone, Calendar, Clock, CheckCircle, ArrowRight, Star } from "lucide-react";
 import heroImage from "@/assets/hero-hospital.jpg";
 
 const Hero = () => {
