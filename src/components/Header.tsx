@@ -34,8 +34,8 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <h1 className="text-lg font-bold text-foreground">Jeevak Heart Hospital</h1>
-                <p className="text-xs text-primary">Bihar's Premier Cardiac Care Center</p>
+                <h1 className="text-lg font-bold text-foreground">Anupama Hospital Pvt Ltd</h1>
+                <p className="text-xs text-primary">Multispecialty Hospital, Ashok Rajpath, Patna</p>
               </div>
             </div>
 

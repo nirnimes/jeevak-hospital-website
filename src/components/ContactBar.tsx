@@ -6,7 +6,7 @@ const ContactBar = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-primary-foreground">
           <a 
-            href="tel:+916122670991" 
+            href="tel:+910000000000" 
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             aria-label="Call main hospital line"
           >
@@ -15,12 +15,12 @@ const ContactBar = () => {
             </div>
             <div>
               <div className="text-xs opacity-90">Main Hospital</div>
-              <div className="font-semibold">+91-612-2670991</div>
+              <div className="font-semibold">(Update from Justdial)</div>
             </div>
           </a>
 
           <a 
-            href="tel:+916122670992" 
+            href="tel:+910000000000" 
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             aria-label="Call emergency cardiac care line 24/7"
           >
@@ -28,13 +28,13 @@ const ContactBar = () => {
               <Phone className="h-5 w-5 text-white" />
             </div>
             <div>
-              <div className="text-xs opacity-90">Emergency Cardiac 24/7</div>
-              <div className="font-semibold">+91-612-2670992</div>
+              <div className="text-xs opacity-90">Emergency 24/7</div>
+              <div className="font-semibold">(Update from Justdial)</div>
             </div>
           </a>
 
           <a 
-            href="https://wa.me/919430012345" 
+            href="https://wa.me/910000000000" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
@@ -45,12 +45,12 @@ const ContactBar = () => {
             </div>
             <div>
               <div className="text-xs opacity-90">WhatsApp</div>
-              <div className="font-semibold">+91-9430012345</div>
+              <div className="font-semibold">(Update from Justdial)</div>
             </div>
           </a>
 
           <a 
-            href="mailto:info@jeevakhospital.com"
+            href="mailto:contact@example.com"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             aria-label="Send us an email"
           >
@@ -59,7 +59,7 @@ const ContactBar = () => {
             </div>
             <div>
               <div className="text-xs opacity-90">Email Us</div>
-              <div className="font-semibold text-sm">info@jeevakhospital.com</div>
+              <div className="font-semibold text-sm">contact@example.com</div>
             </div>
           </a>
         </div>

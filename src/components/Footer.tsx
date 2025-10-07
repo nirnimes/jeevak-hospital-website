@@ -34,8 +34,8 @@ const Footer = () => {
                 <Heart className="h-5 w-5 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="font-bold text-lg">Jeevak Heart Hospital</h3>
-                <p className="text-xs text-muted-foreground">& Research Institute</p>
+                <h3 className="font-bold text-lg">Anupama Hospital Pvt Ltd</h3>
+                <p className="text-xs text-muted-foreground">Multispecialty Hospital</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -50,21 +50,20 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm">+91-612-2365814</p>
-                  <p className="text-sm">+91-612-2345895</p>
+                  <p className="text-sm">(Update main phone from Justdial)</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <a href="mailto:info@jeevakhospital.com" className="text-sm hover:text-primary transition-colors">
-                  info@jeevakhospital.com
+                <a href="mailto:contact@example.com" className="text-sm hover:text-primary transition-colors">
+                  contact@example.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <div className="text-sm">
-                  <p>6, Doctor's Colony, Kankarbagh</p>
-                  <p>Patna - 800020, Bihar, India</p>
+                  <p>Behind Side Of Arvind Hospital, Ashok Rajpath</p>
+                  <p>Patna, Bihar, India</p>
                 </div>
               </div>
             </div>
@@ -97,7 +96,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © {currentYear} Jeevak Heart Hospital & Research Institute. All Rights Reserved.
+              © {currentYear} Anupama Hospital Pvt Ltd. All Rights Reserved.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">

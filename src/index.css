@@ -132,6 +132,20 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Healthcare specific component styles */
+  .medical-card {
+    @apply bg-card text-card-foreground rounded-xl border shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  .medical-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-6 py-3 font-semibold transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .medical-button-emergency {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-lg px-6 py-3 font-semibold transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  /* YC Startup level animations */
   .animate-fade-in {
     animation: fade-in 0.5s ease-out;
   }
@@ -140,6 +154,11 @@ All colors MUST be HSL.
     animation: slide-up 0.6s ease-out;
   }
   
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out;
+  }
+  
+  /* Modern hover effects */
   .hover-lift {
     transition: var(--transition-base);
   }
@@ -147,6 +166,38 @@ All colors MUST be HSL.
   .hover-lift:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
+  }
+  
+  /* Glass morphism effects */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+  
+  /* Gradient backgrounds */
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
+  }
+  
+  .gradient-card {
+    background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  }
+  
+  /* Modern focus states */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+  
+  /* Status indicators */
+  .status-online {
+    @apply bg-green-500 text-white;
+  }
+  
+  .status-busy {
+    @apply bg-yellow-500 text-white;
+  }
+  
+  .status-offline {
+    @apply bg-gray-500 text-white;
   }
 }
 

@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import EmergencyContact from "@/components/EmergencyContact";
 import ContactBar from "@/components/ContactBar";
 import CallbackForm from "@/components/CallbackForm";
+import AppointmentBooking from "@/components/AppointmentBooking";
+import DoctorCards from "@/components/DoctorCards";
 
 const Index = () => {
   return (
@@ -22,6 +24,10 @@ const Index = () => {
         </section>
         <ContactBar />
         <Services />
+        <DoctorCards />
+        <div className="py-10 text-center">
+          <AppointmentBooking />
+        </div>
         <About />
       </main>
       <Footer />
