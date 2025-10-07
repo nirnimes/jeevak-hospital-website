@@ -114,19 +114,19 @@ const About = () => {
       <Header />
       <main>
         {/* About Hero */}
-        <section className="py-responsive bg-gradient-to-br from-primary/5 to-secondary/10">
-          <div className="container-responsive">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-primary/5 to-secondary/10">
+          <div className="container">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
                 <Badge className="mb-4">Our Story</Badge>
-                <h1 className="text-responsive-4xl font-bold mb-6">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                   26 Years of{" "}
                   <span className="text-primary">Transforming Lives</span>
                 </h1>
-                <p className="text-responsive-xl text-muted-foreground mb-8">
+                <p className="text-lg md:text-xl text-muted-foreground mb-8">
                   From a vision to provide world-class cardiac care in Bihar to becoming the region's most trusted heart hospital, our journey has been one of dedication, innovation, and compassion.
                 </p>
-                <div className="grid-responsive-2">
+                <div className="grid grid-cols-2 gap-6">
                   <div>
                     <div className="text-3xl font-bold text-primary">10,000+</div>
                     <div className="text-sm text-muted-foreground">Lives Saved</div>
@@ -173,31 +173,25 @@ const About = () => {
               </p>
             </div>
 
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary/20 h-full"></div>
-              
-              <div className="space-y-12">
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-8">
                 {milestones.map((milestone, index) => (
-                  <div key={milestone.year} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                    <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
+                  <div key={milestone.year} className="flex items-center space-x-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        {milestone.year}
+                      </div>
+                    </div>
+                    <div className="flex-1">
                       <Card className="hover:shadow-lg transition-shadow">
                         <CardHeader>
-                          <div className={`flex items-center space-x-3 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-                            <Badge variant="outline" className="text-primary border-primary">
-                              {milestone.year}
-                            </Badge>
-                            <CardTitle className="text-lg">{milestone.event}</CardTitle>
-                          </div>
+                          <CardTitle className="text-xl">{milestone.event}</CardTitle>
                         </CardHeader>
                         <CardContent>
-                          <p className="text-muted-foreground text-overflow-fix break-words">{milestone.description}</p>
+                          <p className="text-muted-foreground leading-relaxed">{milestone.description}</p>
                         </CardContent>
                       </Card>
                     </div>
-                    
-                    <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg relative z-10"></div>
-                    
-                    <div className="w-1/2"></div>
                   </div>
                 ))}
               </div>
