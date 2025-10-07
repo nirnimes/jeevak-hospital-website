@@ -1,27 +1,38 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Stethoscope, Activity, Siren } from "lucide-react";
+import { Heart, Bone, Stethoscope, Siren, Baby, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: Heart,
-      title: "Coronary Angioplasty",
-      description: "Advanced coronary angioplasty with and without stent placement, ensuring optimal heart function.",
+      title: "Cardiology",
+      description: "Comprehensive cardiac care including angioplasty, bypass surgery, valve replacement, and advanced interventional procedures.",
     },
     {
-      icon: Activity,
-      title: "Open Heart Surgery",
-      description: "Comprehensive open heart surgery for simple and complex congenital heart defects, including neonatal cases.",
+      icon: Bone,
+      title: "Orthopedics",
+      description: "Expert treatment for bone, joint, and muscle conditions. Specializing in joint replacement, sports injuries, and spine care.",
     },
     {
       icon: Stethoscope,
-      title: "Valve Replacement",
-      description: "Expert valve replacement and repair procedures using cutting-edge technology and techniques.",
+      title: "Internal Medicine",
+      description: "Complete diagnostic and treatment services for adult medical conditions, chronic disease management, and preventive care.",
     },
     {
       icon: Siren,
-      title: "24/7 Emergency Care",
-      description: "Round-the-clock cardiac emergency services with dedicated paramedic staff and state-of-the-art equipment.",
+      title: "Emergency Care",
+      description: "24/7 emergency services with state-of-the-art trauma care, critical care units, and dedicated emergency physicians.",
+    },
+    {
+      icon: Baby,
+      title: "Pediatrics",
+      description: "Specialized care for infants, children, and adolescents. From routine checkups to complex pediatric procedures.",
+    },
+    {
+      icon: Users,
+      title: "Women's Health",
+      description: "Comprehensive women's healthcare including obstetrics, gynecology, maternal-fetal medicine, and wellness programs.",
     },
   ];
 
@@ -30,18 +41,18 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Specialized Cardiac Services
+            Our Medical Services
           </h2>
           <p className="text-lg text-muted-foreground">
-            Comprehensive cardiac care with international standards, bringing world-class treatment to Bihar
+            Comprehensive healthcare services with world-class facilities and experienced medical professionals
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="hover-lift border-border/50 bg-card"
+              className="hover-lift border-border/50 bg-card animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
@@ -51,39 +62,28 @@ const Services = () => {
                 <CardTitle className="text-xl">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base mb-4">
                   {service.description}
                 </CardDescription>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group"
+                >
+                  Learn More
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Additional Services List */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <Card className="border-border/50">
-            <CardHeader>
-              <CardTitle className="text-2xl">Complete Treatment Range</CardTitle>
-              <CardDescription>All cardiac procedures under one roof</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {[
-                  "Coronary Artery Bypass Surgery",
-                  "Balloon Mitral Valvotomy",
-                  "Pacemaker Implantation",
-                  "Surgery for Aortic Aneurysm",
-                  "Cardiac Catheterization",
-                  "Interventional Cardiology",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-secondary" />
-                    <span className="text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+        {/* Additional Specialties */}
+        <div className="mt-16 text-center max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground">
+            In addition to our core services, we offer specialized treatments in neurology, dermatology, 
+            oncology, nephrology, and more. Our multidisciplinary approach ensures comprehensive care 
+            for all your healthcare needs.
+          </p>
         </div>
       </div>
     </section>
