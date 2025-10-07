@@ -40,7 +40,7 @@ const CallbackForm = () => {
     
     toast({
       title: "Request Received!",
-      description: "We'll contact you within 24 hours.",
+      description: "Our cardiac care specialist will contact you shortly.",
     });
   };
 
@@ -50,10 +50,21 @@ const CallbackForm = () => {
         <div className="text-center">
           <CheckCircle2 className="h-16 w-16 text-secondary mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
-          <p className="text-muted-foreground mb-4">We'll contact you within 24 hours</p>
-          <p className="text-sm text-muted-foreground">
-            Your information is HIPAA-protected and will only be used for medical consultation purposes.
-          </p>
+          <p className="text-muted-foreground mb-4">Our cardiac care specialist will contact you shortly</p>
+          <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2 justify-center">
+              <CheckCircle2 className="h-4 w-4 text-secondary" />
+              <span>Free consultation</span>
+            </div>
+            <div className="flex items-center gap-2 justify-center">
+              <CheckCircle2 className="h-4 w-4 text-secondary" />
+              <span>No waiting lists</span>
+            </div>
+            <div className="flex items-center gap-2 justify-center">
+              <CheckCircle2 className="h-4 w-4 text-secondary" />
+              <span>HIPAA protected</span>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -62,29 +73,29 @@ const CallbackForm = () => {
   return (
     <div className="bg-card rounded-lg p-6 md:p-8 shadow-lg border border-border">
       <div className="mb-6">
-        <h3 className="text-2xl font-bold text-foreground mb-3">
+        <h3 className="text-2xl font-bold text-foreground mb-2">
           Get Expert Cardiac Care - Free Consultation
         </h3>
-        <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
-          <span className="flex items-center gap-1">
+        <div className="flex flex-wrap gap-4 mt-4">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <CheckCircle2 className="h-4 w-4 text-secondary" />
-            Free consultation
-          </span>
-          <span className="flex items-center gap-1">
+            <span>Free consultation</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <CheckCircle2 className="h-4 w-4 text-secondary" />
-            No waiting lists
-          </span>
-          <span className="flex items-center gap-1">
+            <span>No waiting lists</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <CheckCircle2 className="h-4 w-4 text-secondary" />
-            HIPAA protected
-          </span>
+            <span>HIPAA protected</span>
+          </div>
         </div>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         <div>
           <Label htmlFor="fullName" className="text-foreground">
-            Full Name <span className="text-destructive">*</span>
+            Name <span className="text-destructive">*</span>
           </Label>
           <Input
             id="fullName"
@@ -106,7 +117,7 @@ const CallbackForm = () => {
         <div>
           <Label htmlFor="phone" className="text-foreground flex items-center gap-2">
             <Phone className="h-4 w-4" />
-            Phone Number <span className="text-destructive">*</span>
+            Phone <span className="text-destructive">*</span>
           </Label>
           <Input
             id="phone"
@@ -127,35 +138,46 @@ const CallbackForm = () => {
 
         <div>
           <Label htmlFor="service" className="text-foreground">
-            Preferred Service (Optional)
+            Preferred Service <span className="text-muted-foreground text-xs">(Optional)</span>
           </Label>
           <Select onValueChange={(value) => setValue("service", value)}>
             <SelectTrigger 
               id="service" 
               className="mt-1.5 h-12 text-base"
+              aria-invalid={!!errors.service}
             >
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
             <SelectContent>
+              <SelectItem value="cardiology">Cardiology - Heart Care</SelectItem>
               <SelectItem value="angioplasty">Angioplasty</SelectItem>
-              <SelectItem value="bypass-surgery">Bypass Surgery</SelectItem>
-              <SelectItem value="valve-replacement">Valve Replacement</SelectItem>
-              <SelectItem value="heart-checkup">Heart Checkup</SelectItem>
+              <SelectItem value="bypass">Bypass Surgery</SelectItem>
+              <SelectItem value="valve">Valve Replacement</SelectItem>
+              <SelectItem value="general">General Consultation</SelectItem>
               <SelectItem value="emergency">Emergency Care</SelectItem>
-              <SelectItem value="consultation">General Consultation</SelectItem>
+              <SelectItem value="checkup">Heart Checkup</SelectItem>
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
           </Select>
+          {errors.service && (
+            <p className="text-sm text-destructive mt-1" role="alert">
+              {errors.service.message}
+            </p>
+          )}
         </div>
 
         <Button
           type="submit"
           size="lg"
-          className="w-full h-14 text-base font-semibold bg-secondary hover:bg-secondary/90"
+          className="w-full h-14 text-lg font-semibold bg-secondary hover:bg-secondary/90"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Submitting..." : "Request My Consultation"}
         </Button>
+
+        <p className="text-xs text-center text-muted-foreground">
+          For cardiac emergencies, call our 24/7 helpline: +91-612-2670992
+        </p>
       </form>
     </div>
   );
