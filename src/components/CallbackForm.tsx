@@ -12,16 +12,8 @@ import { toast } from "@/hooks/use-toast";
 const indianPhoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[6-9]\d{9}$/;
 
 const formSchema = z.object({
-  fullName: z
-    .string()
-    .min(2, "Name must be at least 2 characters")
-    .max(100),
-  phone: z
-    .string()
-    .regex(
-      indianPhoneRegex,
-      "Please enter a valid Indian phone number (10 digits, starting with 6-9)",
-    ),
+  fullName: z.string().min(2, "Name must be at least 2 characters").max(100),
+  phone: z.string().regex(indianPhoneRegex, "Please enter a valid Indian phone number (10 digits, starting with 6-9)"),
   service: z.string().optional(),
 });
 
