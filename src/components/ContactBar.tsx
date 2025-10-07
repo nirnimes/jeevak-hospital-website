@@ -22,13 +22,13 @@ const ContactBar = () => {
           <a 
             href="tel:+916122670992" 
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-            aria-label="Call emergency line"
+            aria-label="Call emergency cardiac care line 24/7"
           >
-            <div className="h-10 w-10 rounded-full bg-destructive flex items-center justify-center flex-shrink-0">
+            <div className="h-10 w-10 rounded-full bg-destructive flex items-center justify-center flex-shrink-0 animate-pulse">
               <Phone className="h-5 w-5 text-white" />
             </div>
             <div>
-              <div className="text-xs opacity-90">Emergency 24/7</div>
+              <div className="text-xs opacity-90">Emergency Cardiac 24/7</div>
               <div className="font-semibold">+91-612-2670992</div>
             </div>
           </a>
