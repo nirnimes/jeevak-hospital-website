@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart } from "lucide-react";
+import { ArrowRight, Heart, Award, Users, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-hospital.jpg";
 
 const Hero = () => {
@@ -24,36 +24,51 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-slide-up leading-tight">
-            Complete Cardiac Care You Can Trust
+            Expert Medical Care You Can Trust
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 animate-slide-up max-w-2xl">
             State-of-the-art cardiac care with world-class facilities. From coronary angioplasty to open heart surgery, we bring international standards to Bihar.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
-            <Button size="lg" variant="secondary" className="group">
-              Book Appointment
+          <div className="flex flex-col sm:flex-row gap-4 animate-slide-up mb-12">
+            <Button size="lg" variant="secondary" className="group text-base px-8">
+              Request Callback
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-primary-foreground hover:bg-white/20">
+            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-primary-foreground hover:bg-white/20 text-base px-8">
               Learn More
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-primary-foreground/20">
-            <div className="animate-fade-in">
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-1">25+</div>
-              <div className="text-sm text-primary-foreground/80">Years Experience</div>
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-primary-foreground/20">
+            <div className="flex items-start gap-3 animate-fade-in">
+              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                <Award className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary-foreground mb-1">Board Certified</div>
+                <div className="text-sm text-primary-foreground/80">Expert Physicians</div>
+              </div>
             </div>
-            <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-1">5000+</div>
-              <div className="text-sm text-primary-foreground/80">Surgeries Performed</div>
+            <div className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                <Clock className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary-foreground mb-1">20+ Years</div>
+                <div className="text-sm text-primary-foreground/80">Of Excellence</div>
+              </div>
             </div>
-            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-1">24/7</div>
-              <div className="text-sm text-primary-foreground/80">Emergency Care</div>
+            <div className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                <Users className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary-foreground mb-1">10,000+</div>
+                <div className="text-sm text-primary-foreground/80">Patients Treated</div>
+              </div>
             </div>
           </div>
         </div>
