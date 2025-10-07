@@ -1,15 +1,15 @@
-import { Phone, Menu, Heart, ChevronDown, ChevronUp } from "lucide-react";
+import { Phone, Menu, Hospital } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isEmergencyCollapsed, setIsEmergencyCollapsed] = useState(false);
+  const [emergencyCollapsed, setEmergencyCollapsed] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Services", href: "#services" },
-    { name: "Emergency", href: "tel:+916122670992" },
+    { name: "Emergency", href: "#emergency" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
@@ -17,34 +17,44 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        {/* Sticky Emergency Bar */}
+        {/* Emergency Bar */}
         <div className="bg-destructive text-destructive-foreground -mx-4 px-4">
-          {/* Expanded */}
-          {!isEmergencyCollapsed && (
-            <div className="container mx-auto flex items-center justify-between text-sm py-2">
-              <span className="font-medium">Emergency Cardiac Care: <a href="tel:+916122670992" className="underline underline-offset-2">+91-612-2670992</a> | Available 24/7</span>
-              <div className="flex items-center gap-3">
-                <a href="tel:+916122670992" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-                  <Phone className="h-4 w-4" />
-                  <span className="font-semibold">Call Now</span>
-                </a>
-                <button className="md:hidden" aria-label="Collapse emergency bar" onClick={() => setIsEmergencyCollapsed(true)}>
-                  <ChevronUp className="h-4 w-4" />
-                </button>
-              </div>
-            </div>
-          )}
-          {/* Collapsed (mobile) */}
-          {isEmergencyCollapsed && (
-            <div className="container mx-auto flex items-center justify-between text-sm py-1 md:py-2">
-              <a href="tel:+916122670992" className="flex items-center gap-2">
-                <div className="h-6 w-6 rounded-full bg-white/20 flex items-center justify-center">
-                  <Phone className="h-4 w-4" />
-                </div>
-                <span className="font-semibold">Emergency</span>
+          {emergencyCollapsed ? (
+            <div className="container mx-auto flex items-center justify-between text-sm py-1.5">
+              <a
+                href="tel:+916122670992"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                aria-label="Emergency Cardiac Care: Call +91-612-2670992"
+              >
+                <Phone className="h-4 w-4" />
+                <span className="font-semibold">Emergency 24/7: +91-612-2670992</span>
               </a>
-              <button className="md:hidden" aria-label="Expand emergency bar" onClick={() => setIsEmergencyCollapsed(false)}>
-                <ChevronDown className="h-4 w-4" />
+              <button
+                className="md:hidden text-destructive-foreground/90 text-xs underline"
+                onClick={() => setEmergencyCollapsed(false)}
+                aria-label="Expand emergency bar"
+              >
+                Show
+              </button>
+            </div>
+          ) : (
+            <div className="container mx-auto flex items-center justify-between text-sm py-2">
+              <a
+                href="tel:+916122670992"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                aria-label="Emergency Cardiac Care: Call +91-612-2670992"
+              >
+                <Phone className="h-4 w-4" />
+                <span className="font-semibold">
+                  Emergency Cardiac Care: +91-612-2670992 | Available 24/7
+                </span>
+              </a>
+              <button
+                className="md:hidden text-destructive-foreground/90 text-xs underline"
+                onClick={() => setEmergencyCollapsed(true)}
+                aria-label="Collapse emergency bar"
+              >
+                Hide
               </button>
             </div>
           )}
@@ -56,7 +66,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center gap-3">
               <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
-                <Heart className="h-6 w-6 text-primary-foreground" />
+                <Hospital className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
                 <h1 className="text-lg font-bold text-foreground">Jeevak Heart Hospital</h1>
@@ -65,7 +75,7 @@ const Header = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -75,11 +85,15 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <a href="tel:+916122670992" className="font-semibold text-destructive hover:opacity-90 transition-opacity">
+              <a
+                href="tel:+916122670992"
+                className="text-destructive font-semibold hover:opacity-80 transition-opacity"
+                aria-label="Call Emergency +91-612-2670992"
+              >
                 +91-612-2670992
               </a>
-              <Button variant="default" size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-                <a href="#home">Book Consultation</a>
+              <Button variant="default" size="sm" asChild>
+                <a href="#consultation">Request My Consultation</a>
               </Button>
             </div>
 
@@ -98,22 +112,15 @@ const Header = () => {
               {navItems.map((item) => (
                 <a
                   key={item.name}
-                  href={item.href}
-                  className="block text-foreground hover:text-primary transition-colors font-medium"
+                  href={item.name === "Emergency" ? "tel:+916122670992" : item.href}
+                  className={`block transition-colors font-medium ${item.name === "Emergency" ? "text-destructive" : "text-foreground hover:text-primary"}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <a
-                href="tel:+916122670992"
-                className="block text-center font-semibold text-destructive"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                +91-612-2670992
-              </a>
-              <Button variant="default" size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-                <a href="#home" onClick={() => setMobileMenuOpen(false)}>Book Consultation</a>
+              <Button variant="default" size="sm" className="w-full" asChild>
+                <a href="#consultation">Request My Consultation</a>
               </Button>
             </div>
           )}
