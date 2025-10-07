@@ -9,9 +9,9 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  // Required for GitHub Pages when hosted at /anupama-hospital-website
+  // Required for GitHub Pages when hosted at /jeevak-hospital-website
   // Dev server ignores base; it only affects build output asset paths
-  base: "/anupama-hospital-website/",
+  base: "/jeevak-hospital-website/",
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
