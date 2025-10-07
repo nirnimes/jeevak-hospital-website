@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Heart } from "lucide-react";
+import { Phone, Mail, MapPin, Heart, GitBranch } from "lucide-react";
+import { buildShortSha, buildTime, hasBuildInfo } from "@/lib/buildInfo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -79,10 +80,20 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground text-center md:text-left">
               © {currentYear} Jeevak Heart Hospital & Research Institute. All Rights Reserved.
             </p>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>Made with</span>
-              <Heart className="h-4 w-4 text-destructive fill-current" />
-              <span>for better cardiac care</span>
+            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <span>Made with</span>
+                <Heart className="h-4 w-4 text-destructive fill-current" />
+                <span>for better cardiac care</span>
+              </div>
+              {hasBuildInfo() && (
+                <div className="flex items-center gap-2">
+                  <GitBranch className="h-4 w-4" />
+                  <span className="tabular-nums">{buildShortSha}</span>
+                  <span aria-hidden>•</span>
+                  <time dateTime={buildTime}>{new Date(buildTime).toLocaleString()}</time>
+                </div>
+              )}
             </div>
           </div>
         </div>
