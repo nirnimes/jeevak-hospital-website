@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Bone, Stethoscope, Siren, Baby, Users } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
   const services = [
@@ -85,6 +86,19 @@ const Services = () => {
             for all your healthcare needs.
           </p>
         </div>
+
+      {/* CTA After Services */}
+      <div className="mt-16 text-center">
+        <h3 className="text-2xl font-bold mb-4">Find the Right Cardiac Treatment</h3>
+        <div className="flex items-center justify-center gap-4">
+          <Button size="lg" asChild>
+            <a href="#consultation">Request My Consultation</a>
+          </Button>
+          <Button size="lg" variant="outline" asChild>
+            <a href="tel:+916122670992">Call Emergency</a>
+          </Button>
+        </div>
+      </div>
       </div>
     </section>
   );

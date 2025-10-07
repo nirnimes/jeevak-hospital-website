@@ -6,6 +6,25 @@ const Footer = () => {
   return (
     <footer id="contact" className="bg-muted/50 border-t border-border">
       <div className="container mx-auto px-4 py-12">
+        {/* Pre-footer CTA */}
+        <div className="mb-10 p-6 rounded-lg bg-card border border-border text-center">
+          <h3 className="text-2xl font-bold mb-3">Get Emergency Heart Care Now</h3>
+          <div className="flex items-center justify-center gap-4">
+            <a
+              href="tel:+916122670992"
+              className="inline-flex items-center justify-center h-11 px-6 rounded-md bg-destructive text-destructive-foreground font-semibold hover:opacity-90 transition-opacity"
+            >
+              Call +91-612-2670992
+            </a>
+            <a
+              href="#consultation"
+              className="inline-flex items-center justify-center h-11 px-6 rounded-md border border-border font-semibold hover:bg-muted/50 transition-colors"
+            >
+              Request My Consultation
+            </a>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
