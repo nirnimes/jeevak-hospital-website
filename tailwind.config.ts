@@ -57,6 +57,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        medical: {
+          blue: "#2563eb",
+          teal: "#059669",
+          red: "#dc2626",
+          gray: "#6b7280",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Poppins", "Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
