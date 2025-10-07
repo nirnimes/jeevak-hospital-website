@@ -1,4 +1,4 @@
-import { Phone, Menu, FirstAidKit, ChevronDown, ChevronUp } from "lucide-react";
+import { Phone, Menu, Heart, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -56,7 +56,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center gap-3">
               <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
-                <FirstAidKit className="h-6 w-6 text-primary-foreground" />
+                <Heart className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
                 <h1 className="text-lg font-bold text-foreground">Jeevak Heart Hospital</h1>
