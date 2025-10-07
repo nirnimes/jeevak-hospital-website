@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, CheckCircle2 } from "lucide-react";
+import { Phone, CheckCircle2, Loader2 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const indianPhoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[6-9]\d{9}$/;
@@ -20,9 +20,8 @@ const formSchema = z.object({
     .string()
     .regex(
       indianPhoneRegex,
-      "Enter a valid Indian mobile number (10 digits, starts with 6-9)",
+      "Please enter a valid Indian phone number (10 digits, starting with 6-9)",
     ),
-  // Optional per requirement
   service: z.string().optional(),
 });
 
@@ -37,6 +36,7 @@ const CallbackForm = () => {
     formState: { errors, isSubmitting, touchedFields },
     setValue,
     watch,
+    reset,
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     mode: "onBlur",
@@ -46,6 +46,9 @@ const CallbackForm = () => {
   const fullNameValue = watch("fullName");
   const phoneValue = watch("phone");
   const serviceValue = watch("service");
+
+  const isFullNameValid = !!touchedFields.fullName && !errors.fullName && (fullNameValue?.trim().length ?? 0) >= 2;
+  const isPhoneValid = !!touchedFields.phone && !errors.phone && indianPhoneRegex.test(phoneValue ?? "");
 
   const onSubmit = async (data: FormData) => {
     // Simulate API call
@@ -58,13 +61,14 @@ const CallbackForm = () => {
       title: "Request Received!",
       description: "We'll contact you within 24 hours.",
     });
+    reset();
   };
 
   if (isSubmitted) {
     return (
       <div className="bg-card rounded-lg p-8 shadow-lg border border-border animate-fade-in">
         <div className="text-center">
-          <CheckCircle2 className="h-16 w-16 text-secondary mx-auto mb-4" />
+          <CheckCircle2 className="h-16 w-16 text-green-600 mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
           <p className="text-muted-foreground mb-4">We'll contact you within 24 hours</p>
           <p className="text-sm text-muted-foreground">
@@ -77,37 +81,34 @@ const CallbackForm = () => {
 
   return (
     <div className="bg-card rounded-lg p-6 md:p-8 shadow-lg border border-border">
+      <div className="mb-3">
+        <p className="text-xs md:text-sm text-muted-foreground" aria-live="polite">🔒 Your information is HIPAA-protected and secure</p>
+      </div>
       <div className="mb-6">
-        <p className="text-xs md:text-sm text-muted-foreground" aria-live="polite">
-          🔒 Your information is HIPAA-protected and secure
-        </p>
-        <h3 className="text-2xl font-bold text-foreground mt-2">
-          Request Your Free Medical Consultation
-        </h3>
-        <p className="text-sm text-muted-foreground mt-1">
-          Expert doctors will contact you within 24 hours
-        </p>
+        <h3 className="text-2xl font-bold text-foreground mb-2">Request Your Free Medical Consultation</h3>
+        <p className="text-sm text-muted-foreground">Expert doctors will contact you within 24 hours</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
         <div>
-          <Label htmlFor="fullName" className="text-foreground">
-            Full Name <span className="text-destructive">*</span>
-          </Label>
+          <Label htmlFor="fullName" className="text-foreground">Full Name <span className="text-destructive">*</span></Label>
           <div className="relative">
             <Input
               id="fullName"
               type="text"
               placeholder="Enter your full name"
-              className="mt-1.5 h-12 text-base focus-visible:ring-blue-500"
+              className="mt-1.5 h-12 text-base focus-visible:ring-blue-500 focus-visible:border-blue-500"
               aria-required="true"
               aria-invalid={!!errors.fullName}
               aria-describedby={errors.fullName ? "fullName-error" : undefined}
+              autoComplete="name"
               {...register("fullName")}
             />
-            {touchedFields.fullName && !errors.fullName && fullNameValue ? (
-              <CheckCircle2 aria-hidden className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-green-600" />
-            ) : null}
+            {isFullNameValid && (
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-green-600" aria-hidden="true">
+                <CheckCircle2 className="h-5 w-5" />
+              </span>
+            )}
           </div>
           {errors.fullName && (
             <p id="fullName-error" className="text-sm text-destructive mt-1" role="alert">
@@ -125,22 +126,21 @@ const CallbackForm = () => {
             <Input
               id="phone"
               type="tel"
-              inputMode="tel"
-              autoComplete="tel"
               placeholder="10-digit mobile number"
-              className="mt-1.5 h-12 text-base focus-visible:ring-blue-500"
+              className="mt-1.5 h-12 text-base focus-visible:ring-blue-500 focus-visible:border-blue-500"
               aria-required="true"
               aria-invalid={!!errors.phone}
-              aria-describedby={errors.phone ? "phone-error" : "phone-help"}
+              aria-describedby={errors.phone ? "phone-error" : undefined}
+              inputMode="tel"
+              autoComplete="tel"
               {...register("phone")}
             />
-            {touchedFields.phone && !errors.phone && phoneValue ? (
-              <CheckCircle2 aria-hidden className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-green-600" />
-            ) : null}
+            {isPhoneValid && (
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-green-600" aria-hidden="true">
+                <CheckCircle2 className="h-5 w-5" />
+              </span>
+            )}
           </div>
-          {!errors.phone && (
-            <p id="phone-help" className="sr-only">Enter a 10-digit Indian mobile number starting with 6-9</p>
-          )}
           {errors.phone && (
             <p id="phone-error" className="text-sm text-destructive mt-1" role="alert">
               {errors.phone.message}
@@ -149,13 +149,11 @@ const CallbackForm = () => {
         </div>
 
         <div>
-          <Label htmlFor="service" className="text-foreground">
-            Preferred Service <span className="text-muted-foreground">(optional)</span>
-          </Label>
-          <Select onValueChange={(value) => setValue("service", value)} value={serviceValue}>
-            <SelectTrigger
-              id="service"
-              className="mt-1.5 h-12 text-base focus:ring-blue-500 focus:outline-none"
+          <Label htmlFor="service" className="text-foreground">Preferred Service (optional)</Label>
+          <Select onValueChange={(value) => setValue("service", value, { shouldDirty: true, shouldTouch: true })}>
+            <SelectTrigger 
+              id="service" 
+              className="mt-1.5 h-12 text-base focus:ring-blue-500 focus:border-blue-500"
               aria-invalid={false}
             >
               <SelectValue placeholder="Select a service (optional)" />
@@ -171,20 +169,23 @@ const CallbackForm = () => {
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
           </Select>
+          {serviceValue && (
+            <p className="text-xs text-green-600 mt-1" aria-live="polite">Service selected</p>
+          )}
         </div>
 
         <Button
           type="submit"
           size="lg"
-          className="w-full h-12 text-base font-semibold bg-[#059669] hover:bg-[#047857] focus-visible:ring-[#059669]"
+          className="w-full h-12 text-base font-semibold bg-[#059669] hover:bg-[#047857] text-white focus-visible:ring-white"
           disabled={isSubmitting}
           aria-busy={isSubmitting}
         >
           {isSubmitting ? (
-            <>
-              <span className="inline-flex h-4 w-4 animate-spin rounded-full border-2 border-white/60 border-t-white"></span>
-              <span>Sending request...</span>
-            </>
+            <span className="inline-flex items-center gap-2">
+              <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+              Sending request...
+            </span>
           ) : (
             "Request My Free Consultation"
           )}
