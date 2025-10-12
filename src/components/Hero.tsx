@@ -3,13 +3,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Award, Users, ShieldCheck, Shield, Phone, Calendar, Clock, CheckCircle, ArrowRight, Star } from "lucide-react";
 import heroImage from "@/assets/hero-hospital.jpg";
+import AppointmentBooking from "@/components/AppointmentBooking";
 
 const Hero = () => {
   return (
     <section 
-      id="main-content"
+      id="hero-section"
       className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-primary/5 via-background to-secondary/10 overflow-hidden"
-      role="main"
       aria-label="Hero section - Welcome to Anupama Hospital"
     >
       {/* Background Pattern */}
@@ -89,15 +89,7 @@ const Hero = () => {
 
             {/* Primary CTAs */}
             <div className="flex flex-col sm:flex-row gap-4" role="group" aria-label="Action buttons">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow medical-button-primary group focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                aria-label="Book free consultation appointment"
-              >
-                <Calendar className="mr-2 h-5 w-5" aria-hidden="true" />
-                Book Free Consultation
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </Button>
+              <AppointmentBooking />
               <Button 
                 variant="outline" 
                 size="lg" 

@@ -173,11 +173,76 @@ export default function AppointmentBooking() {
                 </Button>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <Input placeholder="First Name" />
-                <Input placeholder="Last Name" />
-              </div>
-              <Input placeholder="Phone Number" />
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input 
+                      id="firstName"
+                      placeholder="First Name" 
+                      {...form.register("firstName")}
+                    />
+                    {form.formState.errors.firstName && (
+                      <p className="text-sm text-destructive mt-1">{form.formState.errors.firstName.message}</p>
+                    )}
+                  </div>
+                  <div>
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input 
+                      id="lastName"
+                      placeholder="Last Name" 
+                      {...form.register("lastName")}
+                    />
+                    {form.formState.errors.lastName && (
+                      <p className="text-sm text-destructive mt-1">{form.formState.errors.lastName.message}</p>
+                    )}
+                  </div>
+                </div>
+                <div>
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input 
+                    id="phone"
+                    placeholder="Phone Number" 
+                    {...form.register("phone")}
+                  />
+                  {form.formState.errors.phone && (
+                    <p className="text-sm text-destructive mt-1">{form.formState.errors.phone.message}</p>
+                  )}
+                </div>
+                <div>
+                  <Label htmlFor="email">Email</Label>
+                  <Input 
+                    id="email"
+                    placeholder="Email Address" 
+                    type="email"
+                    {...form.register("email")}
+                  />
+                  {form.formState.errors.email && (
+                    <p className="text-sm text-destructive mt-1">{form.formState.errors.email.message}</p>
+                  )}
+                </div>
+                <div>
+                  <Label htmlFor="symptoms">Symptoms (Optional)</Label>
+                  <Textarea 
+                    id="symptoms"
+                    placeholder="Describe your symptoms or concerns..." 
+                    {...form.register("symptoms")}
+                  />
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="agreeToTerms"
+                    checked={form.watch("agreeToTerms")}
+                    onCheckedChange={(checked) => form.setValue("agreeToTerms", checked as boolean)}
+                  />
+                  <Label htmlFor="agreeToTerms" className="text-sm">
+                    I agree to the terms and conditions
+                  </Label>
+                </div>
+                {form.formState.errors.agreeToTerms && (
+                  <p className="text-sm text-destructive">{form.formState.errors.agreeToTerms.message}</p>
+                )}
+              </form>
 
               <Card className="bg-muted/50">
                 <CardHeader>
@@ -199,7 +264,21 @@ export default function AppointmentBooking() {
                 </CardContent>
               </Card>
 
-              <Button className="w-full" size="lg">Confirm Appointment</Button>
+              <Button 
+                type="submit"
+                className="w-full" 
+                size="lg"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Confirming...
+                  </>
+                ) : (
+                  "Confirm Appointment"
+                )}
+              </Button>
               <p className="text-xs text-muted-foreground text-center">You'll receive confirmation within 15 minutes via SMS and email</p>
             </div>
           )}

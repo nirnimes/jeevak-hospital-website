@@ -12,18 +12,18 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main role="main">
         <Hero />
         <Features />
         <Services />
         <DoctorCards />
         <Testimonials />
-        <div className="py-16 text-center bg-gradient-to-br from-primary/5 via-background to-primary/5">
+        <section className="py-16 text-center bg-gradient-to-br from-primary/5 via-background to-primary/5">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8">Ready to Book Your Appointment?</h2>
             <AppointmentBooking />
           </div>
-        </div>
+        </section>
       </main>
       <Footer />
       <EmergencyContact />

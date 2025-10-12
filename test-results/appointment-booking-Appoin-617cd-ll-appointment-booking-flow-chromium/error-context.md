@@ -1,0 +1,962 @@
+# Page snapshot
+
+```yaml
+- generic:
+  - generic:
+    - list
+    - region "Notifications alt+T"
+    - generic:
+      - link:
+        - /url: "#main-content"
+        - text: Skip to main content
+      - banner:
+        - generic:
+          - navigation:
+            - generic:
+              - link:
+                - /url: /jeevak-hospital-website
+                - generic:
+                  - img
+                - generic:
+                  - heading [level=1]: Anupama Hospital Pvt Ltd
+                  - paragraph: Multispecialty Hospital, Ashok Rajpath, Patna
+              - generic:
+                - menubar:
+                  - menuitem: Home
+                  - menuitem: Services
+                  - menuitem:
+                    - img
+                    - text: Emergency
+                  - menuitem: About
+                  - menuitem: Contact
+                - link:
+                  - /url: tel:+916122670992
+                  - img
+                  - generic: +91-612-2670992
+                - link:
+                  - /url: /jeevak-hospital-website/contact
+                  - button: Book Consultation
+      - main:
+        - main:
+          - generic:
+            - generic:
+              - generic:
+                - group:
+                  - generic:
+                    - img
+                    - text: "Bihar's #1 Heart Hospital"
+                  - generic: 25+ Years Trusted
+                - generic:
+                  - heading [level=1]: Your Heart, Our Promise Expert Care Close to Home
+                  - paragraph: When your heart needs expert care, you shouldn't have to travel far from family. Get world-class cardiac treatment right here in Bihar, with the compassion you deserve.
+                - group:
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - generic: 5000+ Surgeries
+                      - generic: Lives Saved
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - generic: < 5 minutes
+                      - generic: Emergency Response
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - generic: 98.5%
+                      - generic: Success Rate
+                  - generic:
+                    - generic:
+                      - img
+                    - generic:
+                      - generic: 24/7
+                      - generic: Always Here
+                - group:
+                  - button:
+                    - img
+                    - text: Book Free Consultation
+                    - img
+                  - button:
+                    - img
+                    - text: "Emergency: +91-612-267-0992"
+                - region:
+                  - generic:
+                    - img
+                    - generic:
+                      - heading [level=3]: Our Promise to You
+                      - paragraph: Every patient receives personalized care from our expert team. We treat you like family because your health is our highest priority.
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: Patient Success Story
+                          - generic: "\"They saved my life\" - Rajesh, 52"
+                      - generic:
+                        - generic:
+                          - img
+                - group:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - generic: 10,000+
+                        - generic: Lives Saved
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - generic: 24/7
+                        - generic: Emergency Care
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - img
+                - text: Why Choose Us
+              - heading [level=2]: World-Class Heart Care
+              - paragraph: Bihar's premier cardiac care center with cutting-edge technology and compassionate care
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: 98.5%
+                  - paragraph: Success Rate
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: 4.9/5
+                  - paragraph: Patient Satisfaction
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: < 15 min
+                  - paragraph: Average Wait Time
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: < 5 min
+                  - paragraph: Emergency Response
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Advanced Cardiac Surgery
+                  - paragraph: State-of-the-art equipment and minimally invasive procedures for faster recovery
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Minimally Invasive
+                    - generic:
+                      - img
+                      - generic: Faster Recovery
+                    - generic:
+                      - img
+                      - generic: Higher Success Rate
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: 24/7 Emergency Care
+                  - paragraph: Round-the-clock emergency services with rapid response time for critical cases
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: 24/7 Availability
+                    - generic:
+                      - img
+                      - generic: Rapid Response
+                    - generic:
+                      - img
+                      - generic: Critical Care
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Quick Appointments
+                  - paragraph: Same-day consultations and minimal wait times for your convenience
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Same-Day Booking
+                    - generic:
+                      - img
+                      - generic: Minimal Wait
+                    - generic:
+                      - img
+                      - generic: Flexible Timing
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Expert Medical Team
+                  - paragraph: Board-certified specialists with international training and extensive experience
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Board Certified
+                    - generic:
+                      - img
+                      - generic: International Training
+                    - generic:
+                      - img
+                      - generic: 25+ Years Experience
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Proven Track Record
+                  - paragraph: 5000+ successful surgeries and 10,000+ lives saved with excellent outcomes
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: 5000+ Surgeries
+                    - generic:
+                      - img
+                      - generic: 10,000+ Lives Saved
+                    - generic:
+                      - img
+                      - generic: Excellent Outcomes
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Comprehensive Care
+                  - paragraph: From consultation to post-operative care, we handle everything under one roof
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Complete Care
+                    - generic:
+                      - img
+                      - generic: Post-Operative Support
+                    - generic:
+                      - img
+                      - generic: One-Stop Solution
+            - generic:
+              - generic:
+                - generic:
+                  - heading [level=3]: Ready to Experience Excellence?
+                  - paragraph: Join thousands of patients who trust us with their heart health. Book your consultation today.
+                  - generic:
+                    - generic:
+                      - img
+                      - text: Book Consultation
+                    - generic:
+                      - img
+                      - text: "Emergency: +91-612-267-0992"
+        - generic:
+          - generic:
+            - generic:
+              - heading [level=2]: Our Medical Services
+              - paragraph: Comprehensive healthcare services with world-class facilities and experienced medical professionals
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Cardiology
+                - generic:
+                  - paragraph: Comprehensive cardiac care with advanced diagnostics and treatment for all heart-related conditions.
+                  - generic:
+                    - heading [level=4]: "Key Specialties:"
+                    - list:
+                      - listitem:
+                        - generic: Angioplasty & Stenting
+                      - listitem:
+                        - generic: Bypass Surgery
+                      - listitem:
+                        - generic: Valve Replacement
+                      - listitem:
+                        - generic: Cardiac Rehabilitation
+                  - link:
+                    - /url: "#contact"
+                    - img
+                    - text: Book Consultation
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Orthopedics
+                - generic:
+                  - paragraph: Expert treatment for bone, joint, and muscle conditions with cutting-edge surgical techniques.
+                  - generic:
+                    - heading [level=4]: "Key Specialties:"
+                    - list:
+                      - listitem:
+                        - generic: Joint Replacement
+                      - listitem:
+                        - generic: Sports Injury Treatment
+                      - listitem:
+                        - generic: Spine Surgery
+                      - listitem:
+                        - generic: Arthroscopic Procedures
+                  - link:
+                    - /url: "#contact"
+                    - img
+                    - text: Book Consultation
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Internal Medicine
+                - generic:
+                  - paragraph: Complete diagnostic and treatment services for adult medical conditions and preventive care.
+                  - generic:
+                    - heading [level=4]: "Key Specialties:"
+                    - list:
+                      - listitem:
+                        - generic: Chronic Disease Management
+                      - listitem:
+                        - generic: Preventive Health Checkups
+                      - listitem:
+                        - generic: Diabetes Care
+                      - listitem:
+                        - generic: Hypertension Treatment
+                  - link:
+                    - /url: "#contact"
+                    - img
+                    - text: Book Consultation
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Emergency Care
+                - generic:
+                  - paragraph: 24/7 emergency services with state-of-the-art trauma care and immediate medical attention.
+                  - generic:
+                    - heading [level=4]: "Key Specialties:"
+                    - list:
+                      - listitem:
+                        - generic: Trauma Care
+                      - listitem:
+                        - generic: Critical Care Units
+                      - listitem:
+                        - generic: Emergency Surgery
+                      - listitem:
+                        - generic: Poison Control
+                  - link:
+                    - /url: "#contact"
+                    - img
+                    - text: Book Consultation
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Pediatrics
+                - generic:
+                  - paragraph: Specialized care for infants, children, and adolescents with compassionate medical experts.
+                  - generic:
+                    - heading [level=4]: "Key Specialties:"
+                    - list:
+                      - listitem:
+                        - generic: Newborn Care
+                      - listitem:
+                        - generic: Vaccination Programs
+                      - listitem:
+                        - generic: Child Development
+                      - listitem:
+                        - generic: Pediatric Surgery
+                  - link:
+                    - /url: "#contact"
+                    - img
+                    - text: Book Consultation
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: Women's Health
+                - generic:
+                  - paragraph: Comprehensive women's healthcare services with advanced obstetrics and gynecology care.
+                  - generic:
+                    - heading [level=4]: "Key Specialties:"
+                    - list:
+                      - listitem:
+                        - generic: Obstetrics & Delivery
+                      - listitem:
+                        - generic: Gynecological Surgery
+                      - listitem:
+                        - generic: Maternal-Fetal Medicine
+                      - listitem:
+                        - generic: Fertility Treatment
+                  - link:
+                    - /url: "#contact"
+                    - img
+                    - text: Book Consultation
+            - generic:
+              - paragraph: In addition to our core services, we offer specialized treatments in neurology, dermatology, oncology, nephrology, and more. Our multidisciplinary approach ensures comprehensive care for all your healthcare needs.
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - img
+                - text: Expert Medical Team
+              - heading [level=2]: Meet Our Expert Doctors
+              - paragraph: Board-certified specialists with international training and extensive experience in cardiac care
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: DRS
+                  - heading [level=3]: Dr. Rajiv Sharma
+                  - paragraph: Chief Cardiac Surgeon
+                  - generic:
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                    - generic: "4.9"
+                    - generic: (340 reviews)
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - text: 25+ Years
+                  - generic:
+                    - paragraph: Qualifications
+                    - generic:
+                      - generic: MBBS
+                      - generic: MS Cardiothoracic Surgery
+                  - generic:
+                    - paragraph: Achievement
+                    - paragraph: 3000+ Successful Surgeries
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Next Available
+                      - generic: Today 2:30 PM
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Consultation Fee
+                      - generic: ₹2,500
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Available Today
+                    - button:
+                      - img
+                      - text: Book Now
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: DPS
+                  - heading [level=3]: Dr. Priya Singh
+                  - paragraph: Senior Cardiologist
+                  - generic:
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                    - generic: "4.8"
+                    - generic: (280 reviews)
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - text: 18+ Years
+                  - generic:
+                    - paragraph: Qualifications
+                    - generic:
+                      - generic: MBBS
+                      - generic: MD Medicine
+                      - generic: DM Cardiology
+                  - generic:
+                    - paragraph: Achievement
+                    - paragraph: 2500+ Cardiac Procedures
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Next Available
+                      - generic: Tomorrow 10:00 AM
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Consultation Fee
+                      - generic: ₹2,000
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Available Tomorrow
+                    - button:
+                      - img
+                      - text: Book Now
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: DAK
+                  - heading [level=3]: Dr. Amit Kumar
+                  - paragraph: Emergency Medicine Specialist
+                  - generic:
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                    - generic: "4.7"
+                    - generic: (190 reviews)
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - text: 15+ Years
+                  - generic:
+                    - paragraph: Qualifications
+                    - generic:
+                      - generic: MBBS
+                      - generic: MD Emergency Medicine
+                  - generic:
+                    - paragraph: Achievement
+                    - paragraph: 5000+ Emergency Cases
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Next Available
+                      - generic: Available Now
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Consultation Fee
+                      - generic: ₹1,500
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: 24/7 Available
+                    - button:
+                      - img
+                      - text: Book Now
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: DSD
+                  - heading [level=3]: Dr. Sunita Devi
+                  - paragraph: Pediatric Cardiologist
+                  - generic:
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                    - generic: "4.9"
+                    - generic: (150 reviews)
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - text: 12+ Years
+                  - generic:
+                    - paragraph: Qualifications
+                    - generic:
+                      - generic: MBBS
+                      - generic: MD Pediatrics
+                      - generic: DM Pediatric Cardiology
+                  - generic:
+                    - paragraph: Achievement
+                    - paragraph: 800+ Child Heart Surgeries
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Next Available
+                      - generic: Today 4:00 PM
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Consultation Fee
+                      - generic: ₹2,200
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Available Today
+                    - button:
+                      - img
+                      - text: Book Now
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: DVG
+                  - heading [level=3]: Dr. Vikash Gupta
+                  - paragraph: Interventional Cardiologist
+                  - generic:
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                    - generic: "4.8"
+                    - generic: (320 reviews)
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - text: 20+ Years
+                  - generic:
+                    - paragraph: Qualifications
+                    - generic:
+                      - generic: MBBS
+                      - generic: MD Medicine
+                      - generic: DM Interventional Cardiology
+                  - generic:
+                    - paragraph: Achievement
+                    - paragraph: 1500+ Angioplasty Procedures
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Next Available
+                      - generic: Tomorrow 11:30 AM
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Consultation Fee
+                      - generic: ₹2,800
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Available Tomorrow
+                    - button:
+                      - img
+                      - text: Book Now
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: DNS
+                  - heading [level=3]: Dr. Neha Sharma
+                  - paragraph: Cardiac Anesthesiologist
+                  - generic:
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                    - generic: "4.7"
+                    - generic: (120 reviews)
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - text: 14+ Years
+                  - generic:
+                    - paragraph: Qualifications
+                    - generic:
+                      - generic: MBBS
+                      - generic: MD Anesthesia
+                      - generic: DM Cardiac Anesthesia
+                  - generic:
+                    - paragraph: Achievement
+                    - paragraph: 2000+ Cardiac Anesthesia Cases
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Next Available
+                      - generic: Today 3:00 PM
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Consultation Fee
+                      - generic: ₹1,800
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Available Today
+                    - button:
+                      - img
+                      - text: Book Now
+            - generic:
+              - paragraph: Can't find the right specialist? Our team will help you find the perfect match.
+              - button:
+                - img
+                - text: Consult Our Medical Team
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - img
+                - text: Patient Stories
+              - heading [level=2]: What Our Patients Say
+              - paragraph: Real stories from real patients who trusted us with their heart health
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: 10,000+
+                  - paragraph: Lives Saved
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: 5,000+
+                  - paragraph: Successful Surgeries
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading [level=3]: 25+
+                  - paragraph: Years of Excellence
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                    - img
+                    - img
+                    - img
+                    - img
+                  - paragraph: "\"Dr. Rajiv Sharma saved my life with a complex heart surgery. The entire team was professional and caring. I'm grateful to be alive today.\""
+                  - generic:
+                    - generic:
+                      - generic: RK
+                    - generic:
+                      - heading [level=4]: Rajesh Kumar
+                      - paragraph: Patna, Bihar
+                      - generic:
+                        - generic: Bypass Surgery
+                        - generic: 3 months ago
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                    - img
+                    - img
+                    - img
+                    - img
+                  - paragraph: "\"Excellent emergency care when I had a heart attack. The team responded immediately and provided world-class treatment. Highly recommended!\""
+                  - generic:
+                    - generic:
+                      - generic: PS
+                    - generic:
+                      - heading [level=4]: Priya Singh
+                      - paragraph: Gaya, Bihar
+                      - generic:
+                        - generic: Emergency Care
+                        - generic: 1 month ago
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                    - img
+                    - img
+                    - img
+                    - img
+                  - paragraph: "\"My 8-year-old son's heart condition was treated here. Dr. Sunita is amazing with children. The hospital has the best pediatric cardiac care.\""
+                  - generic:
+                    - generic:
+                      - generic: AK
+                    - generic:
+                      - heading [level=4]: Amit Kumar
+                      - paragraph: Muzaffarpur, Bihar
+                      - generic:
+                        - generic: Pediatric Cardiology
+                        - generic: 2 weeks ago
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                    - img
+                    - img
+                    - img
+                    - img
+                  - paragraph: "\"Angioplasty procedure was smooth and painless. The modern equipment and skilled doctors gave me confidence. Thank you team!\""
+                  - generic:
+                    - generic:
+                      - generic: SD
+                    - generic:
+                      - heading [level=4]: Sunita Devi
+                      - paragraph: Darbhanga, Bihar
+                      - generic:
+                        - generic: Angioplasty
+                        - generic: 1 week ago
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                    - img
+                    - img
+                    - img
+                    - img
+                  - paragraph: "\"From consultation to surgery, everything was handled professionally. The hospital facilities are world-class. Dr. Priya is an excellent cardiologist.\""
+                  - generic:
+                    - generic:
+                      - generic: VG
+                    - generic:
+                      - heading [level=4]: Vikash Gupta
+                      - paragraph: Bhagalpur, Bihar
+                      - generic:
+                        - generic: Cardiology Consultation
+                        - generic: 2 months ago
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                    - img
+                    - img
+                    - img
+                    - img
+                  - paragraph: "\"24/7 emergency services saved my father's life. The response time was incredible. This hospital is a blessing for Bihar.\""
+                  - generic:
+                    - generic:
+                      - generic: NS
+                    - generic:
+                      - heading [level=4]: Neha Sharma
+                      - paragraph: Purnia, Bihar
+                      - generic:
+                        - generic: Emergency Surgery
+                        - generic: 3 weeks ago
+            - generic:
+              - generic:
+                - generic:
+                  - heading [level=3]: Ready to Experience World-Class Heart Care?
+                  - paragraph: Join thousands of satisfied patients who trust us with their heart health
+                  - generic:
+                    - generic:
+                      - img
+                      - text: 4.9/5 Patient Rating
+                    - generic:
+                      - img
+                      - text: 100% Safe & Secure
+        - generic:
+          - generic:
+            - heading [level=2]: Ready to Book Your Appointment?
+            - button [expanded]:
+              - img
+              - text: Book Appointment
+      - contentinfo:
+        - generic:
+          - generic:
+            - heading [level=3]: Get Emergency Heart Care Now
+            - generic:
+              - link:
+                - /url: tel:+916122670992
+                - text: Call +91-612-2670992
+              - link:
+                - /url: "#consultation"
+                - text: Request My Consultation
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - heading [level=3]: Anupama Hospital Pvt Ltd
+                  - paragraph: Multispecialty Hospital
+              - paragraph: Bihar's first super-specialty cardiac hospital, providing world-class cardiac care since 1998.
+            - generic:
+              - heading [level=4]: Contact Us
+              - generic:
+                - generic:
+                  - img
+                  - generic:
+                    - paragraph: (Update main phone from Justdial)
+                - generic:
+                  - img
+                  - link:
+                    - /url: mailto:contact@example.com
+                    - text: contact@example.com
+                - generic:
+                  - img
+                  - generic:
+                    - paragraph: Behind Side Of Arvind Hospital, Ashok Rajpath
+                    - paragraph: Patna, Bihar, India
+            - generic:
+              - heading [level=4]: Quick Links
+              - list:
+                - listitem:
+                  - link:
+                    - /url: "#services"
+                    - text: Our Services
+                - listitem:
+                  - link:
+                    - /url: "#about"
+                    - text: About Us
+                - listitem:
+                  - link:
+                    - /url: "#contact"
+                    - text: Contact
+          - generic:
+            - generic:
+              - paragraph: © 2025 Anupama Hospital Pvt Ltd. All Rights Reserved.
+              - generic:
+                - generic:
+                  - generic: Made with
+                  - img
+                  - generic: for better cardiac care
+      - generic:
+        - link:
+          - /url: tel:+910000000000
+          - generic:
+            - generic:
+              - generic:
+                - img
+                - generic: Emergency
+  - dialog "Book Your Appointment" [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Book Your Appointment" [level=2] [ref=e4]
+      - paragraph [ref=e5]: Schedule your consultation with our expert medical team
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - heading "Patient Information" [level=3] [ref=e9]
+        - button "Back" [ref=e10] [cursor=pointer]
+      - generic [ref=e11]:
+        - textbox "First Name" [ref=e12]: John
+        - textbox "Last Name" [ref=e13]: Doe
+      - textbox "Phone Number" [active] [ref=e14]: "1234567890"
+      - generic [ref=e15]:
+        - heading "Appointment Summary" [level=3] [ref=e17]
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e20]: "Service:"
+            - generic [ref=e21]: Cardiology Consultation
+          - generic [ref=e22]:
+            - generic [ref=e23]: "Date:"
+            - generic [ref=e24]: October 14th, 2025
+          - generic [ref=e25]:
+            - generic [ref=e26]: "Time:"
+            - generic [ref=e27]: 9:00 AM
+      - button "Confirm Appointment" [ref=e28] [cursor=pointer]
+      - paragraph [ref=e29]: You'll receive confirmation within 15 minutes via SMS and email
+    - button "Close" [ref=e30] [cursor=pointer]:
+      - img [ref=e31]
+      - generic [ref=e34]: Close
+```

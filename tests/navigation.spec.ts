@@ -8,26 +8,26 @@ test.describe('Navigation and Routing', () => {
   test('should navigate to all major sections', async ({ page }) => {
     // Test Home navigation
     await page.getByRole('link', { name: /home/i }).click();
-    await expect(page).toHaveURL(/.*\/$/);
+    await expect(page).toHaveURL(/.*\/jeevak-hospital-website\/?$/);
     
     // Test Services navigation
     await page.getByRole('link', { name: /services/i }).click();
-    await expect(page).toHaveURL(/.*\/services/);
+    await expect(page).toHaveURL(/.*\/jeevak-hospital-website\/services/);
     await expect(page.getByText('Our Medical Services')).toBeVisible();
     
     // Test About navigation
     await page.getByRole('link', { name: /about/i }).click();
-    await expect(page).toHaveURL(/.*\/about/);
+    await expect(page).toHaveURL(/.*\/jeevak-hospital-website\/about/);
     await expect(page.getByText('About Jeevak Hospital')).toBeVisible();
     
     // Test Contact navigation
     await page.getByRole('link', { name: /contact/i }).click();
-    await expect(page).toHaveURL(/.*\/contact/);
+    await expect(page).toHaveURL(/.*\/jeevak-hospital-website\/contact/);
     await expect(page.getByText('Contact Us')).toBeVisible();
     
     // Test Emergency navigation
     await page.getByRole('link', { name: /emergency/i }).click();
-    await expect(page).toHaveURL(/.*\/emergency/);
+    await expect(page).toHaveURL(/.*\/jeevak-hospital-website\/emergency/);
     await expect(page.getByText('Emergency Services')).toBeVisible();
   });
 
@@ -45,7 +45,7 @@ test.describe('Navigation and Routing', () => {
   test('should maintain navigation state across page loads', async ({ page }) => {
     // Navigate to services
     await page.getByRole('link', { name: /services/i }).click();
-    await expect(page).toHaveURL(/.*\/services/);
+    await expect(page).toHaveURL(/.*\/jeevak-hospital-website\/services/);
     
     // Reload page
     await page.reload();

@@ -90,7 +90,7 @@ const Header = () => {
     <>
       {/* Skip to content link for accessibility */}
       <a 
-        href="#main-content" 
+        href="#hero-section" 
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:shadow-lg"
         tabIndex={1}
       >
@@ -128,14 +128,14 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <h1 className="text-lg font-bold text-foreground">Anupama Hospital Pvt Ltd</h1>
+                <div className="text-lg font-bold text-foreground">Anupama Hospital Pvt Ltd</div>
                 <p className="text-xs text-primary">Multispecialty Hospital, Ashok Rajpath, Patna</p>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6">
-              <ul className="flex items-center gap-6" role="menubar">
+              <ul className="flex items-center gap-6" role="menubar" aria-label="Main navigation menu">
                 {navItems.map((item) => (
                   <li key={item.name} role="none">
                     <Link
