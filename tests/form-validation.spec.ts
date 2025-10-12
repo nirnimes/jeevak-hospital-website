@@ -9,7 +9,7 @@ test.describe('Form Validation and User Input', () => {
     await page.getByRole('button', { name: /book appointment/i }).click();
     
     // Go through the flow to reach form fields
-    await page.getByText('Cardiology Consultation').click();
+    await page.locator('[role="dialog"]').getByText('Cardiology Consultation').first().click();
     await page.getByRole('button', { name: /continue/i }).click();
     
     // Select date and time
@@ -20,7 +20,44 @@ test.describe('Form Validation and User Input', () => {
       month: 'short', 
       day: 'numeric' 
     });
-    await page.getByRole('gridcell', { name: tomorrowString }).click();
+    // Wait for calendar to load and select any available date
+    await page.waitForSelector('[role="grid"]');
+    
+    // Try to find any available date in the calendar
+    let dateFound = false;
+    
+    // First, try to click any available date button (not disabled and not in past)
+    const availableDates = page.locator('[role="gridcell"]:not([disabled]):not([aria-disabled="true"])');
+    const dateCount = await availableDates.count();
+    
+    if (dateCount > 0) {
+      // Click the first available date
+      await availableDates.first().click();
+      dateFound = true;
+    } else {
+      // Fallback: try specific future dates
+      for (let i = 1; i <= 7; i++) {
+        const testDate = new Date();
+        testDate.setDate(testDate.getDate() + i);
+        const testDateString = testDate.toLocaleDateString('en-US', { 
+          weekday: 'short', 
+          month: 'short', 
+          day: 'numeric' 
+        });
+        
+        try {
+          await page.getByRole('gridcell', { name: testDateString }).click({ timeout: 1000 });
+          dateFound = true;
+          break;
+        } catch (e) {
+          // Continue to next date
+        }
+      }
+    }
+    
+    if (!dateFound) {
+      throw new Error('No available future dates found in calendar');
+    }
     await page.getByRole('button', { name: '9:00 AM' }).click();
     await page.getByRole('button', { name: /continue/i }).click();
     
@@ -77,7 +114,7 @@ test.describe('Form Validation and User Input', () => {
     await page.getByRole('button', { name: /book appointment/i }).click();
     
     // Complete the appointment booking flow
-    await page.getByText('Cardiology Consultation').click();
+    await page.locator('[role="dialog"]').getByText('Cardiology Consultation').first().click();
     await page.getByRole('button', { name: /continue/i }).click();
     
     const tomorrow = new Date();
@@ -87,7 +124,44 @@ test.describe('Form Validation and User Input', () => {
       month: 'short', 
       day: 'numeric' 
     });
-    await page.getByRole('gridcell', { name: tomorrowString }).click();
+    // Wait for calendar to load and select any available date
+    await page.waitForSelector('[role="grid"]');
+    
+    // Try to find any available date in the calendar
+    let dateFound = false;
+    
+    // First, try to click any available date button (not disabled and not in past)
+    const availableDates = page.locator('[role="gridcell"]:not([disabled]):not([aria-disabled="true"])');
+    const dateCount = await availableDates.count();
+    
+    if (dateCount > 0) {
+      // Click the first available date
+      await availableDates.first().click();
+      dateFound = true;
+    } else {
+      // Fallback: try specific future dates
+      for (let i = 1; i <= 7; i++) {
+        const testDate = new Date();
+        testDate.setDate(testDate.getDate() + i);
+        const testDateString = testDate.toLocaleDateString('en-US', { 
+          weekday: 'short', 
+          month: 'short', 
+          day: 'numeric' 
+        });
+        
+        try {
+          await page.getByRole('gridcell', { name: testDateString }).click({ timeout: 1000 });
+          dateFound = true;
+          break;
+        } catch (e) {
+          // Continue to next date
+        }
+      }
+    }
+    
+    if (!dateFound) {
+      throw new Error('No available future dates found in calendar');
+    }
     await page.getByRole('button', { name: '9:00 AM' }).click();
     await page.getByRole('button', { name: /continue/i }).click();
     
@@ -106,7 +180,7 @@ test.describe('Form Validation and User Input', () => {
     await page.getByRole('button', { name: /book appointment/i }).click();
     
     // Complete flow to form submission
-    await page.getByText('Cardiology Consultation').click();
+    await page.locator('[role="dialog"]').getByText('Cardiology Consultation').first().click();
     await page.getByRole('button', { name: /continue/i }).click();
     
     const tomorrow = new Date();
@@ -116,7 +190,44 @@ test.describe('Form Validation and User Input', () => {
       month: 'short', 
       day: 'numeric' 
     });
-    await page.getByRole('gridcell', { name: tomorrowString }).click();
+    // Wait for calendar to load and select any available date
+    await page.waitForSelector('[role="grid"]');
+    
+    // Try to find any available date in the calendar
+    let dateFound = false;
+    
+    // First, try to click any available date button (not disabled and not in past)
+    const availableDates = page.locator('[role="gridcell"]:not([disabled]):not([aria-disabled="true"])');
+    const dateCount = await availableDates.count();
+    
+    if (dateCount > 0) {
+      // Click the first available date
+      await availableDates.first().click();
+      dateFound = true;
+    } else {
+      // Fallback: try specific future dates
+      for (let i = 1; i <= 7; i++) {
+        const testDate = new Date();
+        testDate.setDate(testDate.getDate() + i);
+        const testDateString = testDate.toLocaleDateString('en-US', { 
+          weekday: 'short', 
+          month: 'short', 
+          day: 'numeric' 
+        });
+        
+        try {
+          await page.getByRole('gridcell', { name: testDateString }).click({ timeout: 1000 });
+          dateFound = true;
+          break;
+        } catch (e) {
+          // Continue to next date
+        }
+      }
+    }
+    
+    if (!dateFound) {
+      throw new Error('No available future dates found in calendar');
+    }
     await page.getByRole('button', { name: '9:00 AM' }).click();
     await page.getByRole('button', { name: /continue/i }).click();
     

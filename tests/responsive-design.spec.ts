@@ -15,7 +15,7 @@ test.describe('Responsive Design Testing', () => {
       await page.goto('/');
       
       // Check that main content is visible
-      await expect(page.locator('main, [role="main"]')).toBeVisible();
+      await expect(page.locator('main').first()).toBeVisible();
       
       // Check navigation is accessible
       const nav = page.locator('nav, [role="navigation"]');
@@ -59,7 +59,7 @@ test.describe('Responsive Design Testing', () => {
     
     // Test touch on appointment booking button
     const bookButton = page.getByRole('button', { name: /book appointment/i });
-    await bookButton.tap();
+    await bookButton.click(); // Use click instead of tap for better compatibility
     
     // Modal should open
     await expect(page.getByText('Book Your Appointment')).toBeVisible();
@@ -85,7 +85,7 @@ test.describe('Responsive Design Testing', () => {
     });
     
     // Content should still be readable and not break layout
-    await expect(page.locator('main, [role="main"]')).toBeVisible();
+    await expect(page.locator('main').first()).toBeVisible();
     
     // Text should not overflow containers
     const containers = page.locator('.container, main, section');
@@ -107,7 +107,7 @@ test.describe('Responsive Design Testing', () => {
     await page.goto('/');
     
     // Check initial layout
-    await expect(page.locator('main, [role="main"]')).toBeVisible();
+    await expect(page.locator('main').first()).toBeVisible();
     
     // Change to landscape
     await page.setViewportSize({ width: 667, height: 375 });

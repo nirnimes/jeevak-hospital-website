@@ -122,10 +122,16 @@ const Hero = () => {
             {/* Patient Hero Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <div className="aspect-[4/5] bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
-                {/* Placeholder for patient image */}
+                {/* Professional hospital image */}
                 <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-end justify-end relative">
-                  {/* Professional patient photo placeholder */}
+                  <img 
+                    src={heroImage} 
+                    alt="Modern hospital building with professional medical facilities showing state-of-the-art cardiac care center"
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Professional patient photo overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" aria-hidden="true"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" aria-hidden="true"></div>
                   <div className="relative z-10 p-6 text-right">
                     <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 inline-block max-w-xs">
                       <div className="text-sm font-medium text-gray-700">Patient Success Story</div>

@@ -94,7 +94,7 @@ test.describe('Appointment Booking Flow', () => {
     
     // Check appointment summary
     await expect(page.getByText('Appointment Summary')).toBeVisible();
-    await expect(page.getByText('Cardiology Consultation')).toBeVisible();
+    await expect(page.locator('[role="dialog"]').getByText('Cardiology Consultation')).toBeVisible();
     
     // Confirm appointment
     await page.getByRole('button', { name: /confirm appointment/i }).click();

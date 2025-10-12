@@ -935,32 +935,28 @@
       - heading "Book Your Appointment" [level=2] [ref=e4]
       - paragraph [ref=e5]: Schedule your consultation with our expert medical team
     - generic [ref=e7]:
-      - heading "Select Service" [level=3] [ref=e8]
-      - generic [ref=e9]:
-        - generic [ref=e13] [cursor=pointer]:
-          - img [ref=e14]
-          - generic [ref=e16]:
-            - paragraph [ref=e17]: Cardiology Consultation
-            - paragraph [ref=e18]: "Duration: 45 min"
-        - generic [ref=e21] [cursor=pointer]:
+      - generic [ref=e8]:
+        - heading "Patient Information" [level=3] [ref=e9]
+        - button "Back" [ref=e10] [cursor=pointer]
+      - generic [ref=e11]:
+        - textbox "First Name" [ref=e12]: John
+        - textbox "Last Name" [ref=e13]: Doe
+      - textbox "Phone Number" [ref=e14]: "1234567890"
+      - generic [ref=e15]:
+        - heading "Appointment Summary" [level=3] [ref=e17]
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e20]: "Service:"
+            - generic [ref=e21]: Cardiology Consultation
           - generic [ref=e22]:
-            - img [ref=e23]
-            - generic [ref=e25]:
-              - paragraph [ref=e26]: Emergency Care
-              - paragraph [ref=e27]: "Duration: Immediate"
-          - generic [ref=e28]: Urgent
-        - generic [ref=e32] [cursor=pointer]:
-          - img [ref=e33]
-          - generic [ref=e36]:
-            - paragraph [ref=e37]: General Health Checkup
-            - paragraph [ref=e38]: "Duration: 30 min"
-        - generic [ref=e42] [cursor=pointer]:
-          - img [ref=e43]
-          - generic [ref=e46]:
-            - paragraph [ref=e47]: Follow-up Visit
-            - paragraph [ref=e48]: "Duration: 20 min"
-      - button "Continue" [disabled]
-    - button "Close" [active] [ref=e49] [cursor=pointer]:
-      - img [ref=e50]
-      - generic [ref=e53]: Close
+            - generic [ref=e23]: "Date:"
+            - generic [ref=e24]: October 14th, 2025
+          - generic [ref=e25]:
+            - generic [ref=e26]: "Time:"
+            - generic [ref=e27]: 9:00 AM
+      - button "Confirm Appointment" [active] [ref=e28] [cursor=pointer]
+      - paragraph [ref=e29]: You'll receive confirmation within 15 minutes via SMS and email
+    - button "Close" [ref=e30] [cursor=pointer]:
+      - img [ref=e31]
+      - generic [ref=e34]: Close
 ```
