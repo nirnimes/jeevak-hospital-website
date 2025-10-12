@@ -61,10 +61,15 @@ export default function AppointmentBooking() {
 
   const onSubmit = async (data: AppointmentFormData) => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setSubmitted(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setIsSubmitting(false);
+      setSubmitted(true);
+    } catch (error) {
+      setIsSubmitting(false);
+      // Handle error if needed
+    }
   };
 
   const getProgress = () => {

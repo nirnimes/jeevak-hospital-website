@@ -61,8 +61,8 @@ test.describe('Responsive Design Testing', () => {
     const bookButton = page.getByRole('button', { name: /book appointment/i });
     await bookButton.click(); // Use click instead of tap for better compatibility
     
-    // Modal should open
-    await expect(page.getByText('Book Your Appointment')).toBeVisible();
+    // Modal should open - use more specific selector to avoid strict mode violation
+    await expect(page.locator('[role="dialog"]').getByText('Book Your Appointment')).toBeVisible();
     
     // Test touch on emergency button
     const emergencyButton = page.getByRole('link', { name: /emergency contact/i });
@@ -113,7 +113,7 @@ test.describe('Responsive Design Testing', () => {
     await page.setViewportSize({ width: 667, height: 375 });
     
     // Layout should adapt
-    await expect(page.locator('main, [role="main"]')).toBeVisible();
+    await expect(page.locator('main').first()).toBeVisible();
     
     // Emergency button should still be accessible
     const emergencyButton = page.getByRole('link', { name: /emergency contact/i });
