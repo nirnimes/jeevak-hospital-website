@@ -1,0 +1,833 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner "Main navigation" [ref=e5]:
+      - navigation "Main navigation" [ref=e7]:
+        - generic [ref=e8]:
+          - link "Anupama Hospital - Home" [ref=e9] [cursor=pointer]:
+            - /url: /jeevak-hospital-website
+            - img [ref=e11]
+            - generic [ref=e14]:
+              - heading "Anupama Hospital Pvt Ltd" [level=1] [ref=e15]
+              - paragraph [ref=e16]: Multispecialty Hospital, Ashok Rajpath, Patna
+          - generic [ref=e17]:
+            - menubar [ref=e18]:
+              - menuitem "Home" [ref=e19] [cursor=pointer]
+              - menuitem "Services" [ref=e20] [cursor=pointer]
+              - menuitem "Emergency" [ref=e21] [cursor=pointer]:
+                - img [ref=e22]
+                - text: Emergency
+              - menuitem "About" [ref=e24] [cursor=pointer]
+              - menuitem "Contact" [ref=e25] [cursor=pointer]
+            - link "Emergency phone number" [ref=e26] [cursor=pointer]:
+              - /url: tel:+916122670992
+              - img [ref=e27]
+              - generic "Emergency number" [ref=e29]: +91-612-2670992
+            - link "Book consultation appointment" [ref=e30] [cursor=pointer]:
+              - /url: /jeevak-hospital-website/contact
+              - button "Book consultation appointment" [ref=e31]: Book Consultation
+    - main [ref=e32]:
+      - main "Hero section - Welcome to Anupama Hospital" [ref=e33]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - group "Hospital achievements" [ref=e38]:
+              - generic [ref=e39]:
+                - img [ref=e40]
+                - text: "Bihar's #1 Heart Hospital"
+              - generic [ref=e42]: 25+ Years Trusted
+            - generic [ref=e43]:
+              - heading "Your Heart, Our Promise Expert Care Close to Home" [level=1] [ref=e44]:
+                - text: Your Heart, Our Promise
+                - text: Expert Care Close to Home
+              - paragraph [ref=e45]: When your heart needs expert care, you shouldn't have to travel far from family. Get world-class cardiac treatment right here in Bihar, with the compassion you deserve.
+            - group "Hospital statistics" [ref=e46]:
+              - generic [ref=e47]:
+                - img [ref=e49]
+                - generic [ref=e52]:
+                  - generic [ref=e53]: 5000+ Surgeries
+                  - generic [ref=e54]: Lives Saved
+              - generic [ref=e55]:
+                - img [ref=e57]
+                - generic [ref=e60]:
+                  - generic [ref=e61]: < 5 minutes
+                  - generic [ref=e62]: Emergency Response
+              - generic [ref=e63]:
+                - img [ref=e65]
+                - generic [ref=e68]:
+                  - generic [ref=e69]: 98.5%
+                  - generic [ref=e70]: Success Rate
+              - generic [ref=e71]:
+                - img [ref=e73]
+                - generic [ref=e78]:
+                  - generic [ref=e79]: 24/7
+                  - generic [ref=e80]: Always Here
+            - group "Action buttons" [ref=e81]:
+              - button "Book free consultation appointment" [ref=e82] [cursor=pointer]:
+                - img
+                - text: Book Free Consultation
+                - img
+              - button "Emergency phone number" [ref=e83] [cursor=pointer]:
+                - img
+                - text: "Emergency: +91-612-267-0992"
+            - region "Our Promise to You" [ref=e84]:
+              - generic [ref=e85]:
+                - img [ref=e86]
+                - generic [ref=e88]:
+                  - heading "Our Promise to You" [level=3] [ref=e89]
+                  - paragraph [ref=e90]: Every patient receives personalized care from our expert team. We treat you like family because your health is our highest priority.
+          - generic [ref=e91]:
+            - generic [ref=e94]:
+              - generic [ref=e97]:
+                - generic [ref=e98]: Patient Success Story
+                - generic [ref=e99]: "\"They saved my life\" - Rajesh, 52"
+              - img [ref=e102]
+            - group "Hospital performance statistics" [ref=e104]:
+              - generic [ref=e106]:
+                - img [ref=e108]
+                - generic [ref=e110]:
+                  - generic [ref=e111]: 10,000+
+                  - generic [ref=e112]: Lives Saved
+              - generic [ref=e114]:
+                - img [ref=e116]
+                - generic [ref=e118]:
+                  - generic [ref=e119]: 24/7
+                  - generic [ref=e120]: Emergency Care
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - img [ref=e125]
+            - text: Why Choose Us
+          - heading "World-Class Heart Care" [level=2] [ref=e128]
+          - paragraph [ref=e129]: Bihar's premier cardiac care center with cutting-edge technology and compassionate care
+        - generic [ref=e130]:
+          - generic [ref=e132]:
+            - img [ref=e134]
+            - heading "98.5%" [level=3] [ref=e136]
+            - paragraph [ref=e137]: Success Rate
+          - generic [ref=e139]:
+            - img [ref=e141]
+            - heading "4.9/5" [level=3] [ref=e143]
+            - paragraph [ref=e144]: Patient Satisfaction
+          - generic [ref=e146]:
+            - img [ref=e148]
+            - heading "< 15 min" [level=3] [ref=e151]
+            - paragraph [ref=e152]: Average Wait Time
+          - generic [ref=e154]:
+            - img [ref=e156]
+            - heading "< 5 min" [level=3] [ref=e158]
+            - paragraph [ref=e159]: Emergency Response
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - img [ref=e164]
+              - heading "Advanced Cardiac Surgery" [level=3] [ref=e166]
+              - paragraph [ref=e167]: State-of-the-art equipment and minimally invasive procedures for faster recovery
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - img [ref=e171]
+                - generic [ref=e174]: Minimally Invasive
+              - generic [ref=e175]:
+                - img [ref=e176]
+                - generic [ref=e179]: Faster Recovery
+              - generic [ref=e180]:
+                - img [ref=e181]
+                - generic [ref=e184]: Higher Success Rate
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - img [ref=e188]
+              - heading "24/7 Emergency Care" [level=3] [ref=e190]
+              - paragraph [ref=e191]: Round-the-clock emergency services with rapid response time for critical cases
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - img [ref=e195]
+                - generic [ref=e198]: 24/7 Availability
+              - generic [ref=e199]:
+                - img [ref=e200]
+                - generic [ref=e203]: Rapid Response
+              - generic [ref=e204]:
+                - img [ref=e205]
+                - generic [ref=e208]: Critical Care
+          - generic [ref=e209]:
+            - generic [ref=e210]:
+              - img [ref=e212]
+              - heading "Quick Appointments" [level=3] [ref=e215]
+              - paragraph [ref=e216]: Same-day consultations and minimal wait times for your convenience
+            - generic [ref=e218]:
+              - generic [ref=e219]:
+                - img [ref=e220]
+                - generic [ref=e223]: Same-Day Booking
+              - generic [ref=e224]:
+                - img [ref=e225]
+                - generic [ref=e228]: Minimal Wait
+              - generic [ref=e229]:
+                - img [ref=e230]
+                - generic [ref=e233]: Flexible Timing
+          - generic [ref=e234]:
+            - generic [ref=e235]:
+              - img [ref=e237]
+              - heading "Expert Medical Team" [level=3] [ref=e242]
+              - paragraph [ref=e243]: Board-certified specialists with international training and extensive experience
+            - generic [ref=e245]:
+              - generic [ref=e246]:
+                - img [ref=e247]
+                - generic [ref=e250]: Board Certified
+              - generic [ref=e251]:
+                - img [ref=e252]
+                - generic [ref=e255]: International Training
+              - generic [ref=e256]:
+                - img [ref=e257]
+                - generic [ref=e260]: 25+ Years Experience
+          - generic [ref=e261]:
+            - generic [ref=e262]:
+              - img [ref=e264]
+              - heading "Proven Track Record" [level=3] [ref=e267]
+              - paragraph [ref=e268]: 5000+ successful surgeries and 10,000+ lives saved with excellent outcomes
+            - generic [ref=e270]:
+              - generic [ref=e271]:
+                - img [ref=e272]
+                - generic [ref=e275]: 5000+ Surgeries
+              - generic [ref=e276]:
+                - img [ref=e277]
+                - generic [ref=e280]: 10,000+ Lives Saved
+              - generic [ref=e281]:
+                - img [ref=e282]
+                - generic [ref=e285]: Excellent Outcomes
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - img [ref=e289]
+              - heading "Comprehensive Care" [level=3] [ref=e293]
+              - paragraph [ref=e294]: From consultation to post-operative care, we handle everything under one roof
+            - generic [ref=e296]:
+              - generic [ref=e297]:
+                - img [ref=e298]
+                - generic [ref=e301]: Complete Care
+              - generic [ref=e302]:
+                - img [ref=e303]
+                - generic [ref=e306]: Post-Operative Support
+              - generic [ref=e307]:
+                - img [ref=e308]
+                - generic [ref=e311]: One-Stop Solution
+        - generic [ref=e314]:
+          - heading "Ready to Experience Excellence?" [level=3] [ref=e315]
+          - paragraph [ref=e316]: Join thousands of patients who trust us with their heart health. Book your consultation today.
+          - generic [ref=e317]:
+            - generic [ref=e318]:
+              - img [ref=e319]
+              - text: Book Consultation
+            - generic [ref=e321]:
+              - img [ref=e322]
+              - text: "Emergency: +91-612-267-0992"
+      - generic [ref=e325]:
+        - generic [ref=e326]:
+          - heading "Our Medical Services" [level=2] [ref=e327]
+          - paragraph [ref=e328]: Comprehensive healthcare services with world-class facilities and experienced medical professionals
+        - generic [ref=e329]:
+          - generic [ref=e330]:
+            - generic [ref=e331]:
+              - img [ref=e333]
+              - heading "Cardiology" [level=3] [ref=e335]
+            - generic [ref=e336]:
+              - paragraph [ref=e337]: Comprehensive cardiac care with advanced diagnostics and treatment for all heart-related conditions.
+              - generic [ref=e338]:
+                - heading "Key Specialties:" [level=4] [ref=e339]
+                - list [ref=e340]:
+                  - listitem [ref=e341]:
+                    - generic [ref=e343]: Angioplasty & Stenting
+                  - listitem [ref=e344]:
+                    - generic [ref=e346]: Bypass Surgery
+                  - listitem [ref=e347]:
+                    - generic [ref=e349]: Valve Replacement
+                  - listitem [ref=e350]:
+                    - generic [ref=e352]: Cardiac Rehabilitation
+              - link "Book Consultation" [ref=e353] [cursor=pointer]:
+                - /url: "#contact"
+                - img [ref=e354]
+                - text: Book Consultation
+          - generic [ref=e356]:
+            - generic [ref=e357]:
+              - img [ref=e359]
+              - heading "Orthopedics" [level=3] [ref=e361]
+            - generic [ref=e362]:
+              - paragraph [ref=e363]: Expert treatment for bone, joint, and muscle conditions with cutting-edge surgical techniques.
+              - generic [ref=e364]:
+                - heading "Key Specialties:" [level=4] [ref=e365]
+                - list [ref=e366]:
+                  - listitem [ref=e367]:
+                    - generic [ref=e369]: Joint Replacement
+                  - listitem [ref=e370]:
+                    - generic [ref=e372]: Sports Injury Treatment
+                  - listitem [ref=e373]:
+                    - generic [ref=e375]: Spine Surgery
+                  - listitem [ref=e376]:
+                    - generic [ref=e378]: Arthroscopic Procedures
+              - link "Book Consultation" [ref=e379] [cursor=pointer]:
+                - /url: "#contact"
+                - img [ref=e380]
+                - text: Book Consultation
+          - generic [ref=e382]:
+            - generic [ref=e383]:
+              - img [ref=e385]
+              - heading "Internal Medicine" [level=3] [ref=e389]
+            - generic [ref=e390]:
+              - paragraph [ref=e391]: Complete diagnostic and treatment services for adult medical conditions and preventive care.
+              - generic [ref=e392]:
+                - heading "Key Specialties:" [level=4] [ref=e393]
+                - list [ref=e394]:
+                  - listitem [ref=e395]:
+                    - generic [ref=e397]: Chronic Disease Management
+                  - listitem [ref=e398]:
+                    - generic [ref=e400]: Preventive Health Checkups
+                  - listitem [ref=e401]:
+                    - generic [ref=e403]: Diabetes Care
+                  - listitem [ref=e404]:
+                    - generic [ref=e406]: Hypertension Treatment
+              - link "Book Consultation" [ref=e407] [cursor=pointer]:
+                - /url: "#contact"
+                - img [ref=e408]
+                - text: Book Consultation
+          - generic [ref=e410]:
+            - generic [ref=e411]:
+              - img [ref=e413]
+              - heading "Emergency Care" [level=3] [ref=e418]
+            - generic [ref=e419]:
+              - paragraph [ref=e420]: 24/7 emergency services with state-of-the-art trauma care and immediate medical attention.
+              - generic [ref=e421]:
+                - heading "Key Specialties:" [level=4] [ref=e422]
+                - list [ref=e423]:
+                  - listitem [ref=e424]:
+                    - generic [ref=e426]: Trauma Care
+                  - listitem [ref=e427]:
+                    - generic [ref=e429]: Critical Care Units
+                  - listitem [ref=e430]:
+                    - generic [ref=e432]: Emergency Surgery
+                  - listitem [ref=e433]:
+                    - generic [ref=e435]: Poison Control
+              - link "Book Consultation" [ref=e436] [cursor=pointer]:
+                - /url: "#contact"
+                - img [ref=e437]
+                - text: Book Consultation
+          - generic [ref=e439]:
+            - generic [ref=e440]:
+              - img [ref=e442]
+              - heading "Pediatrics" [level=3] [ref=e445]
+            - generic [ref=e446]:
+              - paragraph [ref=e447]: Specialized care for infants, children, and adolescents with compassionate medical experts.
+              - generic [ref=e448]:
+                - heading "Key Specialties:" [level=4] [ref=e449]
+                - list [ref=e450]:
+                  - listitem [ref=e451]:
+                    - generic [ref=e453]: Newborn Care
+                  - listitem [ref=e454]:
+                    - generic [ref=e456]: Vaccination Programs
+                  - listitem [ref=e457]:
+                    - generic [ref=e459]: Child Development
+                  - listitem [ref=e460]:
+                    - generic [ref=e462]: Pediatric Surgery
+              - link "Book Consultation" [ref=e463] [cursor=pointer]:
+                - /url: "#contact"
+                - img [ref=e464]
+                - text: Book Consultation
+          - generic [ref=e466]:
+            - generic [ref=e467]:
+              - img [ref=e469]
+              - heading "Women's Health" [level=3] [ref=e474]
+            - generic [ref=e475]:
+              - paragraph [ref=e476]: Comprehensive women's healthcare services with advanced obstetrics and gynecology care.
+              - generic [ref=e477]:
+                - heading "Key Specialties:" [level=4] [ref=e478]
+                - list [ref=e479]:
+                  - listitem [ref=e480]:
+                    - generic [ref=e482]: Obstetrics & Delivery
+                  - listitem [ref=e483]:
+                    - generic [ref=e485]: Gynecological Surgery
+                  - listitem [ref=e486]:
+                    - generic [ref=e488]: Maternal-Fetal Medicine
+                  - listitem [ref=e489]:
+                    - generic [ref=e491]: Fertility Treatment
+              - link "Book Consultation" [ref=e492] [cursor=pointer]:
+                - /url: "#contact"
+                - img [ref=e493]
+                - text: Book Consultation
+        - paragraph [ref=e496]: In addition to our core services, we offer specialized treatments in neurology, dermatology, oncology, nephrology, and more. Our multidisciplinary approach ensures comprehensive care for all your healthcare needs.
+      - generic [ref=e498]:
+        - generic [ref=e499]:
+          - generic [ref=e500]:
+            - img [ref=e501]
+            - text: Expert Medical Team
+          - heading "Meet Our Expert Doctors" [level=2] [ref=e506]
+          - paragraph [ref=e507]: Board-certified specialists with international training and extensive experience in cardiac care
+        - generic [ref=e508]:
+          - generic [ref=e509]:
+            - generic [ref=e510]:
+              - generic [ref=e512]: DRS
+              - heading "Dr. Rajiv Sharma" [level=3] [ref=e513]
+              - paragraph [ref=e514]: Chief Cardiac Surgeon
+              - generic [ref=e515]:
+                - generic [ref=e516]:
+                  - img [ref=e517]
+                  - img [ref=e519]
+                  - img [ref=e521]
+                  - img [ref=e523]
+                  - img [ref=e525]
+                - generic [ref=e527]: "4.9"
+                - generic [ref=e528]: (340 reviews)
+            - generic [ref=e529]:
+              - generic [ref=e531]:
+                - img [ref=e532]
+                - text: 25+ Years
+              - generic [ref=e535]:
+                - paragraph [ref=e536]: Qualifications
+                - generic [ref=e537]:
+                  - generic [ref=e538]: MBBS
+                  - generic [ref=e539]: MS Cardiothoracic Surgery
+              - generic [ref=e540]:
+                - paragraph [ref=e541]: Achievement
+                - paragraph [ref=e542]: 3000+ Successful Surgeries
+              - generic [ref=e543]:
+                - generic [ref=e544]:
+                  - generic [ref=e545]:
+                    - img [ref=e546]
+                    - generic [ref=e549]: Next Available
+                  - generic [ref=e550]: Today 2:30 PM
+                - generic [ref=e551]:
+                  - generic [ref=e552]:
+                    - img [ref=e553]
+                    - generic [ref=e555]: Consultation Fee
+                  - generic [ref=e556]: ₹2,500
+              - generic [ref=e557]:
+                - generic [ref=e558]:
+                  - img [ref=e559]
+                  - generic [ref=e562]: Available Today
+                - button "Book Now" [ref=e563] [cursor=pointer]:
+                  - img
+                  - text: Book Now
+          - generic [ref=e564]:
+            - generic [ref=e565]:
+              - generic [ref=e567]: DPS
+              - heading "Dr. Priya Singh" [level=3] [ref=e568]
+              - paragraph [ref=e569]: Senior Cardiologist
+              - generic [ref=e570]:
+                - generic [ref=e571]:
+                  - img [ref=e572]
+                  - img [ref=e574]
+                  - img [ref=e576]
+                  - img [ref=e578]
+                  - img [ref=e580]
+                - generic [ref=e582]: "4.8"
+                - generic [ref=e583]: (280 reviews)
+            - generic [ref=e584]:
+              - generic [ref=e586]:
+                - img [ref=e587]
+                - text: 18+ Years
+              - generic [ref=e590]:
+                - paragraph [ref=e591]: Qualifications
+                - generic [ref=e592]:
+                  - generic [ref=e593]: MBBS
+                  - generic [ref=e594]: MD Medicine
+                  - generic [ref=e595]: DM Cardiology
+              - generic [ref=e596]:
+                - paragraph [ref=e597]: Achievement
+                - paragraph [ref=e598]: 2500+ Cardiac Procedures
+              - generic [ref=e599]:
+                - generic [ref=e600]:
+                  - generic [ref=e601]:
+                    - img [ref=e602]
+                    - generic [ref=e605]: Next Available
+                  - generic [ref=e606]: Tomorrow 10:00 AM
+                - generic [ref=e607]:
+                  - generic [ref=e608]:
+                    - img [ref=e609]
+                    - generic [ref=e611]: Consultation Fee
+                  - generic [ref=e612]: ₹2,000
+              - generic [ref=e613]:
+                - generic [ref=e614]:
+                  - img [ref=e615]
+                  - generic [ref=e618]: Available Tomorrow
+                - button "Book Now" [ref=e619] [cursor=pointer]:
+                  - img
+                  - text: Book Now
+          - generic [ref=e620]:
+            - generic [ref=e621]:
+              - generic [ref=e623]: DAK
+              - heading "Dr. Amit Kumar" [level=3] [ref=e624]
+              - paragraph [ref=e625]: Emergency Medicine Specialist
+              - generic [ref=e626]:
+                - generic [ref=e627]:
+                  - img [ref=e628]
+                  - img [ref=e630]
+                  - img [ref=e632]
+                  - img [ref=e634]
+                  - img [ref=e636]
+                - generic [ref=e638]: "4.7"
+                - generic [ref=e639]: (190 reviews)
+            - generic [ref=e640]:
+              - generic [ref=e642]:
+                - img [ref=e643]
+                - text: 15+ Years
+              - generic [ref=e646]:
+                - paragraph [ref=e647]: Qualifications
+                - generic [ref=e648]:
+                  - generic [ref=e649]: MBBS
+                  - generic [ref=e650]: MD Emergency Medicine
+              - generic [ref=e651]:
+                - paragraph [ref=e652]: Achievement
+                - paragraph [ref=e653]: 5000+ Emergency Cases
+              - generic [ref=e654]:
+                - generic [ref=e655]:
+                  - generic [ref=e656]:
+                    - img [ref=e657]
+                    - generic [ref=e660]: Next Available
+                  - generic [ref=e661]: Available Now
+                - generic [ref=e662]:
+                  - generic [ref=e663]:
+                    - img [ref=e664]
+                    - generic [ref=e666]: Consultation Fee
+                  - generic [ref=e667]: ₹1,500
+              - generic [ref=e668]:
+                - generic [ref=e669]:
+                  - img [ref=e670]
+                  - generic [ref=e673]: 24/7 Available
+                - button "Book Now" [ref=e674] [cursor=pointer]:
+                  - img
+                  - text: Book Now
+          - generic [ref=e675]:
+            - generic [ref=e676]:
+              - generic [ref=e678]: DSD
+              - heading "Dr. Sunita Devi" [level=3] [ref=e679]
+              - paragraph [ref=e680]: Pediatric Cardiologist
+              - generic [ref=e681]:
+                - generic [ref=e682]:
+                  - img [ref=e683]
+                  - img [ref=e685]
+                  - img [ref=e687]
+                  - img [ref=e689]
+                  - img [ref=e691]
+                - generic [ref=e693]: "4.9"
+                - generic [ref=e694]: (150 reviews)
+            - generic [ref=e695]:
+              - generic [ref=e697]:
+                - img [ref=e698]
+                - text: 12+ Years
+              - generic [ref=e701]:
+                - paragraph [ref=e702]: Qualifications
+                - generic [ref=e703]:
+                  - generic [ref=e704]: MBBS
+                  - generic [ref=e705]: MD Pediatrics
+                  - generic [ref=e706]: DM Pediatric Cardiology
+              - generic [ref=e707]:
+                - paragraph [ref=e708]: Achievement
+                - paragraph [ref=e709]: 800+ Child Heart Surgeries
+              - generic [ref=e710]:
+                - generic [ref=e711]:
+                  - generic [ref=e712]:
+                    - img [ref=e713]
+                    - generic [ref=e716]: Next Available
+                  - generic [ref=e717]: Today 4:00 PM
+                - generic [ref=e718]:
+                  - generic [ref=e719]:
+                    - img [ref=e720]
+                    - generic [ref=e722]: Consultation Fee
+                  - generic [ref=e723]: ₹2,200
+              - generic [ref=e724]:
+                - generic [ref=e725]:
+                  - img [ref=e726]
+                  - generic [ref=e729]: Available Today
+                - button "Book Now" [ref=e730] [cursor=pointer]:
+                  - img
+                  - text: Book Now
+          - generic [ref=e731]:
+            - generic [ref=e732]:
+              - generic [ref=e734]: DVG
+              - heading "Dr. Vikash Gupta" [level=3] [ref=e735]
+              - paragraph [ref=e736]: Interventional Cardiologist
+              - generic [ref=e737]:
+                - generic [ref=e738]:
+                  - img [ref=e739]
+                  - img [ref=e741]
+                  - img [ref=e743]
+                  - img [ref=e745]
+                  - img [ref=e747]
+                - generic [ref=e749]: "4.8"
+                - generic [ref=e750]: (320 reviews)
+            - generic [ref=e751]:
+              - generic [ref=e753]:
+                - img [ref=e754]
+                - text: 20+ Years
+              - generic [ref=e757]:
+                - paragraph [ref=e758]: Qualifications
+                - generic [ref=e759]:
+                  - generic [ref=e760]: MBBS
+                  - generic [ref=e761]: MD Medicine
+                  - generic [ref=e762]: DM Interventional Cardiology
+              - generic [ref=e763]:
+                - paragraph [ref=e764]: Achievement
+                - paragraph [ref=e765]: 1500+ Angioplasty Procedures
+              - generic [ref=e766]:
+                - generic [ref=e767]:
+                  - generic [ref=e768]:
+                    - img [ref=e769]
+                    - generic [ref=e772]: Next Available
+                  - generic [ref=e773]: Tomorrow 11:30 AM
+                - generic [ref=e774]:
+                  - generic [ref=e775]:
+                    - img [ref=e776]
+                    - generic [ref=e778]: Consultation Fee
+                  - generic [ref=e779]: ₹2,800
+              - generic [ref=e780]:
+                - generic [ref=e781]:
+                  - img [ref=e782]
+                  - generic [ref=e785]: Available Tomorrow
+                - button "Book Now" [ref=e786] [cursor=pointer]:
+                  - img
+                  - text: Book Now
+          - generic [ref=e787]:
+            - generic [ref=e788]:
+              - generic [ref=e790]: DNS
+              - heading "Dr. Neha Sharma" [level=3] [ref=e791]
+              - paragraph [ref=e792]: Cardiac Anesthesiologist
+              - generic [ref=e793]:
+                - generic [ref=e794]:
+                  - img [ref=e795]
+                  - img [ref=e797]
+                  - img [ref=e799]
+                  - img [ref=e801]
+                  - img [ref=e803]
+                - generic [ref=e805]: "4.7"
+                - generic [ref=e806]: (120 reviews)
+            - generic [ref=e807]:
+              - generic [ref=e809]:
+                - img [ref=e810]
+                - text: 14+ Years
+              - generic [ref=e813]:
+                - paragraph [ref=e814]: Qualifications
+                - generic [ref=e815]:
+                  - generic [ref=e816]: MBBS
+                  - generic [ref=e817]: MD Anesthesia
+                  - generic [ref=e818]: DM Cardiac Anesthesia
+              - generic [ref=e819]:
+                - paragraph [ref=e820]: Achievement
+                - paragraph [ref=e821]: 2000+ Cardiac Anesthesia Cases
+              - generic [ref=e822]:
+                - generic [ref=e823]:
+                  - generic [ref=e824]:
+                    - img [ref=e825]
+                    - generic [ref=e828]: Next Available
+                  - generic [ref=e829]: Today 3:00 PM
+                - generic [ref=e830]:
+                  - generic [ref=e831]:
+                    - img [ref=e832]
+                    - generic [ref=e834]: Consultation Fee
+                  - generic [ref=e835]: ₹1,800
+              - generic [ref=e836]:
+                - generic [ref=e837]:
+                  - img [ref=e838]
+                  - generic [ref=e841]: Available Today
+                - button "Book Now" [ref=e842] [cursor=pointer]:
+                  - img
+                  - text: Book Now
+        - generic [ref=e843]:
+          - paragraph [ref=e844]: Can't find the right specialist? Our team will help you find the perfect match.
+          - button "Consult Our Medical Team" [ref=e845] [cursor=pointer]:
+            - img
+            - text: Consult Our Medical Team
+      - generic [ref=e847]:
+        - generic [ref=e848]:
+          - generic [ref=e849]:
+            - img [ref=e850]
+            - text: Patient Stories
+          - heading "What Our Patients Say" [level=2] [ref=e852]
+          - paragraph [ref=e853]: Real stories from real patients who trusted us with their heart health
+        - generic [ref=e854]:
+          - generic [ref=e856]:
+            - img [ref=e858]
+            - heading "10,000+" [level=3] [ref=e860]
+            - paragraph [ref=e861]: Lives Saved
+          - generic [ref=e863]:
+            - img [ref=e865]
+            - heading "5,000+" [level=3] [ref=e867]
+            - paragraph [ref=e868]: Successful Surgeries
+          - generic [ref=e870]:
+            - img [ref=e872]
+            - heading "25+" [level=3] [ref=e875]
+            - paragraph [ref=e876]: Years of Excellence
+        - generic [ref=e877]:
+          - generic [ref=e879]:
+            - img [ref=e881]
+            - generic [ref=e884]:
+              - img [ref=e885]
+              - img [ref=e887]
+              - img [ref=e889]
+              - img [ref=e891]
+              - img [ref=e893]
+            - paragraph [ref=e895]: "\"Dr. Rajiv Sharma saved my life with a complex heart surgery. The entire team was professional and caring. I'm grateful to be alive today.\""
+            - generic [ref=e896]:
+              - generic [ref=e898]: RK
+              - generic [ref=e899]:
+                - heading "Rajesh Kumar" [level=4] [ref=e900]
+                - paragraph [ref=e901]: Patna, Bihar
+                - generic [ref=e902]:
+                  - generic [ref=e903]: Bypass Surgery
+                  - generic [ref=e904]: 3 months ago
+          - generic [ref=e906]:
+            - img [ref=e908]
+            - generic [ref=e911]:
+              - img [ref=e912]
+              - img [ref=e914]
+              - img [ref=e916]
+              - img [ref=e918]
+              - img [ref=e920]
+            - paragraph [ref=e922]: "\"Excellent emergency care when I had a heart attack. The team responded immediately and provided world-class treatment. Highly recommended!\""
+            - generic [ref=e923]:
+              - generic [ref=e925]: PS
+              - generic [ref=e926]:
+                - heading "Priya Singh" [level=4] [ref=e927]
+                - paragraph [ref=e928]: Gaya, Bihar
+                - generic [ref=e929]:
+                  - generic [ref=e930]: Emergency Care
+                  - generic [ref=e931]: 1 month ago
+          - generic [ref=e933]:
+            - img [ref=e935]
+            - generic [ref=e938]:
+              - img [ref=e939]
+              - img [ref=e941]
+              - img [ref=e943]
+              - img [ref=e945]
+              - img [ref=e947]
+            - paragraph [ref=e949]: "\"My 8-year-old son's heart condition was treated here. Dr. Sunita is amazing with children. The hospital has the best pediatric cardiac care.\""
+            - generic [ref=e950]:
+              - generic [ref=e952]: AK
+              - generic [ref=e953]:
+                - heading "Amit Kumar" [level=4] [ref=e954]
+                - paragraph [ref=e955]: Muzaffarpur, Bihar
+                - generic [ref=e956]:
+                  - generic [ref=e957]: Pediatric Cardiology
+                  - generic [ref=e958]: 2 weeks ago
+          - generic [ref=e960]:
+            - img [ref=e962]
+            - generic [ref=e965]:
+              - img [ref=e966]
+              - img [ref=e968]
+              - img [ref=e970]
+              - img [ref=e972]
+              - img [ref=e974]
+            - paragraph [ref=e976]: "\"Angioplasty procedure was smooth and painless. The modern equipment and skilled doctors gave me confidence. Thank you team!\""
+            - generic [ref=e977]:
+              - generic [ref=e979]: SD
+              - generic [ref=e980]:
+                - heading "Sunita Devi" [level=4] [ref=e981]
+                - paragraph [ref=e982]: Darbhanga, Bihar
+                - generic [ref=e983]:
+                  - generic [ref=e984]: Angioplasty
+                  - generic [ref=e985]: 1 week ago
+          - generic [ref=e987]:
+            - img [ref=e989]
+            - generic [ref=e992]:
+              - img [ref=e993]
+              - img [ref=e995]
+              - img [ref=e997]
+              - img [ref=e999]
+              - img [ref=e1001]
+            - paragraph [ref=e1003]: "\"From consultation to surgery, everything was handled professionally. The hospital facilities are world-class. Dr. Priya is an excellent cardiologist.\""
+            - generic [ref=e1004]:
+              - generic [ref=e1006]: VG
+              - generic [ref=e1007]:
+                - heading "Vikash Gupta" [level=4] [ref=e1008]
+                - paragraph [ref=e1009]: Bhagalpur, Bihar
+                - generic [ref=e1010]:
+                  - generic [ref=e1011]: Cardiology Consultation
+                  - generic [ref=e1012]: 2 months ago
+          - generic [ref=e1014]:
+            - img [ref=e1016]
+            - generic [ref=e1019]:
+              - img [ref=e1020]
+              - img [ref=e1022]
+              - img [ref=e1024]
+              - img [ref=e1026]
+              - img [ref=e1028]
+            - paragraph [ref=e1030]: "\"24/7 emergency services saved my father's life. The response time was incredible. This hospital is a blessing for Bihar.\""
+            - generic [ref=e1031]:
+              - generic [ref=e1033]: NS
+              - generic [ref=e1034]:
+                - heading "Neha Sharma" [level=4] [ref=e1035]
+                - paragraph [ref=e1036]: Purnia, Bihar
+                - generic [ref=e1037]:
+                  - generic [ref=e1038]: Emergency Surgery
+                  - generic [ref=e1039]: 3 weeks ago
+        - generic [ref=e1042]:
+          - heading "Ready to Experience World-Class Heart Care?" [level=3] [ref=e1043]
+          - paragraph [ref=e1044]: Join thousands of satisfied patients who trust us with their heart health
+          - generic [ref=e1045]:
+            - generic [ref=e1046]:
+              - img [ref=e1047]
+              - text: 4.9/5 Patient Rating
+            - generic [ref=e1049]:
+              - img [ref=e1050]
+              - text: 100% Safe & Secure
+      - generic [ref=e1053]:
+        - heading "Ready to Book Your Appointment?" [level=2] [ref=e1054]
+        - button "Book Appointment" [ref=e1055] [cursor=pointer]:
+          - img
+          - text: Book Appointment
+    - contentinfo [ref=e1056]:
+      - generic [ref=e1057]:
+        - generic [ref=e1058]:
+          - heading "Get Emergency Heart Care Now" [level=3] [ref=e1059]
+          - generic [ref=e1060]:
+            - link "Call +91-612-2670992" [ref=e1061] [cursor=pointer]:
+              - /url: tel:+916122670992
+            - link "Request My Consultation" [ref=e1062] [cursor=pointer]:
+              - /url: "#consultation"
+        - generic [ref=e1063]:
+          - generic [ref=e1064]:
+            - generic [ref=e1065]:
+              - img [ref=e1067]
+              - generic [ref=e1069]:
+                - heading "Anupama Hospital Pvt Ltd" [level=3] [ref=e1070]
+                - paragraph [ref=e1071]: Multispecialty Hospital
+            - paragraph [ref=e1072]: Bihar's first super-specialty cardiac hospital, providing world-class cardiac care since 1998.
+          - generic [ref=e1073]:
+            - heading "Contact Us" [level=4] [ref=e1074]
+            - generic [ref=e1075]:
+              - generic [ref=e1076]:
+                - img [ref=e1077]
+                - paragraph [ref=e1080]: (Update main phone from Justdial)
+              - generic [ref=e1081]:
+                - img [ref=e1082]
+                - link "contact@example.com" [ref=e1085] [cursor=pointer]:
+                  - /url: mailto:contact@example.com
+              - generic [ref=e1086]:
+                - img [ref=e1087]
+                - generic [ref=e1090]:
+                  - paragraph [ref=e1091]: Behind Side Of Arvind Hospital, Ashok Rajpath
+                  - paragraph [ref=e1092]: Patna, Bihar, India
+          - generic [ref=e1093]:
+            - heading "Quick Links" [level=4] [ref=e1094]
+            - list [ref=e1095]:
+              - listitem [ref=e1096]:
+                - link "Our Services" [ref=e1097] [cursor=pointer]:
+                  - /url: "#services"
+              - listitem [ref=e1098]:
+                - link "About Us" [ref=e1099] [cursor=pointer]:
+                  - /url: "#about"
+              - listitem [ref=e1100]:
+                - link "Contact" [ref=e1101] [cursor=pointer]:
+                  - /url: "#contact"
+        - generic [ref=e1103]:
+          - paragraph [ref=e1104]: © 2025 Anupama Hospital Pvt Ltd. All Rights Reserved.
+          - generic [ref=e1106]:
+            - generic [ref=e1107]: Made with
+            - img [ref=e1108]
+            - generic [ref=e1110]: for better cardiac care
+    - link "Emergency contact - Call now" [ref=e1112] [cursor=pointer]:
+      - /url: tel:+910000000000
+      - generic [ref=e1116]:
+        - img [ref=e1117]
+        - generic [ref=e1119]: Emergency
+```
