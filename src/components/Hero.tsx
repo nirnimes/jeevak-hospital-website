@@ -6,18 +6,23 @@ import heroImage from "@/assets/hero-hospital.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-primary/5 via-background to-secondary/10 overflow-hidden">
+    <section 
+      id="main-content"
+      className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-primary/5 via-background to-secondary/10 overflow-hidden"
+      role="main"
+      aria-label="Hero section - Welcome to Anupama Hospital"
+    >
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" aria-hidden="true"></div>
       
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content - Left Side */}
           <div className="space-y-8 animate-slide-up">
             {/* Trust Badge */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4" role="group" aria-label="Hospital achievements">
               <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-2">
-                <Star className="mr-2 h-4 w-4" />
+                <Star className="mr-2 h-4 w-4" aria-hidden="true" />
                 Bihar's #1 Heart Hospital
               </Badge>
               <Badge variant="outline" className="border-green-200 text-green-700 bg-green-50">
@@ -43,9 +48,9 @@ const Hero = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4" role="group" aria-label="Hospital statistics">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center" aria-hidden="true">
                   <CheckCircle className="h-6 w-6 text-green-600" />
                 </div>
                 <div>
@@ -54,7 +59,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center" aria-hidden="true">
                   <Clock className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
@@ -63,7 +68,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center" aria-hidden="true">
                   <Award className="h-6 w-6 text-purple-600" />
                 </div>
                 <div>
@@ -72,7 +77,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center" aria-hidden="true">
                   <Users className="h-6 w-6 text-orange-600" />
                 </div>
                 <div>
@@ -83,24 +88,34 @@ const Hero = () => {
             </div>
 
             {/* Primary CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow medical-button-primary group">
-                <Calendar className="mr-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-4" role="group" aria-label="Action buttons">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow medical-button-primary group focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-label="Book free consultation appointment"
+              >
+                <Calendar className="mr-2 h-5 w-5" aria-hidden="true" />
                 Book Free Consultation
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 text-destructive border-destructive hover:bg-destructive hover:text-destructive-foreground">
-                <Phone className="mr-2 h-5 w-5" />
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 py-6 text-destructive border-destructive hover:bg-destructive hover:text-destructive-foreground focus:ring-2 focus:ring-destructive focus:ring-offset-2"
+                aria-label="Emergency phone number"
+                onClick={() => window.open('tel:+916122670992', '_self')}
+              >
+                <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
                 Emergency: +91-612-267-0992
               </Button>
             </div>
 
             {/* Patient Promise */}
-            <div className="bg-primary/5 rounded-lg p-6 border border-primary/10">
+            <div className="bg-primary/5 rounded-lg p-6 border border-primary/10" role="region" aria-labelledby="patient-promise-heading">
               <div className="flex items-start space-x-3">
-                <Heart className="h-6 w-6 text-primary mt-1" />
+                <Heart className="h-6 w-6 text-primary mt-1" aria-hidden="true" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">Our Promise to You</h3>
+                  <h3 id="patient-promise-heading" className="font-semibold text-lg mb-2">Our Promise to You</h3>
                   <p className="text-muted-foreground">
                     Every patient receives personalized care from our expert team. 
                     We treat you like family because your health is our highest priority.
@@ -118,7 +133,7 @@ const Hero = () => {
                 {/* Placeholder for patient image */}
                 <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-end justify-end relative">
                   {/* Professional patient photo placeholder */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" aria-hidden="true"></div>
                   <div className="relative z-10 p-6 text-right">
                     <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 inline-block max-w-xs">
                       <div className="text-sm font-medium text-gray-700">Patient Success Story</div>
@@ -127,7 +142,7 @@ const Hero = () => {
                   </div>
                   
                   {/* Heart icon overlay */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
                     <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center backdrop-blur-sm">
                       <Heart className="w-12 h-12 text-primary" />
                     </div>
@@ -137,10 +152,10 @@ const Hero = () => {
             </div>
 
             {/* Stats Cards - Positioned outside the image container */}
-            <div className="mt-6 grid grid-cols-2 gap-4">
+            <div className="mt-6 grid grid-cols-2 gap-4" role="group" aria-label="Hospital performance statistics">
               <div className="bg-white rounded-xl shadow-lg p-4 border">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center" aria-hidden="true">
                     <Heart className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
@@ -152,7 +167,7 @@ const Hero = () => {
 
               <div className="bg-white rounded-xl shadow-lg p-4 border">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center" aria-hidden="true">
                     <Shield className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
