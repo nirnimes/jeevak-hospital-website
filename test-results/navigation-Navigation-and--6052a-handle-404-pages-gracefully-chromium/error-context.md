@@ -1,9 +1,13 @@
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]:
-  - text: The server is configured with a public base URL of /jeevak-hospital-website/ - did you mean to visit
-  - link "/jeevak-hospital-website/non-existent-page" [ref=e2] [cursor=pointer]:
-    - /url: /jeevak-hospital-website/non-existent-page
-  - text: instead?
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e4]:
+    - heading "404" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Oops! Page not found
+    - link "Return to Home" [ref=e7] [cursor=pointer]:
+      - /url: /
 ```

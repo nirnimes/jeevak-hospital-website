@@ -1,9 +1,320 @@
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]:
-  - text: The server is configured with a public base URL of /jeevak-hospital-website/ - did you mean to visit
-  - link "/jeevak-hospital-website/services" [ref=e2] [cursor=pointer]:
-    - /url: /jeevak-hospital-website/services
-  - text: instead?
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#hero-section"
+    - banner "Main navigation" [ref=e5]:
+      - navigation "Main navigation" [ref=e7]:
+        - generic [ref=e8]:
+          - link "Anupama Hospital - Home" [ref=e9] [cursor=pointer]:
+            - /url: /jeevak-hospital-website
+            - img [ref=e11]
+            - generic [ref=e14]:
+              - generic [ref=e15]: Anupama Hospital Pvt Ltd
+              - paragraph [ref=e16]: Multispecialty Hospital, Ashok Rajpath, Patna
+          - generic [ref=e17]:
+            - menubar "Main navigation menu" [ref=e18]:
+              - menuitem "Home" [ref=e19] [cursor=pointer]
+              - menuitem "Services" [ref=e20] [cursor=pointer]
+              - menuitem "Emergency" [ref=e21] [cursor=pointer]:
+                - img [ref=e22]
+                - text: Emergency
+              - menuitem "About" [ref=e24] [cursor=pointer]
+              - menuitem "Contact" [ref=e25] [cursor=pointer]
+            - link "Emergency phone number" [ref=e26] [cursor=pointer]:
+              - /url: tel:+916122670992
+              - img [ref=e27]
+              - generic "Emergency number" [ref=e29]: +91-612-2670992
+            - link "Book consultation appointment" [ref=e30] [cursor=pointer]:
+              - /url: /jeevak-hospital-website/contact
+              - button "Book consultation appointment" [ref=e31]: Book Consultation
+    - main [ref=e32]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - img [ref=e37]
+            - text: Our Services
+          - heading "Comprehensive Heart Care Services" [level=1] [ref=e39]
+          - paragraph [ref=e40]: From emergency care to complex surgeries, we provide world-class cardiac services with cutting-edge technology and compassionate care.
+        - generic [ref=e41]:
+          - generic [ref=e43]:
+            - img [ref=e45]
+            - heading "5,000+" [level=3] [ref=e47]
+            - paragraph [ref=e48]: Total Surgeries
+          - generic [ref=e50]:
+            - img [ref=e52]
+            - heading "98.5%" [level=3] [ref=e55]
+            - paragraph [ref=e56]: Success Rate
+          - generic [ref=e58]:
+            - img [ref=e60]
+            - heading "< 5 min" [level=3] [ref=e62]
+            - paragraph [ref=e63]: Emergency Response
+          - generic [ref=e65]:
+            - img [ref=e67]
+            - heading "4.9/5" [level=3] [ref=e72]
+            - paragraph [ref=e73]: Patient Satisfaction
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - img [ref=e80]
+            - heading "Cardiac Surgery" [level=3] [ref=e82]
+            - paragraph [ref=e83]: Advanced heart surgeries including bypass, valve replacement, and congenital heart defect corrections.
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - heading "What's Included:" [level=4] [ref=e87]
+              - generic [ref=e88]:
+                - generic [ref=e89]:
+                  - img [ref=e90]
+                  - generic [ref=e93]: CABG Surgery
+                - generic [ref=e94]:
+                  - img [ref=e95]
+                  - generic [ref=e98]: Valve Replacement
+                - generic [ref=e99]:
+                  - img [ref=e100]
+                  - generic [ref=e103]: Congenital Corrections
+                - generic [ref=e104]:
+                  - img [ref=e105]
+                  - generic [ref=e108]: Minimally Invasive
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - paragraph [ref=e111]: Duration
+                - paragraph [ref=e112]: 2-6 hours
+              - generic [ref=e113]:
+                - paragraph [ref=e114]: Recovery
+                - paragraph [ref=e115]: 1-2 weeks
+            - button "Learn More" [ref=e116] [cursor=pointer]:
+              - text: Learn More
+              - img
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - img [ref=e120]
+            - heading "Emergency Cardiac Care" [level=3] [ref=e122]
+            - paragraph [ref=e123]: 24/7 emergency services for heart attacks, cardiac arrests, and critical heart conditions.
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - heading "What's Included:" [level=4] [ref=e127]
+              - generic [ref=e128]:
+                - generic [ref=e129]:
+                  - img [ref=e130]
+                  - generic [ref=e133]: Heart Attack Treatment
+                - generic [ref=e134]:
+                  - img [ref=e135]
+                  - generic [ref=e138]: Cardiac Arrest Response
+                - generic [ref=e139]:
+                  - img [ref=e140]
+                  - generic [ref=e143]: Critical Care ICU
+                - generic [ref=e144]:
+                  - img [ref=e145]
+                  - generic [ref=e148]: Ambulance Service
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - paragraph [ref=e151]: Duration
+                - paragraph [ref=e152]: Immediate
+              - generic [ref=e153]:
+                - paragraph [ref=e154]: Recovery
+                - paragraph [ref=e155]: Varies
+            - button "Learn More" [ref=e156] [cursor=pointer]:
+              - text: Learn More
+              - img
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - img [ref=e160]
+            - heading "Cardiology Consultation" [level=3] [ref=e164]
+            - paragraph [ref=e165]: Comprehensive heart health assessments, diagnostics, and treatment planning.
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - heading "What's Included:" [level=4] [ref=e169]
+              - generic [ref=e170]:
+                - generic [ref=e171]:
+                  - img [ref=e172]
+                  - generic [ref=e175]: ECG & Echo
+                - generic [ref=e176]:
+                  - img [ref=e177]
+                  - generic [ref=e180]: Stress Testing
+                - generic [ref=e181]:
+                  - img [ref=e182]
+                  - generic [ref=e185]: Holter Monitoring
+                - generic [ref=e186]:
+                  - img [ref=e187]
+                  - generic [ref=e190]: Treatment Planning
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - paragraph [ref=e193]: Duration
+                - paragraph [ref=e194]: 30-45 min
+              - generic [ref=e195]:
+                - paragraph [ref=e196]: Recovery
+                - paragraph [ref=e197]: Same day
+            - button "Learn More" [ref=e198] [cursor=pointer]:
+              - text: Learn More
+              - img
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - img [ref=e202]
+            - heading "Interventional Cardiology" [level=3] [ref=e204]
+            - paragraph [ref=e205]: Non-surgical procedures like angioplasty, stenting, and catheter-based treatments.
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - heading "What's Included:" [level=4] [ref=e209]
+              - generic [ref=e210]:
+                - generic [ref=e211]:
+                  - img [ref=e212]
+                  - generic [ref=e215]: Angioplasty
+                - generic [ref=e216]:
+                  - img [ref=e217]
+                  - generic [ref=e220]: Stent Placement
+                - generic [ref=e221]:
+                  - img [ref=e222]
+                  - generic [ref=e225]: Catheter Procedures
+                - generic [ref=e226]:
+                  - img [ref=e227]
+                  - generic [ref=e230]: Balloon Valvuloplasty
+            - generic [ref=e231]:
+              - generic [ref=e232]:
+                - paragraph [ref=e233]: Duration
+                - paragraph [ref=e234]: 1-3 hours
+              - generic [ref=e235]:
+                - paragraph [ref=e236]: Recovery
+                - paragraph [ref=e237]: 1-2 days
+            - button "Learn More" [ref=e238] [cursor=pointer]:
+              - text: Learn More
+              - img
+        - generic [ref=e239]:
+          - generic [ref=e240]:
+            - img [ref=e242]
+            - heading "Pediatric Cardiology" [level=3] [ref=e247]
+            - paragraph [ref=e248]: Specialized care for children with heart conditions from birth to adolescence.
+          - generic [ref=e250]:
+            - generic [ref=e251]:
+              - heading "What's Included:" [level=4] [ref=e252]
+              - generic [ref=e253]:
+                - generic [ref=e254]:
+                  - img [ref=e255]
+                  - generic [ref=e258]: Child Heart Surgery
+                - generic [ref=e259]:
+                  - img [ref=e260]
+                  - generic [ref=e263]: Congenital Defects
+                - generic [ref=e264]:
+                  - img [ref=e265]
+                  - generic [ref=e268]: Pediatric ICU
+                - generic [ref=e269]:
+                  - img [ref=e270]
+                  - generic [ref=e273]: Family Counseling
+            - generic [ref=e274]:
+              - generic [ref=e275]:
+                - paragraph [ref=e276]: Duration
+                - paragraph [ref=e277]: Varies
+              - generic [ref=e278]:
+                - paragraph [ref=e279]: Recovery
+                - paragraph [ref=e280]: Varies
+            - button "Learn More" [ref=e281] [cursor=pointer]:
+              - text: Learn More
+              - img
+        - generic [ref=e282]:
+          - generic [ref=e283]:
+            - img [ref=e285]
+            - heading "Preventive Cardiology" [level=3] [ref=e288]
+            - paragraph [ref=e289]: Heart disease prevention, risk assessment, and lifestyle modification programs.
+          - generic [ref=e291]:
+            - generic [ref=e292]:
+              - heading "What's Included:" [level=4] [ref=e293]
+              - generic [ref=e294]:
+                - generic [ref=e295]:
+                  - img [ref=e296]
+                  - generic [ref=e299]: Risk Assessment
+                - generic [ref=e300]:
+                  - img [ref=e301]
+                  - generic [ref=e304]: Lifestyle Counseling
+                - generic [ref=e305]:
+                  - img [ref=e306]
+                  - generic [ref=e309]: Prevention Programs
+                - generic [ref=e310]:
+                  - img [ref=e311]
+                  - generic [ref=e314]: Regular Monitoring
+            - generic [ref=e315]:
+              - generic [ref=e316]:
+                - paragraph [ref=e317]: Duration
+                - paragraph [ref=e318]: 30-60 min
+              - generic [ref=e319]:
+                - paragraph [ref=e320]: Recovery
+                - paragraph [ref=e321]: Same day
+            - button "Learn More" [ref=e322] [cursor=pointer]:
+              - text: Learn More
+              - img
+      - generic [ref=e326]:
+        - img [ref=e328]
+        - heading "24/7 Emergency Cardiac Care" [level=2] [ref=e330]
+        - paragraph [ref=e331]: Heart emergencies don't wait. Our expert team is ready around the clock to provide immediate, life-saving cardiac care.
+        - generic [ref=e332]:
+          - 'button "Call Emergency: +91-612-267-0992" [ref=e333] [cursor=pointer]':
+            - img
+            - text: "Call Emergency: +91-612-267-0992"
+          - button "Book Urgent Consultation" [ref=e334] [cursor=pointer]:
+            - img
+            - text: Book Urgent Consultation
+      - generic [ref=e336]:
+        - heading "Ready to Take Care of Your Heart?" [level=2] [ref=e337]
+        - paragraph [ref=e338]: Schedule a consultation with our expert cardiologists and take the first step towards better heart health.
+        - button "Book Your Consultation Today" [ref=e339] [cursor=pointer]:
+          - img
+          - text: Book Your Consultation Today
+    - contentinfo [ref=e340]:
+      - generic [ref=e341]:
+        - generic [ref=e342]:
+          - heading "Get Emergency Heart Care Now" [level=3] [ref=e343]
+          - generic [ref=e344]:
+            - link "Call +91-612-2670992" [ref=e345] [cursor=pointer]:
+              - /url: tel:+916122670992
+            - link "Request My Consultation" [ref=e346] [cursor=pointer]:
+              - /url: "#consultation"
+        - generic [ref=e347]:
+          - generic [ref=e348]:
+            - generic [ref=e349]:
+              - img [ref=e351]
+              - generic [ref=e353]:
+                - heading "Anupama Hospital Pvt Ltd" [level=3] [ref=e354]
+                - paragraph [ref=e355]: Multispecialty Hospital
+            - paragraph [ref=e356]: Bihar's first super-specialty cardiac hospital, providing world-class cardiac care since 1998.
+          - generic [ref=e357]:
+            - heading "Contact Us" [level=4] [ref=e358]
+            - generic [ref=e359]:
+              - generic [ref=e360]:
+                - img [ref=e361]
+                - paragraph [ref=e364]: (Update main phone from Justdial)
+              - generic [ref=e365]:
+                - img [ref=e366]
+                - link "contact@example.com" [ref=e369] [cursor=pointer]:
+                  - /url: mailto:contact@example.com
+              - generic [ref=e370]:
+                - img [ref=e371]
+                - generic [ref=e374]:
+                  - paragraph [ref=e375]: Behind Side Of Arvind Hospital, Ashok Rajpath
+                  - paragraph [ref=e376]: Patna, Bihar, India
+          - generic [ref=e377]:
+            - heading "Quick Links" [level=4] [ref=e378]
+            - list [ref=e379]:
+              - listitem [ref=e380]:
+                - link "Our Services" [ref=e381] [cursor=pointer]:
+                  - /url: "#services"
+              - listitem [ref=e382]:
+                - link "About Us" [ref=e383] [cursor=pointer]:
+                  - /url: "#about"
+              - listitem [ref=e384]:
+                - link "Contact" [ref=e385] [cursor=pointer]:
+                  - /url: "#contact"
+        - generic [ref=e387]:
+          - paragraph [ref=e388]: © 2025 Anupama Hospital Pvt Ltd. All Rights Reserved.
+          - generic [ref=e390]:
+            - generic [ref=e391]: Made with
+            - img [ref=e392]
+            - generic [ref=e394]: for better cardiac care
+    - link "Emergency contact - Call now" [ref=e396] [cursor=pointer]:
+      - /url: tel:+916122670992
+      - generic [ref=e400]:
+        - img [ref=e401]
+        - generic [ref=e403]: Emergency
 ```

@@ -11,13 +11,13 @@ test.describe('Navigation and Routing', () => {
     await expect(page).toHaveURL(/jeevak-hospital-website/);
     
     // Test Services navigation
-    // Use route navigation for determinism in hash-router environments
-    await page.goto('/services');
-    await expect(page).toHaveURL(/jeevak-hospital-website(\/|#)services/);
+    // Use full base path to match BrowserRouter basename in preview
+    await page.goto('/jeevak-hospital-website/services');
+    await expect(page).toHaveURL(/jeevak-hospital-website\/(|#)services/);
     // Expect services content marker
     await expect(page.getByText(/our medical services/i)).toBeVisible();
-    await page.goto('/services');
-    await expect(page).toHaveURL(/jeevak-hospital-website(\/|#)services/);
+    await page.goto('/jeevak-hospital-website/services');
+    await expect(page).toHaveURL(/jeevak-hospital-website\/(|#)services/);
     await expect(page.getByText('Our Medical Services')).toBeVisible();
     
     // Test About navigation
@@ -61,7 +61,7 @@ test.describe('Navigation and Routing', () => {
   });
 
   test('should handle 404 pages gracefully', async ({ page }) => {
-    const response = await page.goto('/non-existent-page');
+    const response = await page.goto('/jeevak-hospital-website/non-existent-page');
     if (response) {
       expect([404, 200]).toContain(response.status());
     }

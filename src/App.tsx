@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { Loader2 } from "lucide-react";
+import EmergencyContact from "@/components/EmergencyContact";
 
 // Lazy load page components for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -65,6 +66,7 @@ const App = () => (
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <EmergencyContact />
           </Suspense>
         </BrowserRouter>
       </TooltipProvider>

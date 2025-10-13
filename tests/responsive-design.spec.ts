@@ -65,7 +65,7 @@ test.describe('Responsive Design Testing', () => {
     await expect(page.locator('[role="dialog"]').getByText('Book Your Appointment')).toBeVisible();
     
     // Test interaction on emergency button
-    const emergencyButton = page.locator('#emergency-fab a').first();
+    const emergencyButton = page.getByRole('link', { name: /emergency contact - call now/i });
     await emergencyButton.click();
     
     // Should not cause any errors

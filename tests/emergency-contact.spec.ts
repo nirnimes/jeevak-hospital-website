@@ -6,7 +6,7 @@ test.describe('Emergency Contact Features', () => {
   });
 
   test('should display emergency contact button', async ({ page }) => {
-    const emergencyButton = page.locator('#emergency-fab a').first();
+    const emergencyButton = page.getByRole('link', { name: /emergency contact - call now/i });
     await expect(emergencyButton).toBeVisible();
     
     // Check if it's positioned at bottom right
@@ -15,31 +15,31 @@ test.describe('Emergency Contact Features', () => {
   });
 
   test('should have correct emergency phone link', async ({ page }) => {
-    const emergencyLink = page.locator('#emergency-fab a').first();
-    await expect(emergencyLink).toHaveAttribute('href', /tel:\+91/);
+    const emergencyLink = page.getByRole('link', { name: /emergency contact - call now/i });
+    await expect(emergencyLink).toHaveAttribute('href', 'tel:+916122670992');
   });
 
   test('should have proper accessibility attributes', async ({ page }) => {
-    const emergencyButton = page.locator('#emergency-fab a').first();
-    await expect(emergencyButton).toHaveAttribute('aria-label', /Emergency contact/i);
+    const emergencyButton = page.getByRole('link', { name: /emergency contact - call now/i });
+    await expect(emergencyButton).toHaveAttribute('aria-label', 'Emergency contact - Call now');
   });
 
   test('should be visible on mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     
-    const emergencyButton = page.locator('#emergency-fab a').first();
+    const emergencyButton = page.getByRole('link', { name: /emergency contact - call now/i });
     await expect(emergencyButton).toBeVisible();
   });
 
   test('should have pulse animation', async ({ page }) => {
-    // Relax: ensure the emergency wrapper exists; animation may be throttled in headless
-    const wrapper = page.locator('#emergency-fab');
-    await expect(wrapper).toBeVisible();
+    // Check for pulse animation ring within emergency button wrapper
+    const pulseElement = page.locator('#emergency-fab .animate-ping');
+    await expect(pulseElement).toBeVisible();
   });
 
   test('should have proper emergency styling', async ({ page }) => {
-    // Assert destructive style exists within the FAB region
-    const destructiveAny = page.locator('#emergency-fab .bg-destructive');
+    const emergencyButton = page.getByRole('link', { name: /emergency contact - call now/i });
+    const destructiveAny = emergencyButton.locator('.bg-destructive');
     await expect(destructiveAny.first()).toBeVisible();
   });
 });
