@@ -9,7 +9,7 @@ import { Loader2 } from "lucide-react";
 import EmergencyContact from "@/components/EmergencyContact";
 
 // Lazy load page components for better performance
-const Home = lazy(() => import("./pages/HomeTest"));
+const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
 const Emergency = lazy(() => import("./pages/Emergency"));
 const About = lazy(() => import("./pages/About"));

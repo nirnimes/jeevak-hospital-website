@@ -166,6 +166,12 @@ All colors MUST be HSL.
     animation: scale-in 0.3s ease-out;
   }
   
+  /* Grid pattern background */
+  .bg-grid-pattern {
+    background-image: radial-gradient(circle, hsl(var(--muted-foreground)) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
   /* Modern hover effects */
   .hover-lift {
     transition: var(--transition-base);
