@@ -1,9 +1,9 @@
-name: Deploy (gh-pages branch)
+name: Deploy (gh-pages branch) [manual]
 
 on:
+  # Disable automatic triggers to avoid racing with the primary Pages workflow.
+  # You can run this manually from the Actions tab if needed.
   workflow_dispatch:
-  push:
-    branches: ["main"]
 
 permissions:
   contents: write
