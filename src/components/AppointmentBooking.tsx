@@ -89,6 +89,16 @@ export default function AppointmentBooking() {
           <DialogTitle className="text-2xl">Book Your Appointment</DialogTitle>
           <DialogDescription>Schedule your consultation with our expert medical team</DialogDescription>
         </DialogHeader>
+        {/* Screen reader live announcements for step changes and selections */}
+        <div aria-live="polite" className="sr-only">
+          {step === 1 && `Step 1 of 3. Select a service.`}
+          {step === 2 && `Step 2 of 3. Select date and time.`}
+          {step === 3 && `Step 3 of 3. Enter patient information.`}
+          {selectedService && `Selected service: ${services.find(s => s.value === selectedService)?.label}.`}
+          {date && `Selected date: ${format(date, "PPP")}.`}
+          {selectedTime && `Selected time: ${selectedTime}.`}
+          {submitted && `Appointment request submitted successfully.`}
+        </div>
 
         <div className="space-y-6">
           {step === 1 && (
@@ -141,7 +151,13 @@ export default function AppointmentBooking() {
                     mode="single"
                     selected={date}
                     onSelect={setDate}
-                    disabled={(d) => d < new Date()}
+                    disabled={(d) => {
+                      const day = new Date(d);
+                      day.setHours(0, 0, 0, 0);
+                      const today = new Date();
+                      today.setHours(0, 0, 0, 0);
+                      return day < today;
+                    }}
                     className="rounded-md border"
                   />
                 </div>

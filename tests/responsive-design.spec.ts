@@ -37,13 +37,13 @@ test.describe('Responsive Design Testing', () => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/');
     
-    const mobileMenuButton = page.locator('[aria-label*="menu"], [aria-label*="toggle"]');
+    const mobileMenuButton = page.getByRole('button', { name: /open navigation menu/i });
     
     if (await mobileMenuButton.isVisible()) {
       await mobileMenuButton.click();
       
       // Mobile menu should open
-      const mobileMenu = page.locator('[role="navigation"]');
+      const mobileMenu = page.getByRole('navigation');
       await expect(mobileMenu).toBeVisible();
       
       // Test menu items
@@ -58,15 +58,15 @@ test.describe('Responsive Design Testing', () => {
     await page.goto('/');
     
     // Test touch on appointment booking button
-    const bookButton = page.getByRole('button', { name: /book appointment/i });
-    await bookButton.click(); // Use click instead of tap for better compatibility
+    const bookButton = page.locator('[aria-label="Action buttons"]').getByRole('button', { name: /book appointment/i });
+    await bookButton.click();
     
     // Modal should open - use more specific selector to avoid strict mode violation
     await expect(page.locator('[role="dialog"]').getByText('Book Your Appointment')).toBeVisible();
     
-    // Test touch on emergency button
-    const emergencyButton = page.getByRole('link', { name: /emergency contact/i });
-    await emergencyButton.tap();
+    // Test interaction on emergency button
+    const emergencyButton = page.locator('#emergency-fab a').first();
+    await emergencyButton.click();
     
     // Should not cause any errors
     await expect(emergencyButton).toBeVisible();

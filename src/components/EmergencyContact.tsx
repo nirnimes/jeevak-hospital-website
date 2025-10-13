@@ -2,9 +2,9 @@ import { Phone } from "lucide-react";
 
 const EmergencyContact = () => {
   return (
-    <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
+    <div id="emergency-fab" className="fixed bottom-6 right-6 z-50 animate-fade-in">
       <a 
-        href="tel:+910000000000" 
+        href="tel:+916122670992" 
         aria-label="Emergency contact - Call now"
         className="group"
       >

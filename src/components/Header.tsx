@@ -135,7 +135,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6">
-              <ul className="flex items-center gap-6" role="menubar" aria-label="Main navigation menu">
+              <ul className="flex items-center gap-6" role="menubar" aria-label="Main navigation menu" data-testid="header-menubar">
                 {navItems.map((item) => (
                   <li key={item.name} role="none">
                     <Link
@@ -150,6 +150,7 @@ const Header = () => {
                       role="menuitem"
                       aria-current={location.pathname === item.href ? "page" : undefined}
                     >
+                      
                       {item.name === "Emergency" && <Phone className="h-4 w-4" aria-hidden="true" />}
                       {item.name}
                     </Link>

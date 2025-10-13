@@ -7,7 +7,7 @@
     - region "Notifications alt+T"
     - generic:
       - link:
-        - /url: "#main-content"
+        - /url: "#hero-section"
         - text: Skip to main content
       - banner:
         - generic:
@@ -18,12 +18,12 @@
                 - generic:
                   - img
                 - generic:
-                  - heading [level=1]: Anupama Hospital Pvt Ltd
+                  - generic: Anupama Hospital Pvt Ltd
                   - paragraph: Multispecialty Hospital, Ashok Rajpath, Patna
               - button:
                 - img
       - main:
-        - main:
+        - region:
           - generic:
             - generic:
               - generic:
@@ -61,10 +61,9 @@
                       - generic: 24/7
                       - generic: Always Here
                 - group:
-                  - button:
+                  - button [expanded]:
                     - img
-                    - text: Book Free Consultation
-                    - img
+                    - text: Book Appointment
                   - button:
                     - img
                     - text: "Emergency: +91-612-267-0992"
@@ -78,6 +77,7 @@
                 - generic:
                   - generic:
                     - generic:
+                      - img
                       - generic:
                         - generic:
                           - generic: Patient Success Story
@@ -845,7 +845,7 @@
         - generic:
           - generic:
             - heading [level=2]: Ready to Book Your Appointment?
-            - button [expanded]:
+            - button:
               - img
               - text: Book Appointment
       - contentinfo:
@@ -910,7 +910,7 @@
                   - generic: for better cardiac care
       - generic:
         - link:
-          - /url: tel:+910000000000
+          - /url: tel:+916122670992
           - generic:
             - generic:
               - generic:
@@ -920,33 +920,34 @@
     - generic [ref=e3]:
       - heading "Book Your Appointment" [level=2] [ref=e4]
       - paragraph [ref=e5]: Schedule your consultation with our expert medical team
-    - generic [ref=e7]:
-      - heading "Select Service" [level=3] [ref=e8]
-      - generic [ref=e9]:
-        - generic [ref=e13] [cursor=pointer]:
-          - img [ref=e14]
-          - generic [ref=e16]:
-            - paragraph [ref=e17]: Cardiology Consultation
-            - paragraph [ref=e18]: "Duration: 45 min"
-        - generic [ref=e21] [cursor=pointer]:
-          - generic [ref=e22]:
-            - img [ref=e23]
-            - generic [ref=e25]:
-              - paragraph [ref=e26]: Emergency Care
-              - paragraph [ref=e27]: "Duration: Immediate"
-          - generic [ref=e28]: Urgent
-        - generic [ref=e32] [cursor=pointer]:
-          - img [ref=e33]
-          - generic [ref=e36]:
-            - paragraph [ref=e37]: General Health Checkup
-            - paragraph [ref=e38]: "Duration: 30 min"
-        - generic [ref=e42] [cursor=pointer]:
-          - img [ref=e43]
-          - generic [ref=e46]:
-            - paragraph [ref=e47]: Follow-up Visit
-            - paragraph [ref=e48]: "Duration: 20 min"
+    - generic [ref=e6]: Step 1 of 3. Select a service.
+    - generic [ref=e8]:
+      - heading "Select Service" [level=3] [ref=e9]
+      - generic [ref=e10]:
+        - generic [ref=e14] [cursor=pointer]:
+          - img [ref=e15]
+          - generic [ref=e17]:
+            - paragraph [ref=e18]: Cardiology Consultation
+            - paragraph [ref=e19]: "Duration: 45 min"
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]:
+            - img [ref=e24]
+            - generic [ref=e26]:
+              - paragraph [ref=e27]: Emergency Care
+              - paragraph [ref=e28]: "Duration: Immediate"
+          - generic [ref=e29]: Urgent
+        - generic [ref=e33] [cursor=pointer]:
+          - img [ref=e34]
+          - generic [ref=e37]:
+            - paragraph [ref=e38]: General Health Checkup
+            - paragraph [ref=e39]: "Duration: 30 min"
+        - generic [ref=e43] [cursor=pointer]:
+          - img [ref=e44]
+          - generic [ref=e47]:
+            - paragraph [ref=e48]: Follow-up Visit
+            - paragraph [ref=e49]: "Duration: 20 min"
       - button "Continue" [disabled]
-    - button "Close" [active] [ref=e49] [cursor=pointer]:
-      - img [ref=e50]
-      - generic [ref=e53]: Close
+    - button "Close" [active] [ref=e50] [cursor=pointer]:
+      - img [ref=e51]
+      - generic [ref=e54]: Close
 ```
