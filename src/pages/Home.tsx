@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import HeroSimple from "@/components/HeroSimple";
 import Features from "@/components/Features";
 import Services from "@/components/Services";
 import DoctorCards from "@/components/DoctorCards";
@@ -13,7 +13,7 @@ const Home = () => {
     <div className="min-h-screen">
       <Header />
       <main role="main">
-        <Hero />
+        <HeroSimple />
         <Features />
         <Services />
         <DoctorCards />

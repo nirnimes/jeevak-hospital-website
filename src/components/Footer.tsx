@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Heart, GitBranch } from "lucide-react";
+import { Phone, Mail, MapPin, Heart, GitBranch, Award, Shield, Users } from "lucide-react";
 import { buildShortSha, buildTime, hasBuildInfo } from "@/lib/buildInfo";
 
 const Footer = () => {
