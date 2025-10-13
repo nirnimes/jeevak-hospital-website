@@ -22,35 +22,35 @@ import {
 const Emergency = () => {
   const emergencySymptoms = [
     {
-      category: "Heart Attack",
+      category: "Surgical Emergency",
+      symptoms: [
+        "Severe abdominal pain",
+        "Persistent vomiting",
+        "High fever with pain",
+        "Difficulty breathing",
+        "Loss of consciousness"
+      ],
+      action: "Call immediately - surgical intervention needed"
+    },
+    {
+      category: "Trauma Emergency",
+      symptoms: [
+        "Severe bleeding",
+        "Head injury",
+        "Broken bones",
+        "Deep cuts or wounds",
+        "Burns or scalds"
+      ],
+      action: "Call immediately - trauma surgery required"
+    },
+    {
+      category: "Cardiac Emergency",
       symptoms: [
         "Chest pain or pressure",
         "Shortness of breath",
-        "Nausea or vomiting",
-        "Sweating",
-        "Pain in arm, jaw, or back"
-      ],
-      action: "Call immediately - every minute counts"
-    },
-    {
-      category: "Stroke",
-      symptoms: [
-        "Sudden numbness or weakness",
-        "Confusion or trouble speaking",
-        "Trouble seeing",
-        "Severe headache",
-        "Loss of balance"
-      ],
-      action: "Call immediately - time is critical"
-    },
-    {
-      category: "Cardiac Arrest",
-      symptoms: [
         "Sudden loss of consciousness",
-        "No breathing",
-        "No pulse",
-        "Chest pain before collapse",
-        "Dizziness or fainting"
+        "No pulse or breathing",
+        "Severe dizziness"
       ],
       action: "Call immediately and start CPR if trained"
     }
@@ -61,26 +61,26 @@ const Emergency = () => {
       <Header />
       <main>
         {/* Emergency Hero */}
-        <section className="py-12 bg-destructive text-destructive-foreground">
+        <section className="py-12 bg-warm-burgundy text-white">
           <div className="container">
             <div className="text-center space-y-6">
-              <Badge variant="secondary" className="bg-destructive-foreground/20 text-destructive-foreground">
+              <Badge className="bg-white/20 text-white border-white/30">
                 24/7 Emergency
               </Badge>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                Cardiac Emergency?
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif">
+                Surgical Emergency?
                 <br />
-                <span className="text-destructive-foreground/90">We're Here 24/7</span>
+                <span className="text-white/90">We're Here 24/7</span>
               </h1>
 
               <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
                 When every second matters, our expert emergency team is ready to provide 
-                life-saving cardiac care around the clock.
+                life-saving surgical care around the clock, continuing Dr. Prasad's legacy.
               </p>
 
               {/* Emergency Contact - Prominent */}
-              <div className="bg-destructive-foreground/10 rounded-2xl p-8 max-w-2xl mx-auto">
+              <div className="bg-white/10 rounded-2xl p-8 max-w-2xl mx-auto">
                 <div className="flex items-center justify-center space-x-4 mb-4">
                   <Phone className="h-8 w-8" />
                   <span className="text-3xl font-bold">Emergency Hotline</span>
@@ -94,11 +94,11 @@ const Emergency = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+                <Button size="lg" className="bg-white text-warm-burgundy hover:bg-white/90 text-lg px-8 py-4">
                   <Ambulance className="mr-2 h-5 w-5" />
                   Request Ambulance
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-destructive-foreground text-destructive-foreground hover:bg-destructive-foreground hover:text-destructive">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-warm-burgundy">
                   <MapPin className="mr-2 h-5 w-5" />
                   Get Directions
                 </Button>
@@ -111,7 +111,7 @@ const Emergency = () => {
         <section className="py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">When to Call Emergency</h2>
+              <h2 className="text-3xl font-bold mb-4 font-serif text-warm-teal">When to Call Emergency</h2>
               <p className="text-xl text-muted-foreground">
                 Recognize these warning signs and call immediately
               </p>
@@ -119,24 +119,24 @@ const Emergency = () => {
 
             <div className="grid md:grid-cols-3 gap-6">
               {emergencySymptoms.map((emergency, index) => (
-                <Card key={index} className="border-destructive/20">
+                <Card key={index} className="bg-warm-ivory border-warm-burgundy/20">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-destructive/10 rounded-full flex items-center justify-center mb-3">
-                      <AlertTriangle className="h-6 w-6 text-destructive" />
+                    <div className="w-12 h-12 bg-warm-burgundy/10 rounded-full flex items-center justify-center mb-3">
+                      <AlertTriangle className="h-6 w-6 text-warm-burgundy" />
                     </div>
-                    <CardTitle className="text-destructive">{emergency.category}</CardTitle>
+                    <CardTitle className="text-warm-burgundy">{emergency.category}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 mb-4">
                       {emergency.symptoms.map((symptom, i) => (
                         <li key={i} className="flex items-start space-x-2">
-                          <span className="text-destructive mt-1">• </span>
+                          <span className="text-warm-burgundy mt-1">• </span>
                           <span>{symptom}</span>
                         </li>
                       ))}
                     </ul>
-                    <Alert>
-                      <AlertTriangle className="h-4 w-4" />
+                    <Alert className="border-warm-burgundy/20">
+                      <AlertTriangle className="h-4 w-4 text-warm-burgundy" />
                       <AlertTitle>Action Required</AlertTitle>
                       <AlertDescription>{emergency.action}</AlertDescription>
                     </Alert>
@@ -148,16 +148,16 @@ const Emergency = () => {
         </section>
 
         {/* Emergency Process */}
-        <section className="py-16 bg-muted/50">
+        <section className="py-16 bg-warm-ivory/30">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">What to Expect</h2>
+              <h2 className="text-3xl font-bold mb-4 font-serif text-warm-teal">What to Expect</h2>
               <p className="text-xl text-muted-foreground">Our emergency response process</p>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                <div className="w-16 h-16 bg-warm-sage rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                   1
                 </div>
                 <h3 className="font-semibold mb-2">Call Emergency</h3>
@@ -166,7 +166,7 @@ const Emergency = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                <div className="w-16 h-16 bg-warm-sage rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                   2
                 </div>
                 <h3 className="font-semibold mb-2">Rapid Response</h3>
@@ -175,16 +175,16 @@ const Emergency = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                <div className="w-16 h-16 bg-warm-sage rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                   3
                 </div>
                 <h3 className="font-semibold mb-2">Expert Treatment</h3>
                 <p className="text-sm text-muted-foreground">
-                  Specialized cardiac emergency team provides care
+                  Specialized surgical emergency team provides care
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                <div className="w-16 h-16 bg-warm-sage rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                   4
                 </div>
                 <h3 className="font-semibold mb-2">Follow-up Care</h3>
@@ -200,17 +200,17 @@ const Emergency = () => {
         <section className="py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Emergency Medical Team</h2>
+              <h2 className="text-3xl font-bold mb-4 font-serif text-warm-teal">Emergency Medical Team</h2>
               <p className="text-xl text-muted-foreground">Expert specialists available 24/7</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <Card>
+              <Card className="bg-warm-ivory border-warm-sage/10">
                 <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-10 w-10 text-primary" />
+                  <div className="w-20 h-20 bg-warm-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="h-10 w-10 text-warm-sage" />
                   </div>
-                  <CardTitle>Emergency Physicians</CardTitle>
+                  <CardTitle className="text-warm-gray">Emergency Physicians</CardTitle>
                   <CardDescription>Board-certified emergency medicine specialists</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -223,13 +223,13 @@ const Emergency = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-warm-ivory border-warm-sage/10">
                 <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="h-10 w-10 text-primary" />
+                  <div className="w-20 h-20 bg-warm-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Heart className="h-10 w-10 text-warm-sage" />
                   </div>
-                  <CardTitle>Cardiac Surgeons</CardTitle>
-                  <CardDescription>On-call cardiac surgery specialists</CardDescription>
+                  <CardTitle className="text-warm-gray">General Surgeons</CardTitle>
+                  <CardDescription>On-call general surgery specialists</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
@@ -241,12 +241,12 @@ const Emergency = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-warm-ivory border-warm-sage/10">
                 <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-10 w-10 text-primary" />
+                  <div className="w-20 h-20 bg-warm-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="h-10 w-10 text-warm-sage" />
                   </div>
-                  <CardTitle>Critical Care Team</CardTitle>
+                  <CardTitle className="text-warm-gray">Critical Care Team</CardTitle>
                   <CardDescription>ICU and CCU specialists</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -263,18 +263,18 @@ const Emergency = () => {
         </section>
 
         {/* Emergency Facilities */}
-        <section className="py-16 bg-muted/50">
+        <section className="py-16 bg-warm-ivory/30">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Emergency Facilities</h2>
+              <h2 className="text-3xl font-bold mb-4 font-serif text-warm-teal">Emergency Facilities</h2>
               <p className="text-xl text-muted-foreground">State-of-the-art emergency infrastructure</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="text-center">
+              <Card className="text-center bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <Activity className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">ICU & CCU</CardTitle>
+                  <Activity className="h-12 w-12 text-warm-sage mx-auto mb-2" />
+                  <CardTitle className="text-lg text-warm-gray">ICU & CCU</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
@@ -283,10 +283,10 @@ const Emergency = () => {
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <Zap className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">Cath Lab</CardTitle>
+                  <Zap className="h-12 w-12 text-warm-sage mx-auto mb-2" />
+                  <CardTitle className="text-lg text-warm-gray">Operating Theaters</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
@@ -295,10 +295,10 @@ const Emergency = () => {
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <Ambulance className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">Ambulance</CardTitle>
+                  <Ambulance className="h-12 w-12 text-warm-sage mx-auto mb-2" />
+                  <CardTitle className="text-lg text-warm-gray">Ambulance</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
@@ -307,10 +307,10 @@ const Emergency = () => {
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <Shield className="h-12 w-12 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">Blood Bank</CardTitle>
+                  <Shield className="h-12 w-12 text-warm-sage mx-auto mb-2" />
+                  <CardTitle className="text-lg text-warm-gray">Blood Bank</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
@@ -323,11 +323,11 @@ const Emergency = () => {
         </section>
 
         {/* Location & Contact */}
-        <section className="py-16 bg-primary text-primary-foreground">
+        <section className="py-16 bg-gradient-to-r from-warm-sage to-warm-teal text-white">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-6">Emergency Location</h2>
+                <h2 className="text-3xl font-bold mb-6 font-serif">Emergency Location</h2>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-6 w-6 mt-1" />
@@ -364,35 +364,35 @@ const Emergency = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-primary-foreground/10 rounded-2xl p-8">
+              <div className="bg-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold mb-4">Emergency Checklist</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                       <span className="text-sm">✓</span>
                     </div>
                     <span>Call +91-612-267-0992 immediately</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                       <span className="text-sm">✓</span>
                     </div>
                     <span>Stay calm and follow operator instructions</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                       <span className="text-sm">✓</span>
                     </div>
                     <span>Have patient's medical history ready</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                       <span className="text-sm">✓</span>
                     </div>
                     <span>Bring ID and insurance documents</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                       <span className="text-sm">✓</span>
                     </div>
                     <span>Note the time symptoms started</span>

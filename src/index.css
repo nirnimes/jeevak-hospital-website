@@ -8,51 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    --background: 60 100% 97%; /* Warm Ivory */
+    --foreground: 0 0% 31%; /* Warm Gray */
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card: 60 100% 99%; /* Pure White */
+    --card-foreground: 0 0% 31%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover: 60 100% 99%;
+    --popover-foreground: 0 0% 31%;
 
-    --primary: 217 91% 60%;
+    --primary: 90 8% 50%; /* Sage Green */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 162 73% 46%;
+    --secondary: 105 24% 33%; /* Deep Teal */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 90 15% 95%; /* Light Sage */
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96%;
-    --accent-foreground: 217 91% 60%;
+    --accent: 90 15% 95%;
+    --accent-foreground: 90 8% 50%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 346 30% 42%; /* Muted Burgundy */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --border: 90 15% 90%;
+    --input: 90 15% 90%;
+    --ring: 90 8% 50%;
 
     --radius: 0.5rem;
     
-    /* Medical design tokens */
+    /* Legacy medical design tokens (keep for equipment icons) */
     --medical-blue: 217 91% 60%;
     --medical-green: 162 73% 46%;
     --medical-light: 210 40% 98%;
     --medical-dark: 215 25% 27%;
     
+    /* New warm design tokens */
+    --sage-primary: 90 8% 50%;
+    --teal-secondary: 105 24% 33%;
+    --ivory-bg: 60 100% 97%;
+    --warm-gray: 0 0% 31%;
+    --gold-accent: 43 65% 53%;
+    --burgundy-emergency: 346 30% 42%;
+    
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 50%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(90 8% 50%) 0%, hsl(105 24% 33%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(60 100% 99%) 0%, hsl(60 100% 97%) 100%);
     
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(217 91% 60% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(217 91% 60% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(217 91% 60% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(217 91% 60% / 0.1);
+    --shadow-sm: 0 1px 2px 0 hsl(90 8% 50% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(90 8% 50% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(90 8% 50% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(90 8% 50% / 0.1);
     
     /* Transitions */
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,33 +84,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 25% 12%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 8%;
+    --foreground: 60 100% 97%;
 
-    --card: 215 25% 15%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 60 100% 97%;
 
-    --popover: 215 25% 15%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 60 100% 97%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 90 8% 60%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 162 73% 46%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 105 24% 45%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 215 25% 20%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 60 100% 85%;
 
-    --accent: 215 25% 20%;
-    --accent-foreground: 217 91% 60%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 90 8% 60%;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 346 30% 55%;
+    --destructive-foreground: 60 100% 97%;
 
-    --border: 215 25% 20%;
-    --input: 215 25% 20%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 90 8% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -175,11 +183,11 @@ All colors MUST be HSL.
   
   /* Gradient backgrounds */
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
+    background: linear-gradient(135deg, hsl(var(--sage-primary)) 0%, hsl(var(--teal-secondary)) 100%);
   }
   
   .gradient-card {
-    background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--ivory-bg)) 100%);
   }
   
   /* Modern focus states */

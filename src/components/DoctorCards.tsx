@@ -87,18 +87,18 @@ const doctors = [
 
 export default function DoctorCards() {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-primary/5">
+    <section className="py-20 bg-gradient-to-br from-warm-sage/5 via-warm-ivory to-warm-teal/5">
       <div className="container">
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
+          <Badge variant="secondary" className="mb-4 bg-warm-sage/10 text-warm-sage hover:bg-warm-sage/20 border-warm-sage/20">
             <Users className="mr-2 h-3 w-3" />
-            Expert Medical Team
+            Continuing Dr. Prasad's Legacy
           </Badge>
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-            Meet Our Expert Doctors
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-warm-sage to-warm-teal bg-clip-text text-transparent font-serif">
+            Meet Our Expert Surgeons
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Board-certified specialists with international training and extensive experience in cardiac care
+            Board-certified surgeons with extensive experience, continuing Dr. Prasad's legacy of compassionate surgical care
           </p>
         </div>
 
@@ -106,20 +106,20 @@ export default function DoctorCards() {
           {doctors.map((doctor, index) => (
             <Card 
               key={doctor.id} 
-              className="medical-card hover-lift group animate-fade-in" 
+              className="bg-warm-ivory border-warm-sage/10 hover-lift group animate-fade-in shadow-lg" 
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="text-center pb-4">
-                <Avatar className="w-24 h-24 mx-auto mb-4 ring-4 ring-primary/10 group-hover:ring-primary/20 transition-all">
-                  <AvatarFallback className="text-xl font-bold bg-gradient-to-br from-primary/20 to-primary/10 text-primary">
+                <Avatar className="w-24 h-24 mx-auto mb-4 ring-4 ring-warm-sage/10 group-hover:ring-warm-sage/20 transition-all">
+                  <AvatarFallback className="text-xl font-bold bg-gradient-to-br from-warm-sage/20 to-warm-sage/10 text-warm-sage">
                     {doctor.name
                       .split(" ")
                       .map((n) => n[0])
                       .join("")}
                   </AvatarFallback>
                 </Avatar>
-                <CardTitle className="text-xl mb-2">{doctor.name}</CardTitle>
-                <CardDescription className="text-primary font-semibold text-base">{doctor.specialty}</CardDescription>
+                <CardTitle className="text-xl mb-2 text-warm-gray">{doctor.name}</CardTitle>
+                <CardDescription className="text-warm-teal font-semibold text-base">{doctor.specialty}</CardDescription>
 
                 {/* Enhanced Rating */}
                 <div className="flex items-center justify-center space-x-2 mt-3">
@@ -139,7 +139,7 @@ export default function DoctorCards() {
               <CardContent className="space-y-5">
                 {/* Experience Badge */}
                 <div className="flex justify-center">
-                  <Badge variant="secondary" className="bg-primary/10 text-primary px-3 py-1">
+                  <Badge variant="secondary" className="bg-warm-gold/10 text-warm-gold px-3 py-1 border-warm-gold/20">
                     <Award className="w-3 h-3 mr-1" />
                     {doctor.experience}
                   </Badge>
@@ -147,10 +147,10 @@ export default function DoctorCards() {
 
                 {/* Qualifications */}
                 <div>
-                  <p className="text-sm font-semibold mb-3 text-center">Qualifications</p>
+                  <p className="text-sm font-semibold mb-3 text-center text-warm-gray">Qualifications</p>
                   <div className="flex flex-wrap gap-2 justify-center">
                     {doctor.qualifications.map((qual) => (
-                      <Badge key={qual} variant="outline" className="text-xs px-2 py-1">
+                      <Badge key={qual} variant="outline" className="text-xs px-2 py-1 border-warm-sage/30 text-warm-sage">
                         {qual}
                       </Badge>
                     ))}
@@ -160,37 +160,37 @@ export default function DoctorCards() {
                 {/* Achievements */}
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-1">Achievement</p>
-                  <p className="text-sm font-medium text-primary">{doctor.achievements}</p>
+                  <p className="text-sm font-medium text-warm-teal">{doctor.achievements}</p>
                 </div>
 
                 {/* Availability & Fee */}
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 bg-accent/50 rounded-lg">
+                  <div className="flex items-center justify-between p-3 bg-warm-sage/10 rounded-lg">
                     <div className="flex items-center space-x-2">
-                      <Clock className="h-4 w-4 text-primary" />
-                      <span className="text-sm font-medium">Next Available</span>
+                      <Clock className="h-4 w-4 text-warm-sage" />
+                      <span className="text-sm font-medium text-warm-gray">Next Available</span>
                     </div>
-                    <Badge variant="outline" className="text-primary border-primary">
+                    <Badge variant="outline" className="text-warm-sage border-warm-sage">
                       {doctor.nextAvailable}
                     </Badge>
                   </div>
                   
-                  <div className="flex items-center justify-between p-3 bg-accent/50 rounded-lg">
+                  <div className="flex items-center justify-between p-3 bg-warm-sage/10 rounded-lg">
                     <div className="flex items-center space-x-2">
-                      <DollarSign className="h-4 w-4 text-green-600" />
-                      <span className="text-sm font-medium">Consultation Fee</span>
+                      <DollarSign className="h-4 w-4 text-warm-teal" />
+                      <span className="text-sm font-medium text-warm-gray">Consultation Fee</span>
                     </div>
-                    <span className="text-sm font-bold text-green-600">{doctor.consultationFee}</span>
+                    <span className="text-sm font-bold text-warm-teal">{doctor.consultationFee}</span>
                   </div>
                 </div>
 
                 {/* Availability Status & Book Button */}
                 <div className="flex items-center justify-between pt-2">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    <span className="text-sm text-green-600 font-medium">{doctor.availability}</span>
+                    <CheckCircle className="h-4 w-4 text-warm-sage" />
+                    <span className="text-sm text-warm-sage font-medium">{doctor.availability}</span>
                   </div>
-                  <Button size="sm" className="medical-button-primary group">
+                  <Button size="sm" className="bg-warm-gold hover:bg-warm-gold/90 text-white group">
                     <Calendar className="w-4 h-4 mr-1" />
                     Book Now
                   </Button>
@@ -203,11 +203,11 @@ export default function DoctorCards() {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <p className="text-lg text-muted-foreground mb-6">
-            Can't find the right specialist? Our team will help you find the perfect match.
+            Can't find the right surgeon? Our team will help you find the perfect match following Dr. Prasad's compassionate approach.
           </p>
-          <Button size="lg" className="medical-button-primary">
+          <Button size="lg" className="bg-warm-sage hover:bg-warm-sage/90 text-white">
             <Users className="mr-2 h-5 w-5" />
-            Consult Our Medical Team
+            Consult Our Surgical Team
           </Button>
         </div>
       </div>

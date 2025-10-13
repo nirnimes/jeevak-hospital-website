@@ -115,9 +115,9 @@ const Header = () => {
               className="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg p-1"
               aria-label="Anupama Hospital - Home"
             >
-              <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center relative">
+              <div className="h-12 w-12 rounded-full bg-warm-sage flex items-center justify-center relative">
                 <svg
-                  className="h-6 w-6 text-primary-foreground"
+                  className="h-6 w-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -128,8 +128,9 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <div className="text-lg font-bold text-foreground">Anupama Hospital Pvt Ltd</div>
-                <p className="text-xs text-primary">Multispecialty Hospital, Ashok Rajpath, Patna</p>
+                <div className="text-lg font-bold text-warm-gray">Anupama Hospital Pvt Ltd</div>
+                <p className="text-xs text-warm-teal font-medium">Founded on the Legacy of Padma Shri Dr. Narendra Prasad</p>
+                <p className="text-xs text-warm-sage">Multispecialty Hospital, Ashok Rajpath, Patna</p>
               </div>
             </Link>
 
@@ -142,10 +143,10 @@ const Header = () => {
                       to={item.href}
                       className={`transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-2 py-1 ${
                         location.pathname === item.href
-                          ? "text-primary font-semibold"
+                          ? "text-warm-gold font-semibold"
                           : item.name === "Emergency"
-                          ? "text-destructive hover:text-destructive/80 flex items-center gap-1"
-                          : "text-foreground hover:text-primary"
+                          ? "text-warm-burgundy hover:text-warm-burgundy/80 flex items-center gap-1"
+                          : "text-warm-gray hover:text-warm-teal"
                       }`}
                       role="menuitem"
                       aria-current={location.pathname === item.href ? "page" : undefined}
@@ -159,7 +160,7 @@ const Header = () => {
               </ul>
               <a
                 href="tel:+916122670992"
-                className="flex items-center gap-2 text-destructive font-semibold hover:text-destructive/80 transition-colors focus:outline-none focus:ring-2 focus:ring-destructive focus:ring-offset-2 rounded-md px-2 py-1"
+                className="flex items-center gap-2 text-warm-burgundy font-semibold hover:text-warm-burgundy/80 transition-colors focus:outline-none focus:ring-2 focus:ring-warm-burgundy focus:ring-offset-2 rounded-md px-2 py-1"
                 aria-label="Emergency phone number"
               >
                 <Phone className="h-4 w-4" aria-hidden="true" />
@@ -169,7 +170,7 @@ const Header = () => {
                 <Button 
                   variant="default" 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  className="bg-warm-gold hover:bg-warm-gold/90 focus:ring-2 focus:ring-warm-gold focus:ring-offset-2 text-white"
                   aria-label="Book consultation appointment"
                 >
                   Book Consultation
@@ -210,10 +211,10 @@ const Header = () => {
                       to={item.href}
                       className={`block transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-2 py-1 ${
                         location.pathname === item.href
-                          ? "text-primary font-semibold"
+                          ? "text-warm-gold font-semibold"
                           : item.name === "Emergency"
-                          ? "text-destructive hover:text-destructive/80 flex items-center gap-2"
-                          : "text-foreground hover:text-primary"
+                          ? "text-warm-burgundy hover:text-warm-burgundy/80 flex items-center gap-2"
+                          : "text-warm-gray hover:text-warm-teal"
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                       role="menuitem"
@@ -228,7 +229,7 @@ const Header = () => {
               <div className="border-t border-border pt-4 space-y-4">
                 <a
                   href="tel:+916122670992"
-                  className="flex items-center gap-2 text-destructive font-semibold hover:text-destructive/80 transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-destructive focus:ring-offset-2 rounded-md px-2"
+                  className="flex items-center gap-2 text-warm-burgundy font-semibold hover:text-warm-burgundy/80 transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-warm-burgundy focus:ring-offset-2 rounded-md px-2"
                   aria-label="Emergency phone number"
                 >
                   <Phone className="h-4 w-4" aria-hidden="true" />
@@ -238,7 +239,7 @@ const Header = () => {
                   <Button 
                     variant="default" 
                     size="lg" 
-                    className="w-full bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    className="w-full bg-warm-gold hover:bg-warm-gold/90 focus:ring-2 focus:ring-warm-gold focus:ring-offset-2 text-white"
                     aria-label="Book consultation appointment"
                   >
                     Book Consultation

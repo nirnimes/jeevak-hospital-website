@@ -26,86 +26,104 @@ const About = () => {
       position: "Chief Medical Officer & Founder",
       experience: "30+ Years",
       qualifications: ["MBBS", "MS Cardiothoracic Surgery", "Fellowship Harvard Medical School"],
-      description: "Pioneered cardiac surgery in Bihar, established the hospital with vision to provide world-class heart care locally. Performed over 3000 successful cardiac surgeries."
+      description: "Continuing Dr. Prasad's legacy, established the hospital with vision to provide world-class surgical care locally. Performed over 3000 successful cardiac surgeries following Dr. Prasad's compassionate approach."
     },
     {
       name: "Mrs. Sunita Devi",
       position: "Hospital Administrator",
       experience: "25+ Years",
       qualifications: ["MBA Healthcare Management", "Hospital Administration Diploma"],
-      description: "Oversees hospital operations ensuring highest standards of patient care and service excellence. Expert in healthcare quality management and patient safety protocols."
+      description: "Oversees hospital operations ensuring highest standards of patient care following Dr. Prasad's philosophy. Expert in healthcare quality management and patient safety protocols."
     },
     {
       name: "Dr. Amit Kumar",
       position: "Head of Emergency Medicine",
       experience: "20+ Years",
       qualifications: ["MBBS", "MD Emergency Medicine", "Critical Care Certification"],
-      description: "Leads the 24/7 emergency department with expertise in cardiac emergency care. Established rapid response protocols that have saved thousands of lives."
+      description: "Leads the 24/7 emergency department with expertise in surgical emergency care. Established rapid response protocols that have saved thousands of lives."
     },
     {
       name: "Dr. Priya Singh",
-      position: "Director of Cardiology",
+      position: "Director of Surgery",
       experience: "18+ Years",
-      qualifications: ["MBBS", "MD Medicine", "DM Cardiology"],
-      description: "Leading cardiologist specializing in interventional procedures and preventive cardiology. Expert in complex cardiac interventions with excellent outcomes."
+      qualifications: ["MBBS", "MS Surgery", "Fellowship Surgical Oncology"],
+      description: "Leading surgeon specializing in complex procedures and surgical oncology. Expert in advanced surgical techniques with excellent outcomes, continuing Dr. Prasad's surgical excellence."
     }
   ];
 
-  const milestones = [
+  const drPrasadTimeline = [
     { 
-      year: "1998", 
-      event: "Hospital Founded", 
-      description: "Established as Bihar's first super-specialty cardiac hospital by Dr. Rajesh Sharma" 
+      year: "1934", 
+      event: "Birth", 
+      description: "Born in Tiuri village, Nalanda district, Bihar - humble beginnings that shaped his compassionate approach to medicine" 
     },
     { 
-      year: "2000", 
-      event: "1000th Surgery", 
-      description: "Completed milestone of 1000 successful cardiac procedures within 2 years" 
+      year: "1956", 
+      event: "MBBS Achievement", 
+      description: "Graduated with MBBS from Patna Medical College, beginning his medical journey" 
     },
     { 
-      year: "2002", 
-      event: "Emergency Services", 
-      description: "Launched 24/7 emergency cardiac care services for the region" 
+      year: "1959", 
+      event: "MS Surgery", 
+      description: "Completed MS in Surgery, specializing in surgical excellence" 
     },
     { 
-      year: "2005", 
-      event: "CGHS Recognition", 
-      description: "Approved by Central Government Health Scheme for employee treatment" 
+      year: "1962", 
+      event: "FRCS London", 
+      description: "Achieved FRCS (Fellowship of Royal College of Surgeons) from London - international recognition of surgical expertise" 
     },
     { 
-      year: "2008", 
-      event: "Advanced Equipment", 
-      description: "Installed state-of-the-art cardiac catheterization laboratory" 
+      year: "1957", 
+      event: "Bihar Health Service", 
+      description: "Joined Bihar State Health Service, dedicated to serving the people of Bihar" 
     },
     { 
-      year: "2012", 
-      event: "3000th Surgery", 
-      description: "Achieved milestone of 3000 successful cardiac surgeries" 
+      year: "1958", 
+      event: "First Posting", 
+      description: "First posting in Saharsa's Thumha - beginning his rural healthcare service" 
+    },
+    { 
+      year: "1962", 
+      event: "PMCH Appointment", 
+      description: "Appointed Resident Surgical Officer at Patna Medical College and Hospital" 
+    },
+    { 
+      year: "1989", 
+      event: "Head of Surgery", 
+      description: "Became Head of Surgery Department at Patna Medical College and Hospital, leading surgical excellence" 
+    },
+    { 
+      year: "1992", 
+      event: "PMCH Retirement", 
+      description: "Retired from PMCH after decades of dedicated service, but continued his medical practice" 
     },
     { 
       year: "2015", 
-      event: "5000th Surgery", 
-      description: "Completed 5000 successful cardiac procedures with 98%+ success rate" 
-    },
-    { 
-      year: "2018", 
-      event: "20 Years Milestone", 
-      description: "Celebrated 20 years of serving Bihar with world-class cardiac care" 
-    },
-    { 
-      year: "2020", 
-      event: "COVID Response", 
-      description: "Maintained essential cardiac services during pandemic with strict safety protocols" 
-    },
-    { 
-      year: "2022", 
-      event: "Research Institute", 
-      description: "Established cardiac research wing for medical advancement" 
+      event: "Padma Shri Award", 
+      description: "Received Padma Shri from President Pranab Mukherjee for exceptional contributions to medicine" 
     },
     { 
       year: "2024", 
-      event: "10,000+ Lives Saved", 
-      description: "Reached landmark milestone of saving over 10,000 lives through cardiac care" 
+      event: "Memorial", 
+      description: "Passed away, leaving behind a legacy of 100,000+ lives touched and compassionate healthcare philosophy" 
+    }
+  ];
+
+  const hospitalMilestones = [
+    { 
+      year: "Foundation", 
+      event: "Hospital Established", 
+      description: "Founded on Dr. Prasad's legacy of compassionate surgical care and excellence" 
+    },
+    { 
+      year: "Growth", 
+      event: "Service Expansion", 
+      description: "Expanded surgical services following Dr. Prasad's comprehensive care philosophy" 
+    },
+    { 
+      year: "Present", 
+      event: "Continuing Legacy", 
+      description: "Today we continue Dr. Prasad's mission: 'Patients are our Gods' - compassionate care for all" 
     }
   ];
 
@@ -114,45 +132,48 @@ const About = () => {
       <Header />
       <main>
         {/* About Hero */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-primary/5 to-secondary/10">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-warm-sage/5 to-warm-teal/10">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
-                <Badge className="mb-4">Our Story</Badge>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                  26 Years of{" "}
-                  <span className="text-primary">Transforming Lives</span>
+                <Badge className="mb-4 bg-warm-gold/10 text-warm-gold border-warm-gold/20">Dr. Narendra Prasad's Legacy</Badge>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-serif">
+                  Our Legacy of{" "}
+                  <span className="text-warm-teal">Excellence</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                  From a vision to provide world-class cardiac care in Bihar to becoming the region's most trusted heart hospital, our journey has been one of dedication, innovation, and compassion.
+                  The journey of Padma Shri Dr. Narendra Prasad (1934-2024) and Anupama Hospital - from humble beginnings in Tiuri village to touching over 100,000 lives through compassionate surgical care.
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <div className="text-3xl font-bold text-primary">10,000+</div>
-                    <div className="text-sm text-muted-foreground">Lives Saved</div>
+                    <div className="text-3xl font-bold text-warm-sage">100,000+</div>
+                    <div className="text-sm text-muted-foreground">Lives Touched</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary">5,000+</div>
-                    <div className="text-sm text-muted-foreground">Surgeries</div>
+                    <div className="text-3xl font-bold text-warm-teal">60+</div>
+                    <div className="text-sm text-muted-foreground">Years of Service</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary">98.5%</div>
-                    <div className="text-sm text-muted-foreground">Success Rate</div>
+                    <div className="text-3xl font-bold text-warm-gold">Padma Shri</div>
+                    <div className="text-sm text-muted-foreground">2015 Award</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary">26</div>
-                    <div className="text-sm text-muted-foreground">Years Excellence</div>
+                    <div className="text-3xl font-bold text-warm-burgundy">FRCS</div>
+                    <div className="text-sm text-muted-foreground">1962 London</div>
                   </div>
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8">
-                  <div className="bg-white rounded-xl p-6 shadow-lg">
-                    <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                    <p className="text-muted-foreground mb-4">
-                      To provide world-class cardiac care with compassion, making advanced heart treatment accessible to everyone in Bihar and surrounding regions.
+                <div className="bg-gradient-to-br from-warm-sage/10 to-warm-teal/5 rounded-2xl p-8">
+                  <div className="bg-warm-ivory rounded-xl p-6 shadow-lg">
+                    <h3 className="text-2xl font-bold mb-4 font-serif">Dr. Prasad's Philosophy</h3>
+                    <p className="text-muted-foreground mb-4 italic">
+                      "Patients are our Gods. The more they come, the more we learn and serve humanity."
                     </p>
-                    <div className="flex items-center space-x-2 text-primary">
+                    <p className="text-muted-foreground mb-4">
+                      Continuing this legacy of compassionate care where world-class surgical expertise meets genuine human compassion.
+                    </p>
+                    <div className="flex items-center space-x-2 text-warm-sage">
                       <Heart className="h-5 w-5" />
                       <span className="font-semibold">Caring Hearts, Healing Lives</span>
                     </div>
@@ -163,29 +184,29 @@ const About = () => {
           </div>
         </section>
 
-        {/* Hospital Journey Timeline */}
-        <section className="py-16">
+        {/* Dr. Prasad's Legacy Timeline */}
+        <section className="py-16 bg-warm-ivory/30">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Journey</h2>
+              <h2 className="text-3xl font-bold mb-4 font-serif">Dr. Narendra Prasad's Journey</h2>
               <p className="text-xl text-muted-foreground">
-                Milestones that shaped Bihar's cardiac care landscape
+                From humble beginnings to national recognition - a life dedicated to compassionate surgical care
               </p>
             </div>
 
             <div className="max-w-4xl mx-auto">
               <div className="space-y-8">
-                {milestones.map((milestone, index) => (
+                {drPrasadTimeline.map((milestone, index) => (
                   <div key={milestone.year} className="flex items-center space-x-6">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      <div className="w-16 h-16 bg-warm-sage rounded-full flex items-center justify-center text-white font-bold text-lg">
                         {milestone.year}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <Card className="hover:shadow-lg transition-shadow">
+                      <Card className="hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                         <CardHeader>
-                          <CardTitle className="text-xl">{milestone.event}</CardTitle>
+                          <CardTitle className="text-xl text-warm-teal">{milestone.event}</CardTitle>
                         </CardHeader>
                         <CardContent>
                           <p className="text-muted-foreground leading-relaxed">{milestone.description}</p>
@@ -200,31 +221,31 @@ const About = () => {
         </section>
 
         {/* Leadership Team */}
-        <section className="py-16 bg-muted/50">
+        <section className="py-16 bg-warm-sage/5">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Leadership Team</h2>
+              <h2 className="text-3xl font-bold mb-4 font-serif">Continuing the Legacy</h2>
               <p className="text-xl text-muted-foreground">
-                Experienced leaders dedicated to excellence in healthcare
+                Our leadership team dedicated to carrying forward Dr. Prasad's compassionate care philosophy
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {leadership.map((leader, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                   <CardHeader>
                     <div className="flex items-start space-x-4">
                       <Avatar className="w-16 h-16">
-                        <AvatarFallback className="text-lg font-semibold bg-primary/10 text-primary">
+                        <AvatarFallback className="text-lg font-semibold bg-warm-sage/10 text-warm-sage">
                           {leader.name.split(' ').map(n => n[0]).join('')}
                         </AvatarFallback>
                       </Avatar>
                       <div className="flex-1">
-                        <CardTitle className="text-xl">{leader.name}</CardTitle>
-                        <CardDescription className="text-primary font-medium">
+                        <CardTitle className="text-xl text-warm-gray">{leader.name}</CardTitle>
+                        <CardDescription className="text-warm-teal font-medium">
                           {leader.position}
                         </CardDescription>
-                        <Badge variant="secondary" className="mt-2">
+                        <Badge variant="secondary" className="mt-2 bg-warm-gold/10 text-warm-gold border-warm-gold/20">
                           {leader.experience}
                         </Badge>
                       </div>
@@ -234,10 +255,10 @@ const About = () => {
                     <div className="space-y-4">
                       <p className="text-muted-foreground">{leader.description}</p>
                       <div>
-                        <p className="font-medium text-sm mb-2">Qualifications:</p>
+                        <p className="font-medium text-sm mb-2 text-warm-gray">Qualifications:</p>
                         <div className="flex flex-wrap gap-1">
                           {leader.qualifications.map((qual) => (
-                            <Badge key={qual} variant="outline" className="text-xs">
+                            <Badge key={qual} variant="outline" className="text-xs border-warm-sage/30 text-warm-sage">
                               {qual}
                             </Badge>
                           ))}
@@ -251,56 +272,54 @@ const About = () => {
           </div>
         </section>
 
-        {/* Mission, Vision, Values */}
+        {/* Dr. Prasad's Legacy Values */}
         <section className="py-16">
           <div className="container">
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="h-8 w-8 text-primary" />
+                  <div className="w-16 h-16 bg-warm-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="h-8 w-8 text-warm-sage" />
                   </div>
-                  <CardTitle className="text-2xl">Our Mission</CardTitle>
+                  <CardTitle className="text-2xl font-serif text-warm-teal">Dr. Prasad's Mission</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    To provide world-class cardiac care with compassion, innovation, and 
-                    excellence, making advanced heart treatment accessible to all in Bihar 
-                    and surrounding regions.
+                    "Patients are our Gods" - To provide world-class surgical care with compassion, 
+                    making advanced treatment accessible to all, especially the economically disadvantaged.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Eye className="h-8 w-8 text-primary" />
+                  <div className="w-16 h-16 bg-warm-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Eye className="h-8 w-8 text-warm-teal" />
                   </div>
-                  <CardTitle className="text-2xl">Our Vision</CardTitle>
+                  <CardTitle className="text-2xl font-serif text-warm-teal">Our Vision</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    To be the leading cardiac care center in Eastern India, recognized for 
-                    clinical excellence, research innovation, and compassionate patient care 
-                    that transforms lives.
+                    To be the leading surgical care center in Eastern India, continuing Dr. Prasad's 
+                    legacy of compassionate care that transforms lives through excellence and humanity.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Handshake className="h-8 w-8 text-primary" />
+                  <div className="w-16 h-16 bg-warm-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Handshake className="h-8 w-8 text-warm-gold" />
                   </div>
-                  <CardTitle className="text-2xl">Our Values</CardTitle>
+                  <CardTitle className="text-2xl font-serif text-warm-teal">Dr. Prasad's Values</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="text-muted-foreground space-y-2">
+                    <li>• "Patients are our Gods"</li>
                     <li>• Compassionate Care</li>
-                    <li>• Clinical Excellence</li>
-                    <li>• Patient Safety First</li>
-                    <li>• Ethical Practice</li>
-                    <li>• Continuous Innovation</li>
+                    <li>• Surgical Excellence</li>
+                    <li>• Free Care for the Needy</li>
+                    <li>• Human Connection</li>
                     <li>• Community Service</li>
                   </ul>
                 </CardContent>
@@ -371,44 +390,44 @@ const About = () => {
           </div>
         </section>
 
-        {/* Awards & Recognition */}
-        <section className="py-16 bg-primary text-primary-foreground">
+        {/* Dr. Prasad's Awards & Recognition */}
+        <section className="py-16 bg-warm-sage text-white">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Awards & Recognition</h2>
+              <h2 className="text-3xl font-bold mb-4 font-serif">Dr. Prasad's Awards & Recognition</h2>
               <p className="text-xl opacity-90">
-                Recognition for excellence in cardiac care and patient service
+                National recognition for exceptional contributions to medicine and compassionate care
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="h-8 w-8" />
+                <div className="w-16 h-16 bg-warm-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-warm-gold" />
                 </div>
-                <h3 className="font-semibold mb-2">CGHS Approved</h3>
-                <p className="text-sm opacity-80">Central Government Health Scheme Recognition for Quality Care</p>
+                <h3 className="font-semibold mb-2">Padma Shri Award</h3>
+                <p className="text-sm opacity-80">2015 - India's fourth highest civilian honor for contributions to medicine</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8" />
+                <div className="w-16 h-16 bg-warm-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-warm-gold" />
                 </div>
-                <h3 className="font-semibold mb-2">ISO Certified</h3>
-                <p className="text-sm opacity-80">ISO 9001:2015 Quality Management System Certification</p>
+                <h3 className="font-semibold mb-2">FRCS London</h3>
+                <p className="text-sm opacity-80">1962 - Fellowship of Royal College of Surgeons, London</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building className="h-8 w-8" />
+                <div className="w-16 h-16 bg-warm-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Building className="h-8 w-8 text-warm-gold" />
                 </div>
-                <h3 className="font-semibold mb-2">NABH Accredited</h3>
-                <p className="text-sm opacity-80">National Accreditation Board for Hospitals & Healthcare</p>
+                <h3 className="font-semibold mb-2">IMA Leadership</h3>
+                <p className="text-sm opacity-80">President, Association of Surgeons of India (Bihar chapter)</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-8 w-8" />
+                <div className="w-16 h-16 bg-warm-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="h-8 w-8 text-warm-gold" />
                 </div>
-                <h3 className="font-semibold mb-2">Best Hospital</h3>
-                <p className="text-sm opacity-80">Bihar State Healthcare Excellence Award 2023</p>
+                <h3 className="font-semibold mb-2">100,000+ Lives</h3>
+                <p className="text-sm opacity-80">Lives touched through compassionate surgical care throughout his career</p>
               </div>
             </div>
           </div>

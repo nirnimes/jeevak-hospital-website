@@ -79,27 +79,27 @@ export default function Features() {
       <div className="container">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
+          <Badge variant="secondary" className="mb-4 bg-warm-gold/10 text-warm-gold hover:bg-warm-gold/20 border-warm-gold/20">
             <Award className="mr-2 h-3 w-3" />
-            Why Choose Us
+            Dr. Prasad's Legacy
           </Badge>
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-            World-Class Heart Care
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-warm-sage to-warm-teal bg-clip-text text-transparent font-serif">
+            Excellence in Surgical Care
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Bihar's premier cardiac care center with cutting-edge technology and compassionate care
+            Continuing Dr. Narendra Prasad's legacy of compassionate surgical care with cutting-edge technology and human touch
           </p>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
-            <Card key={index} className="medical-card text-center hover-lift animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <Card key={index} className="bg-warm-ivory border-warm-sage/10 text-center hover-lift animate-fade-in shadow-lg" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-6">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-warm-sage/10 flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-warm-sage" />
                 </div>
-                <h3 className="text-2xl font-bold mb-1 text-primary">{stat.value}</h3>
+                <h3 className="text-2xl font-bold mb-1 text-warm-teal">{stat.value}</h3>
                 <p className="text-sm text-muted-foreground font-medium">{stat.label}</p>
               </CardContent>
             </Card>
@@ -111,14 +111,14 @@ export default function Features() {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="medical-card hover-lift group animate-fade-in" 
+              className="bg-warm-ivory border-warm-sage/10 hover-lift group animate-fade-in shadow-lg" 
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="pb-4">
-                <div className={`w-16 h-16 rounded-xl ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <feature.icon className={`w-8 h-8 ${feature.color}`} />
+                <div className="w-16 h-16 rounded-xl bg-warm-sage/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <feature.icon className="w-8 h-8 text-warm-sage" />
                 </div>
-                <CardTitle className="text-xl mb-2">{feature.title}</CardTitle>
+                <CardTitle className="text-xl mb-2 text-warm-gray">{feature.title}</CardTitle>
                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </CardHeader>
               
@@ -126,7 +126,7 @@ export default function Features() {
                 <div className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-warm-sage flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">{benefit}</span>
                     </div>
                   ))}
@@ -138,18 +138,18 @@ export default function Features() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <Card className="medical-card max-w-4xl mx-auto bg-gradient-to-r from-primary/5 to-primary/10">
+          <Card className="bg-warm-ivory border-warm-sage/10 max-w-4xl mx-auto bg-gradient-to-r from-warm-sage/5 to-warm-teal/10 shadow-lg">
             <CardContent className="p-8">
-              <h3 className="text-3xl font-bold mb-4">Ready to Experience Excellence?</h3>
+              <h3 className="text-3xl font-bold mb-4 font-serif text-warm-teal">Ready to Experience Dr. Prasad's Legacy?</h3>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Join thousands of patients who trust us with their heart health. Book your consultation today.
+                Join thousands of patients who trust us with their surgical care. Experience the compassionate excellence that Dr. Prasad established.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Badge variant="secondary" className="px-4 py-2 bg-green-100 text-green-800">
+                <Badge variant="secondary" className="px-4 py-2 bg-warm-sage/10 text-warm-sage border-warm-sage/20">
                   <Calendar className="w-4 h-4 mr-2" />
                   Book Consultation
                 </Badge>
-                <Badge variant="secondary" className="px-4 py-2 bg-red-100 text-red-800">
+                <Badge variant="secondary" className="px-4 py-2 bg-warm-burgundy/10 text-warm-burgundy border-warm-burgundy/20">
                   <Phone className="w-4 h-4 mr-2" />
                   Emergency: +91-612-267-0992
                 </Badge>

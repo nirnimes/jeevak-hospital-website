@@ -60,6 +60,13 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Recent changes (summary)
+- Emergency Contact FAB rendered globally across routes; consistent aria-label and phone link
+- Appointment booking improved: ARIA live announcements, stricter validation, date/time guards
+- Navigation tests stabilized for GitHub Pages basename/hash environments
+- Accessibility polish: descriptive image alt text, single page-level `main`, refined landmarks
+- Test robustness: explicit waits/selectors for FAB and mobile interactions
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/4d42d3f7-387b-4c93-8599-dcf90ca68dd9) and click on Share -> Publish.

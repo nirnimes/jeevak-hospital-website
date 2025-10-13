@@ -71,10 +71,19 @@ export default {
           red: "#dc2626",
           gray: "#6b7280",
         },
+        warm: {
+          sage: "#7B8471",
+          teal: "#4A6741", 
+          ivory: "#FFFFF0",
+          gray: "#4F4F4F",
+          gold: "#D4AF37",
+          burgundy: "#8B4B5C",
+        },
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["Poppins", "Inter", "sans-serif"],
+        serif: ["Georgia", "Times New Roman", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

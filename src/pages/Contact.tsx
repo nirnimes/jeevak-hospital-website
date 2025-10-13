@@ -74,31 +74,31 @@ const Contact = () => {
       <Header />
       <main>
         {/* Contact Hero */}
-        <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/10">
+        <section className="py-20 bg-gradient-to-br from-warm-sage/5 to-warm-teal/10">
           <div className="container text-center">
-            <Badge className="mb-4">Get in Touch</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <Badge className="mb-4 bg-warm-gold/10 text-warm-gold border-warm-gold/20">Continuing Dr. Prasad's Legacy</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
               We're Here to Help You
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Multiple ways to reach us for appointments, emergencies, or any questions
-              about your cardiac health. Our team is ready to assist you 24/7.
+              about your surgical care. Following Dr. Prasad's philosophy, our team is ready to assist you 24/7.
             </p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">5</div>
+                <div className="text-3xl font-bold text-warm-sage">5</div>
                 <div className="text-sm text-muted-foreground">Contact Methods</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">24/7</div>
+                <div className="text-3xl font-bold text-warm-teal">24/7</div>
                 <div className="text-sm text-muted-foreground">Emergency Support</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">&lt; 2hr</div>
+                <div className="text-3xl font-bold text-warm-gold">&lt; 2hr</div>
                 <div className="text-sm text-muted-foreground">Response Time</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">15min</div>
+                <div className="text-3xl font-bold text-warm-burgundy">15min</div>
                 <div className="text-sm text-muted-foreground">Average Wait</div>
               </div>
             </div>
@@ -109,79 +109,79 @@ const Contact = () => {
         <section className="py-16">
           <div className="container">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Phone className="h-8 w-8 text-destructive" />
+                  <div className="w-16 h-16 bg-warm-burgundy/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Phone className="h-8 w-8 text-warm-burgundy" />
                   </div>
-                  <CardTitle className="text-destructive">Emergency</CardTitle>
+                  <CardTitle className="text-warm-burgundy">Emergency</CardTitle>
                   <CardDescription>24/7 Emergency Line</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <a href="tel:+916122670992" className="text-2xl font-bold text-destructive hover:underline block mb-2">
+                  <a href="tel:+916122670992" className="text-2xl font-bold text-warm-burgundy hover:underline block mb-2">
                     +91-612-267-0992
                   </a>
                   <p className="text-sm text-muted-foreground">
-                    Immediate cardiac emergencies
+                    Immediate surgical emergencies
                   </p>
-                  <Badge variant="destructive" className="mt-2">Always Available</Badge>
+                  <Badge className="mt-2 bg-warm-burgundy/10 text-warm-burgundy border-warm-burgundy/20">Always Available</Badge>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar className="h-8 w-8 text-primary" />
+                  <div className="w-16 h-16 bg-warm-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Calendar className="h-8 w-8 text-warm-sage" />
                   </div>
-                  <CardTitle>Appointments</CardTitle>
+                  <CardTitle className="text-warm-sage">Appointments</CardTitle>
                   <CardDescription>Schedule Consultation</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <a href="tel:+916122670991" className="text-2xl font-bold text-primary hover:underline block mb-2">
+                  <a href="tel:+916122670991" className="text-2xl font-bold text-warm-sage hover:underline block mb-2">
                     +91-612-267-0991
                   </a>
                   <p className="text-sm text-muted-foreground">
                     Book your appointment
                   </p>
-                  <Badge variant="secondary" className="mt-2">Same Day Available</Badge>
+                  <Badge className="mt-2 bg-warm-gold/10 text-warm-gold border-warm-gold/20">Same Day Available</Badge>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MessageCircle className="h-8 w-8 text-green-600" />
+                  <div className="w-16 h-16 bg-warm-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <MessageCircle className="h-8 w-8 text-warm-teal" />
                   </div>
-                  <CardTitle>WhatsApp</CardTitle>
+                  <CardTitle className="text-warm-teal">WhatsApp</CardTitle>
                   <CardDescription>Quick Messages</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <a href="https://wa.me/919430012345" className="text-2xl font-bold text-green-600 hover:underline block mb-2">
+                  <a href="https://wa.me/919430012345" className="text-2xl font-bold text-warm-teal hover:underline block mb-2">
                     +91-9430-012345
                   </a>
                   <p className="text-sm text-muted-foreground">
                     Chat with our team
                   </p>
-                  <Badge variant="outline" className="mt-2 border-green-200 text-green-700">Quick Response</Badge>
+                  <Badge variant="outline" className="mt-2 border-warm-teal/30 text-warm-teal">Quick Response</Badge>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Mail className="h-8 w-8 text-blue-600" />
+                  <div className="w-16 h-16 bg-warm-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Mail className="h-8 w-8 text-warm-gold" />
                   </div>
-                  <CardTitle>Email</CardTitle>
+                  <CardTitle className="text-warm-gold">Email</CardTitle>
                   <CardDescription>General Inquiries</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <a href="mailto:info@anupamahospital.com" className="text-lg font-medium text-blue-600 hover:underline block mb-2">
-                    info@anupamahospital.com
+                  <a href="mailto:contact@anupamahospital.com" className="text-lg font-medium text-warm-gold hover:underline block mb-2">
+                    contact@anupamahospital.com
                   </a>
                   <p className="text-sm text-muted-foreground">
                     Email us anytime
                   </p>
-                  <Badge variant="outline" className="mt-2 border-blue-200 text-blue-700">24hr Response</Badge>
+                  <Badge variant="outline" className="mt-2 border-warm-gold/30 text-warm-gold">24hr Response</Badge>
                 </CardContent>
               </Card>
             </div>
@@ -189,7 +189,7 @@ const Contact = () => {
         </section>
 
         {/* Department Contacts & Forms */}
-        <section className="py-16 bg-muted/50">
+        <section className="py-16 bg-warm-ivory/30">
           <div className="container">
             <Tabs defaultValue="departments" className="w-full">
               <TabsList className="grid w-full grid-cols-3">
@@ -202,14 +202,14 @@ const Contact = () => {
               <TabsContent value="departments">
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                   {departments.map((dept, index) => (
-                    <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <Card key={index} className="hover:shadow-lg transition-shadow bg-warm-ivory border-warm-sage/10">
                       <CardHeader>
                         <div className="flex items-center space-x-3">
-                          <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                            <dept.icon className="h-6 w-6 text-primary" />
+                          <div className="w-12 h-12 bg-warm-sage/10 rounded-full flex items-center justify-center">
+                            <dept.icon className="h-6 w-6 text-warm-sage" />
                           </div>
                           <div className="flex-1">
-                            <CardTitle>{dept.name}</CardTitle>
+                            <CardTitle className="text-warm-gray">{dept.name}</CardTitle>
                             <CardDescription>{dept.description}</CardDescription>
                           </div>
                         </div>
@@ -232,7 +232,7 @@ const Contact = () => {
                           <span className="text-muted-foreground text-sm">{dept.hours}</span>
                         </div>
                         <Separator />
-                        <Button className="w-full" variant="outline">
+                        <Button className="w-full bg-warm-sage hover:bg-warm-sage/90 text-white" variant="outline">
                           Contact {dept.name}
                         </Button>
                       </CardContent>
@@ -243,9 +243,9 @@ const Contact = () => {
 
               {/* Appointment Form Tab */}
               <TabsContent value="appointment">
-                <Card className="mt-8">
+                <Card className="mt-8 bg-warm-ivory border-warm-sage/10">
                   <CardHeader>
-                    <CardTitle className="text-2xl">Book Your Appointment</CardTitle>
+                    <CardTitle className="text-2xl font-serif text-warm-teal">Book Your Appointment</CardTitle>
                     <CardDescription>
                       Fill out this form and we'll contact you within 2 hours to confirm your appointment
                     </CardDescription>
@@ -304,8 +304,8 @@ const Contact = () => {
                         />
                       </div>
 
-                      <div className="bg-primary/5 rounded-lg p-4">
-                        <h4 className="font-medium mb-2">What happens next?</h4>
+                      <div className="bg-warm-sage/5 rounded-lg p-4">
+                        <h4 className="font-medium mb-2 text-warm-teal">What happens next?</h4>
                         <ul className="text-sm text-muted-foreground space-y-1">
                           <li>-  We'll call you within 2 hours to confirm your appointment</li>
                           <li>-  You'll receive SMS confirmation with appointment details</li>
@@ -313,7 +313,7 @@ const Contact = () => {
                         </ul>
                       </div>
 
-                      <Button className="w-full" size="lg">
+                      <Button className="w-full bg-warm-gold hover:bg-warm-gold/90 text-white" size="lg">
                         <Calendar className="mr-2 h-4 w-4" />
                         Submit Appointment Request
                       </Button>
@@ -329,9 +329,9 @@ const Contact = () => {
               {/* Feedback Tab */}
               <TabsContent value="feedback">
                 <div className="grid md:grid-cols-2 gap-8 mt-8">
-                  <Card>
+                  <Card className="bg-warm-ivory border-warm-sage/10">
                     <CardHeader>
-                      <CardTitle className="text-2xl">Share Your Feedback</CardTitle>
+                      <CardTitle className="text-2xl font-serif text-warm-teal">Share Your Feedback</CardTitle>
                       <CardDescription>
                         Your feedback helps us improve our services and patient care
                       </CardDescription>
@@ -373,7 +373,7 @@ const Contact = () => {
                           />
                         </div>
 
-                        <Button className="w-full" size="lg">
+                        <Button className="w-full bg-warm-sage hover:bg-warm-sage/90 text-white" size="lg">
                           <Send className="mr-2 h-4 w-4" />
                           Submit Feedback
                         </Button>
@@ -381,21 +381,21 @@ const Contact = () => {
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  <Card className="bg-warm-ivory border-warm-sage/10">
                     <CardHeader>
-                      <CardTitle>Other Ways to Reach Us</CardTitle>
+                      <CardTitle className="text-warm-teal">Other Ways to Reach Us</CardTitle>
                       <CardDescription>Alternative contact methods for your convenience</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-6">
                       <div>
-                        <h4 className="font-medium mb-3">Patient Relations</h4>
+                        <h4 className="font-medium mb-3 text-warm-sage">Patient Relations</h4>
                         <div className="space-y-2">
                           <div className="flex items-center space-x-2">
-                            <Phone className="h-4 w-4 text-muted-foreground" />
+                            <Phone className="h-4 w-4 text-warm-sage" />
                             <span className="text-sm">+91-612-267-0995</span>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <Mail className="h-4 w-4 text-muted-foreground" />
+                            <Mail className="h-4 w-4 text-warm-sage" />
                             <span className="text-sm">patient.relations@anupamahospital.com</span>
                           </div>
                         </div>
@@ -404,10 +404,10 @@ const Contact = () => {
                       <Separator />
 
                       <div>
-                        <h4 className="font-medium mb-3">Media & Press Inquiries</h4>
+                        <h4 className="font-medium mb-3 text-warm-sage">Media & Press Inquiries</h4>
                         <div className="space-y-2">
                           <div className="flex items-center space-x-2">
-                            <Mail className="h-4 w-4 text-muted-foreground" />
+                            <Mail className="h-4 w-4 text-warm-sage" />
                             <span className="text-sm">media@anupamahospital.com</span>
                           </div>
                         </div>
@@ -416,10 +416,10 @@ const Contact = () => {
                       <Separator />
 
                       <div>
-                        <h4 className="font-medium mb-3">Career Opportunities</h4>
+                        <h4 className="font-medium mb-3 text-warm-sage">Career Opportunities</h4>
                         <div className="space-y-2">
                           <div className="flex items-center space-x-2">
-                            <Mail className="h-4 w-4 text-muted-foreground" />
+                            <Mail className="h-4 w-4 text-warm-sage" />
                             <span className="text-sm">careers@anupamahospital.com</span>
                           </div>
                         </div>
@@ -428,11 +428,11 @@ const Contact = () => {
                       <Separator />
 
                       <div>
-                        <h4 className="font-medium mb-3">Social Media</h4>
+                        <h4 className="font-medium mb-3 text-warm-sage">Social Media</h4>
                         <div className="flex space-x-4">
-                          <Button variant="outline" size="sm">Facebook</Button>
-                          <Button variant="outline" size="sm">Twitter</Button>
-                          <Button variant="outline" size="sm">LinkedIn</Button>
+                          <Button variant="outline" size="sm" className="border-warm-sage/30 text-warm-sage hover:bg-warm-sage/10">Facebook</Button>
+                          <Button variant="outline" size="sm" className="border-warm-sage/30 text-warm-sage hover:bg-warm-sage/10">Twitter</Button>
+                          <Button variant="outline" size="sm" className="border-warm-sage/30 text-warm-sage hover:bg-warm-sage/10">LinkedIn</Button>
                         </div>
                       </div>
                     </CardContent>
@@ -447,7 +447,7 @@ const Contact = () => {
         <section className="py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Visit Our Hospital</h2>
+              <h2 className="text-3xl font-bold mb-4 font-serif text-warm-teal">Visit Our Hospital</h2>
               <p className="text-xl text-muted-foreground">
                 Conveniently located in the heart of Patna with easy access from all directions
               </p>
@@ -456,11 +456,11 @@ const Contact = () => {
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Location Info */}
               <div className="space-y-8">
-                <Card>
+                <Card className="bg-warm-ivory border-warm-sage/10">
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <MapPin className="h-5 w-5 text-primary" />
-                      <span>Hospital Address</span>
+                      <MapPin className="h-5 w-5 text-warm-sage" />
+                      <span className="text-warm-teal">Hospital Address</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -471,11 +471,11 @@ const Contact = () => {
                       India
                     </p>
                     <div className="flex space-x-3">
-                      <Button variant="outline">
+                      <Button variant="outline" className="border-warm-sage/30 text-warm-sage hover:bg-warm-sage/10">
                         <Navigation className="mr-2 h-4 w-4" />
                         Get Directions
                       </Button>
-                      <Button variant="outline">
+                      <Button variant="outline" className="border-warm-sage/30 text-warm-sage hover:bg-warm-sage/10">
                         <Phone className="mr-2 h-4 w-4" />
                         Call Hospital
                       </Button>
@@ -483,11 +483,11 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-warm-ivory border-warm-sage/10">
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <Clock className="h-5 w-5 text-primary" />
-                      <span>Hours of Operation</span>
+                      <Clock className="h-5 w-5 text-warm-sage" />
+                      <span className="text-warm-teal">Hours of Operation</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
@@ -501,7 +501,7 @@ const Contact = () => {
                     </div>
                     <div className="flex justify-between">
                       <span>Emergency:</span>
-                      <span className="font-medium text-destructive">24/7 Available</span>
+                      <span className="font-medium text-warm-burgundy">24/7 Available</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Visiting Hours:</span>
@@ -515,28 +515,28 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-warm-ivory border-warm-sage/10">
                   <CardHeader>
-                    <CardTitle>Transportation & Parking</CardTitle>
+                    <CardTitle className="text-warm-teal">Transportation & Parking</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
                       <div className="flex items-center space-x-3">
-                        <Car className="h-5 w-5 text-primary" />
+                        <Car className="h-5 w-5 text-warm-sage" />
                         <div>
                           <p className="font-medium">By Car/Taxi</p>
                           <p className="text-sm text-muted-foreground">Free parking available for 200+ vehicles</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Bus className="h-5 w-5 text-primary" />
+                        <Bus className="h-5 w-5 text-warm-sage" />
                         <div>
                           <p className="font-medium">Public Transport</p>
                           <p className="text-sm text-muted-foreground">Bus routes: 12, 15, 23, 28 - Stop: Medical College</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Phone className="h-5 w-5 text-primary" />
+                        <Phone className="h-5 w-5 text-warm-sage" />
                         <div>
                           <p className="font-medium">Hospital Ambulance</p>
                           <p className="text-sm text-muted-foreground">24/7 ambulance service: +91-612-267-0992</p>
@@ -556,10 +556,10 @@ const Contact = () => {
                     <p className="text-sm text-muted-foreground mb-4">
                       Anupama Hospital Location
                     </p>
-                    <Badge variant="secondary">Medical College Road, Patna</Badge>
+                    <Badge className="bg-warm-sage/10 text-warm-sage border-warm-sage/20">Medical College Road, Patna</Badge>
                   </div>
                 </div>
-                <Button className="absolute bottom-4 right-4">
+                <Button className="absolute bottom-4 right-4 bg-warm-sage hover:bg-warm-sage/90 text-white">
                   <Navigation className="mr-2 h-4 w-4" />
                   Open in Maps
                 </Button>
@@ -569,19 +569,19 @@ const Contact = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-primary text-primary-foreground">
+        <section className="py-16 bg-gradient-to-r from-warm-sage to-warm-teal text-white">
           <div className="container text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <h2 className="text-3xl font-bold mb-6 font-serif">Ready to Get Started?</h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Contact us today to schedule your consultation or for any questions about our cardiac care services. 
-              We're here to help you on your journey to better heart health.
+              Contact us today to schedule your consultation or for any questions about our surgical care services. 
+              Continuing Dr. Prasad's legacy, we're here to help you on your journey to better health.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
+              <Button size="lg" className="bg-warm-gold hover:bg-warm-gold/90 text-white">
                 <Calendar className="mr-2 h-4 w-4" />
                 Book Appointment Now
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-warm-sage">
                 <Phone className="mr-2 h-4 w-4" />
                 Call +91-612-267-0991
               </Button>

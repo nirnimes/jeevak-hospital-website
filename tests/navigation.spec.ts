@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Navigation and Routing', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/jeevak-hospital-website/');
   });
 
   test('should navigate to all major sections', async ({ page }) => {
@@ -11,11 +11,10 @@ test.describe('Navigation and Routing', () => {
     await expect(page).toHaveURL(/jeevak-hospital-website/);
     
     // Test Services navigation
-    // Use full base path to match BrowserRouter basename in preview
+    // Navigate to Services page and assert content marker
     await page.goto('/jeevak-hospital-website/services');
     await expect(page).toHaveURL(/jeevak-hospital-website\/(|#)services/);
-    // Expect services content marker
-    await expect(page.getByText(/our medical services/i)).toBeVisible();
+    await expect(page.getByRole('heading', { name: /our medical services/i })).toBeVisible();
     await page.goto('/jeevak-hospital-website/services');
     await expect(page).toHaveURL(/jeevak-hospital-website\/(|#)services/);
     await expect(page.getByText('Our Medical Services')).toBeVisible();
